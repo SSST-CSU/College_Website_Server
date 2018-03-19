@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_jinja',
     'rest_framework',
-
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'SchoolOfsoftware.urls'
+ROOT_URLCONF = 'SchoolOfSoftware.urls'
 
 TEMPLATES = [
     {
@@ -70,7 +71,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SchoolOfsoftware.wsgi.application'
+WSGI_APPLICATION = 'SchoolOfSoftware.wsgi.application'
 
 
 # Database
