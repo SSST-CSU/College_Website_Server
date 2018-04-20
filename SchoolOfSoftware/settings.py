@@ -42,8 +42,11 @@ INSTALLED_APPS = [
     'django_jinja',
     'django_filters',
 
-    'UserManagement',
     'Pages',
+
+    'UserManagement',
+    'ResourceBorrowingSystem',
+    'OnlineJudgeSystem',
 ]
 
 MIDDLEWARE = [
