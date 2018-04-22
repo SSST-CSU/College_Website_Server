@@ -1,3 +1,3 @@
-from django.db import models
-
-# Create your models here.
+from OnlineJudgeSystem.Contest import models
+from OnlineJudgeSystem.Problem import models
+from OnlineJudgeSystem.Registration import models

@@ -41,12 +41,13 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_jinja',
     'django_filters',
+    'django_cas',
 
-    'Pages',
-
-    'UserManagement',
-    'ResourceBorrowingSystem',
+    'ArticleManagement',
     'OnlineJudgeSystem',
+    'Pages',
+    'ResourceBorrowingSystem',
+    'UserManagement',
 ]
 
 MIDDLEWARE = [
@@ -57,15 +58,29 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    # Use CAS
+    'django_cas.middleware.CASMiddleware',
 ]
 
 ROOT_URLCONF = 'SchoolOfSoftware.urls'
 
+# Use CAS Backend
+CAS_SERVER_URL = '127.0.0.1'    # Your Cas Server
+CAS_LOGOUT_COMPLETELY = False
+
+# If disabled CAS authentication for the entire django admin app, set False
+CAS_ADMIN_AUTH = False
+
+AUTHENTICATION_BACKENDS = [
+  'django.contrib.auth.backends.ModelBackend',
+  'django_cas.backends.CASBackend',
+]
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')]
-        ,
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
