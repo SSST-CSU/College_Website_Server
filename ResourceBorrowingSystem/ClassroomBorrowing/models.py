@@ -16,9 +16,15 @@ class RoomBorrowingApply(models.Model):
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
 
+    def __str__(self):
+        return str(self.room) + str('@') + str(self.user)
+
 
 class RoomBorrowingRecord(models.Model):
     user = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     room = models.ForeignKey(Room, on_delete=models.DO_NOTHING)
     start_time = models.DateTimeField()
     end_time = models.DateTimeField()
+
+    def __str__(self):
+        return str(self.room) + str('@') + str(self.user)
