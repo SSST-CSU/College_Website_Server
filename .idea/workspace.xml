@@ -2,67 +2,226 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="298f0d6c-6e09-421b-bf2e-f593cdce1f17" name="默认的" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/apps.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/migrations/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/tests.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ArticleManagement/urls.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Pages/READEME.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/__init__.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/admin.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/migrations/0001_initial.py" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/SchoolOfSoftware/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserManagement/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserManagement/migrations/0001_initial.py" />
-      <change beforePath="$PROJECT_DIR$/.idea/SchoolOfsoftware.iml" afterPath="$PROJECT_DIR$/.idea/SchoolOfsoftware.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/OnlineJudgeSystem/admin.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/admin.py" />
-      <change beforePath="$PROJECT_DIR$/OnlineJudgeSystem/models.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/models.py" />
-      <change beforePath="$PROJECT_DIR$/OnlineJudgeSystem/urls.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/urls.py" />
-      <change beforePath="$PROJECT_DIR$/OnlineJudgeSystem/views.py" afterPath="$PROJECT_DIR$/ArticleManagement/views.py" />
-      <change beforePath="$PROJECT_DIR$/Pages/urls.py" afterPath="$PROJECT_DIR$/Pages/urls.py" />
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/admin.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/admin.py" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/models.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/models.py" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/urls.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/urls.py" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/views.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/views.py" />
-      <change beforePath="$PROJECT_DIR$/SchoolOfSoftware/settings.py" afterPath="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
-      <change beforePath="$PROJECT_DIR$/SchoolOfSoftware/urls.py" afterPath="$PROJECT_DIR$/SchoolOfSoftware/urls.py" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/__init__.py" afterPath="$PROJECT_DIR$/UserManagement/__init__.py" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/admin.py" afterPath="$PROJECT_DIR$/UserManagement/admin.py" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/models.py" afterPath="$PROJECT_DIR$/UserManagement/models.py" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/urls.py" afterPath="$PROJECT_DIR$/UserManagement/urls.py" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change beforePath="$PROJECT_DIR$/templates/htmls/index.html" afterPath="$PROJECT_DIR$/templates/htmls/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/UserManagement/serializer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SchoolOfsoftware.iml" afterPath="$PROJECT_DIR$/.idea/SchoolOfsoftware.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArticleManagement/README.md" afterPath="$PROJECT_DIR$/ArticleManagement/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArticleManagement/admin.py" afterPath="$PROJECT_DIR$/ArticleManagement/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArticleManagement/apps.py" afterPath="$PROJECT_DIR$/ArticleManagement/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArticleManagement/models.py" afterPath="$PROJECT_DIR$/ArticleManagement/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArticleManagement/tests.py" afterPath="$PROJECT_DIR$/ArticleManagement/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArticleManagement/urls.py" afterPath="$PROJECT_DIR$/ArticleManagement/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ArticleManagement/views.py" afterPath="$PROJECT_DIR$/ArticleManagement/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LICENSE" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/admin.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/models.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/views.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Contest/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/admin.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/models.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/views.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Problem/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/README.md" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/admin.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/models.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/views.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/Registration/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/admin.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/apps.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/models.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/tests.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OnlineJudgeSystem/urls.py" afterPath="$PROJECT_DIR$/OnlineJudgeSystem/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/READEME.md" afterPath="$PROJECT_DIR$/Pages/READEME.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/admin.py" afterPath="$PROJECT_DIR$/Pages/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/apps.py" afterPath="$PROJECT_DIR$/Pages/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/models.py" afterPath="$PROJECT_DIR$/Pages/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/tests.py" afterPath="$PROJECT_DIR$/Pages/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/urls.py" afterPath="$PROJECT_DIR$/Pages/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pages/views.py" afterPath="$PROJECT_DIR$/Pages/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/admin.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/views.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/admin.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/views.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/admin.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/README.md" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/admin.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/apps.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/models.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/tests.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/urls.py" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SchoolOfSoftware/settings.py" afterPath="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SchoolOfSoftware/urls.py" afterPath="$PROJECT_DIR$/SchoolOfSoftware/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SchoolOfSoftware/wsgi.py" afterPath="$PROJECT_DIR$/SchoolOfSoftware/wsgi.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/README.md" afterPath="$PROJECT_DIR$/UserManagement/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/__init__.py" afterPath="$PROJECT_DIR$/UserManagement/__init__.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/admin.py" afterPath="$PROJECT_DIR$/UserManagement/admin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/apps.py" afterPath="$PROJECT_DIR$/UserManagement/apps.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/migrations/0001_initial.py" afterPath="$PROJECT_DIR$/UserManagement/migrations/0001_initial.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/models.py" afterPath="$PROJECT_DIR$/UserManagement/models.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/tests.py" afterPath="$PROJECT_DIR$/UserManagement/tests.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/urls.py" afterPath="$PROJECT_DIR$/UserManagement/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UserManagement/views.py" afterPath="$PROJECT_DIR$/UserManagement/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/.idea/SchoolOfSoftware.iml" afterPath="$PROJECT_DIR$/templates/.idea/SchoolOfSoftware.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/.idea/modules.xml" afterPath="$PROJECT_DIR$/templates/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/.idea/templates.iml" afterPath="$PROJECT_DIR$/templates/.idea/templates.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/.idea/workspace.xml" afterPath="$PROJECT_DIR$/templates/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/htmls/index.html" afterPath="$PROJECT_DIR$/templates/htmls/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/autocomplete.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/autocomplete.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/base.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/changelists.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/changelists.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/dashboard.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/dashboard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/fonts.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/fonts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/forms.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/forms.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/login.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/login.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/responsive.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/responsive.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/responsive_rtl.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/responsive_rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/rtl.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/rtl.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/vendor/select2/LICENSE-SELECT2.md" afterPath="$PROJECT_DIR$/templates/static/admin/css/vendor/select2/LICENSE-SELECT2.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/vendor/select2/select2.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/vendor/select2/select2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/vendor/select2/select2.min.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/vendor/select2/select2.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/css/widgets.css" afterPath="$PROJECT_DIR$/templates/static/admin/css/widgets.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/fonts/LICENSE.txt" afterPath="$PROJECT_DIR$/templates/static/admin/fonts/LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/fonts/README.txt" afterPath="$PROJECT_DIR$/templates/static/admin/fonts/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/LICENSE" afterPath="$PROJECT_DIR$/templates/static/admin/img/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/README.txt" afterPath="$PROJECT_DIR$/templates/static/admin/img/README.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/calendar-icons.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/calendar-icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-addlink.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-addlink.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-alert.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-alert.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-calendar.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-calendar.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-changelink.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-changelink.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-clock.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-clock.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-deletelink.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-deletelink.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-no.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-no.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-unknown-alt.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-unknown-alt.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-unknown.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-unknown.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/icon-yes.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/icon-yes.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/inline-delete.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/inline-delete.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/search.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/search.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/selector-icons.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/selector-icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/sorting-icons.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/sorting-icons.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/tooltag-add.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/tooltag-add.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/img/tooltag-arrowright.svg" afterPath="$PROJECT_DIR$/templates/static/admin/img/tooltag-arrowright.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/SelectBox.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/SelectBox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/SelectFilter2.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/SelectFilter2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/actions.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/actions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/actions.min.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/actions.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/admin/DateTimeShortcuts.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/admin/DateTimeShortcuts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/admin/RelatedObjectLookups.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/admin/RelatedObjectLookups.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/autocomplete.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/autocomplete.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/calendar.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/calendar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/cancel.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/cancel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/change_form.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/change_form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/collapse.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/collapse.min.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/collapse.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/core.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/inlines.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/inlines.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/inlines.min.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/inlines.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/jquery.init.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/jquery.init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/popup_response.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/popup_response.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/prepopulate.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/prepopulate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/prepopulate.min.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/prepopulate.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/prepopulate_init.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/prepopulate_init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/timeparse.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/timeparse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/urlify.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/urlify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/jquery/jquery.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/jquery/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/jquery/jquery.min.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/jquery/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/LICENSE-SELECT2.md" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/LICENSE-SELECT2.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ar.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/az.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/az.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/bg.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/bg.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ca.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ca.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/cs.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/cs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/da.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/da.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/de.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/de.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/el.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/el.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/en.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/en.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/es.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/es.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/et.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/et.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/eu.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/eu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/fa.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/fa.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/fi.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/fi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/fr.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/fr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/gl.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/gl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/he.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/he.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/hi.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/hi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/hr.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/hr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/hu.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/hu.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/id.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/id.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/is.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/is.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/it.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/it.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ja.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ja.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/km.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/km.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ko.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ko.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/lt.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/lt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/lv.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/lv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/mk.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/mk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ms.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ms.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/nb.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/nb.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/nl.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/nl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/pl.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/pl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/pt-BR.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/pt-BR.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/pt.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/pt.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ro.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ru.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/ru.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sk.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sr.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sv.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/sv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/th.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/th.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/tr.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/tr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/uk.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/uk.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/vi.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/vi.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/zh-CN.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/zh-CN.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/zh-TW.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/i18n/zh-TW.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/select2.full.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/select2.full.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/select2.full.min.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/select2/select2.full.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/xregexp/xregexp.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/xregexp/xregexp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/admin/js/vendor/xregexp/xregexp.min.js" afterPath="$PROJECT_DIR$/templates/static/admin/js/vendor/xregexp/xregexp.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/templates/static/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/templates/static/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/templates/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/templates/static/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/templates/static/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/templates/static/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/templates/static/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/js/html5shiv.js" afterPath="$PROJECT_DIR$/templates/static/js/html5shiv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/js/jquery.js" afterPath="$PROJECT_DIR$/templates/static/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/js/npm.js" afterPath="$PROJECT_DIR$/templates/static/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/js/respond.min.js" afterPath="$PROJECT_DIR$/templates/static/js/respond.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/css/bootstrap-tweaks.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/css/bootstrap-tweaks.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/css/default.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/css/default.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/css/prettify.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/css/prettify.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/base.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/font-awesome-4.0.3.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/font-awesome-4.0.3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/highlight.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/highlight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/jquery.json-view.min.css" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/css/jquery.json-view.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/api.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/api.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/highlight.pack.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/highlight.pack.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/jquery-1.10.2.min.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/jquery-1.10.2.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/jquery.json-view.min.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/docs/js/jquery.json-view.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/templates/static/rest_framework/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/js/ajax-form.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/js/ajax-form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/js/coreapi-0.1.1.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/js/coreapi-0.1.1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/js/csrf.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/js/csrf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/js/default.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/js/default.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/js/jquery-1.12.4.min.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/js/jquery-1.12.4.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/static/rest_framework/js/prettify-min.js" afterPath="$PROJECT_DIR$/templates/static/rest_framework/js/prettify-min.js" />
     </list>
     <ignored path="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\website\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,57 +238,69 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserManagement/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+            <state relative-caret-position="396">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="apps.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/apps.py">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserManagement/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
+            <state relative-caret-position="242">
+              <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
               <folding>
-                <element signature="e#0#33#0" expanded="true" />
+                <element signature="e#0#44#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="418">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#640#672#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/htmls/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="74" lean-forward="false" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="serializer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserManagement/serializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="132">
+              <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UserManagement/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="506">
+              <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+              <folding>
+                <element signature="e#640#677#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -176,11 +347,9 @@
         <option value="$PROJECT_DIR$/CAS-SSO/urls.py" />
         <option value="$PROJECT_DIR$/CAS-SSO/middleware.py" />
         <option value="$PROJECT_DIR$/CAS-SSO/views.py" />
-        <option value="$PROJECT_DIR$/SchoolOfSoftware/urls.py" />
         <option value="$PROJECT_DIR$/OnlineJudgeSystem/urls.py" />
         <option value="$PROJECT_DIR$/ArticleManagement/urls.py" />
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/urls.py" />
-        <option value="$PROJECT_DIR$/UserManagement/urls.py" />
         <option value="$PROJECT_DIR$/Pages/urls.py" />
         <option value="$PROJECT_DIR$/Pages/views.py" />
         <option value="$PROJECT_DIR$/templates/htmls/index.html" />
@@ -202,7 +371,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/UserManagement/admin.py" />
         <option value="$PROJECT_DIR$/UserManagement/__init__.py" />
+        <option value="$PROJECT_DIR$/UserManagement/serializer.py" />
+        <option value="$PROJECT_DIR$/SchoolOfSoftware/urls.py" />
         <option value="$PROJECT_DIR$/UserManagement/models.py" />
+        <option value="$PROJECT_DIR$/UserManagement/urls.py" />
+        <option value="$PROJECT_DIR$/UserManagement/views.py" />
       </list>
     </option>
   </component>
@@ -217,9 +390,6 @@
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
-  </component>
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="添加" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -236,7 +406,27 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="SchoolOfSoftware" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -280,44 +470,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="ResourceBorrowingSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="ResourceBorrowingSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="website" type="462c0819:PsiDirectoryNode" />
-              <item name="venv" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -326,6 +479,7 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="django_cas&#9;null&#9;null" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -363,29 +517,6 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="website" type="Python.DjangoServer" factoryName="Django server" singleton="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-        <env name="DJANGO_SETTINGS_MODULE" value="SchoolOfSoftware.settings" />
-      </envs>
-      <option name="SDK_HOME" value="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\website\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="SchoolOfSoftware" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -543,6 +674,29 @@
       <option name="_new_target" value="&quot;&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
+    <configuration name="website" type="Python.DjangoServer" factoryName="Django server" singleton="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="SchoolOfSoftware.settings" />
+      </envs>
+      <option name="SDK_HOME" value="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\website\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="SchoolOfSoftware" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -632,33 +786,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21351932" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20522387" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2904328" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@SchoolOfSoftware" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Thumbnails" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32827735" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -676,15 +830,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CAS-SSO/urls.py" />
-    <entry file="file://$PROJECT_DIR$/CAS-SSO/middleware.py" />
-    <entry file="file://$PROJECT_DIR$/CAS-SSO/management/commands/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/CAS-SSO/management/commands/clearcassessions.py" />
     <entry file="file://$PROJECT_DIR$/CAS-SSO/management/__init__.py" />
     <entry file="file://$PROJECT_DIR$/CAS-SSO/models.py" />
     <entry file="file://$PROJECT_DIR$/CAS-SSO/apps.py" />
@@ -759,24 +909,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="4" column="19" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/htmls/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="105" column="37" lean-forward="false" selection-start-line="105" selection-start-column="37" selection-end-line="105" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -816,31 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="330">
-            <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="72" column="22" lean-forward="true" selection-start-line="72" selection-start-column="22" selection-end-line="72" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OnlineJudgeSystem/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -848,16 +959,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OnlineJudgeSystem/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="630">
-            <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/OnlineJudgeSystem/README.md" />
     <entry file="file://$PROJECT_DIR$/OnlineJudgeSystem/Problem/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -872,16 +974,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ArticleManagement/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ArticleManagement/README.md" />
     <entry file="file://$PROJECT_DIR$/OnlineJudgeSystem/Contest/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -910,48 +1003,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/READEME.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="120">
-            <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/READEME.md" />
     <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="3" column="0" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/apps.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -965,42 +1021,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/admin.py">
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="190">
-            <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-            <folding />
-          </first_editor>
-          <second_editor />
+        <state relative-caret-position="374">
+          <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="39" lean-forward="true" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        <state relative-caret-position="264">
+          <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="39" selection-end-line="12" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="35" lean-forward="true" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/apps.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="36" lean-forward="true" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="880">
+          <caret line="70" column="0" lean-forward="true" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/科协培训 后端/20171118MyBlob/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="7" column="38" lean-forward="false" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/htmls/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="74" lean-forward="false" selection-start-line="7" selection-start-column="74" selection-end-line="7" selection-end-column="74" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="55" lean-forward="true" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
+        <state relative-caret-position="396">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="33" lean-forward="true" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
+          <folding>
+            <element signature="e#640#677#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

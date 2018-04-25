@@ -21,4 +21,4 @@ The web site server is written by Django-2.0.
 - db.sqlite3
 - manage.py
   
-The password of the super user `root` is 'admin123'
+The password of the super `user` root is 'admin123'
