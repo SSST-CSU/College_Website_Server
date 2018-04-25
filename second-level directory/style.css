@@ -1,0 +1,323 @@
+* {
+   margin:0;
+   padding:0;
+}
+#top {
+	    width: 100%;
+		height: 128px;
+		top: 0;
+		float: left;
+		background: transparent url(images/top-trans-bg.png) repeat-x left top;
+		background-color: white;
+}
+#top1 {
+	    width: 1200px;
+		height: 128px;
+		margin-left: auto;
+		margin-right: auto;
+}
+#top2 {
+	    width: 300px;
+		float: left;
+		background-color: #AE0C2A;
+}
+a {
+   text-decoration:none;
+}
+.top3 {
+	        width: 200px;
+			background-color: #AB8A6C;
+			float: left;
+			height: 36px;
+}
+#top4 {
+	    float: left;
+		width: 300px;
+		height: 36px;
+		text-indent: -100000px;
+		background: url(images/summ-new.png) no-repeat 0 0;
+}
+#top5 {
+	    width: 601px;
+		height: 36px;
+		position: absolute;
+		z-index: 100;
+}
+#top6 {
+	   width: 900px;
+       float: left;
+}
+#top8 {
+	    float: left;
+		width: 300px;
+		height: 36px;
+		text-indent: -100000px;
+		background: url(images/service-new.png) no-repeat 0 0;
+}
+#top7 {
+	    float: left;
+		width: 300px;
+		height: 36px;
+		text-indent: -100000px;
+		background: url(images/deps-new.png) no-repeat 0 0;
+}
+#top10 {
+	    background-color: #FFEEC6;
+	    width: 299px;
+		float: right;
+		height: 36px;
+}
+#top9 {
+	   margin-left: 54px;
+}
+#top10 span {
+	        float: left;
+			color: #593939;
+			font-size: 12px;
+			line-height: 36px;
+}
+.top10 {
+	    font-size: 12px;
+		line-height: 36px;
+		color: #593939;
+		float: left;
+		margin: 0 5px;
+		height: 36px;
+}
+#content {
+	        width: 100%;
+			float: left;
+			background-color: #FFFBEE;
+}
+#content1 {
+	        margin-top: 1px;
+			width: 1200px;
+			min-height: 500px;
+			margin-left: auto;
+			margin-right: auto;
+}
+#content2 {
+	        width: 215px;
+			padding: 65px 10px 20px 75px;
+			float: left;
+			background: url(images/schools-left-title-bg.png) no-repeat 0 0;
+}
+ul {
+	 list-style:none;
+}
+#content3 {
+	       width: 215px;
+           float: left;
+}
+.content-left {
+	           font-size: 12px;
+               float: left;
+			   height: 36px;
+			   line-height: 36px;
+			   color: #CCB18E;
+}
+.content-right {
+	               font-size: 12px;
+				   float: right;
+				   height: 36px;
+				   line-height: 36px;
+				   color: #CCB18E;
+}
+#content3 li:hover{
+	               background-color: #fff;
+}
+#content3 li {
+	            width: 215px;
+				height: 36px;
+				float: left;
+				background: url(images/left-nav-trans-bg.png) no-repeat;
+                background-position: 0px -40px;
+}
+#content5 {
+	        width: 100px;
+			height: 100px;
+			float: right;
+			margin-top: 20px;
+}
+#content5 li {
+	            width: 40px;
+				height: 40px;
+				float: left;
+				margin: 5px;
+}
+#a {
+    width: 40px;
+    height: 40px;
+	float: left;
+	text-indent: -10000px;
+	background: url(images/left-nav2-sprite-bg.png) no-repeat;
+	background-position: 0 -225px;			
+}
+#a1 {
+	    width: 40px;
+		height: 40px;
+		float: left;
+		text-indent: -10000px;
+		background: url(images/left-nav2-sprite-bg.png) no-repeat;
+		background-position: 0 -135px;
+}
+#a2 {
+	    width: 40px;
+		height: 40px;
+		float: left;
+		text-indent: -10000px;
+		background: url(images/left-nav2-sprite-bg.png) no-repeat;
+		background-position: 0 -315px;
+}
+#a3 {
+	    width: 40px;
+		height: 40px;
+		float: left;
+		text-indent: -10000px;
+		background: url(images/left-nav2-sprite-bg.png) no-repeat;
+		background-position: 0 -45px;
+}
+#middle {
+			width: 680px;
+			min-height: 730px;
+			float: left;
+			background: url(images/detail-content-humanities-bg.png) no-repeat 0 0;
+}
+#middle1 {
+	        width: 639px;
+			margin: 55px 5px -128px 6px;
+			padding: 0 15px;
+			float: left;
+			padding-bottom: 25px;
+			background-color: #fff;
+			min-height: 700px;
+			position: relative;
+			z-index: 3;
+}
+#middle2  {
+	        width: 639px;
+			float: left;
+			padding-bottom: 40px;
+			margin-left: -15px;
+			padding-right: 30px;
+			background: #fff url(images/dcm-fix-trans-bg.png) no-repeat 0 0;
+}
+#middle3 {
+	        width: 50px;
+			height: 80px;
+			float: left;
+			margin-left: 19px;
+			color: #AB8A6C;
+			font-size: 14px;
+			line-height: 20px;
+}
+#middle3 span {
+	            height: 40px;
+				font-size: 36px;
+				line-height: 40px;
+				border-bottom: 2px solid #AB8A6C;
+				text-align: center;
+				float: left;
+                color: #AB8A6C;
+}
+#middle4 {
+	        width: 560px;
+			float: right;
+			margin-left: 10px;
+			margin-bottom: 20px;
+			padding-bottom: 29px;
+			border-bottom: 1px dotted #AB8A6C;
+			background-color: white;
+}
+#middle5 {
+	      width: 320px;
+          float: left;
+}
+#middle6 {
+	        width: 320px;
+			height: 30px;
+			font-size: 14px;
+			line-height: 30px;
+			color: #593939;
+			float: left;
+			font-weight: 700;
+}
+#middle8 {
+	        float: left;
+			margin: 10px 0;
+			font-size: 12px;
+			line-height: 20px;
+			color: #AB8A6C;
+}
+#middle7 a{
+	        font-size: 12px;
+			line-height: 20px;
+			color: #CCB18D;
+			font-style: italic;
+}
+#right {
+	     width: 220px;
+         float: left;
+}
+#right1 {
+	        width: 220px;
+			height: 350px;
+			float: left;
+			background: url(images/hotlinkslist-bg.png) no-repeat 0 0;
+}
+#right1 ul li {
+				width: 180px;
+				height: 36px;
+				float: left;
+}
+#right1 ul li a {
+	                color: #938D72;
+					font-size: 12px;
+					line-height: 35px;
+					cursor: pointer;
+}
+#right1 ul {
+	        width: 170px;
+			float: left;
+			margin: 55px 20px 10px 30px;
+}
+#bottom {
+	        width: 100%;
+			height: 128px;
+			background-color: #383E33;
+			float: left;
+}
+#bottom1 {
+	        width: 1200px;
+			height: 128px;
+			margin-left: auto;
+			margin-right: auto;
+			background: transparent url(images/detail-contentbar-trans-bg.png) no-repeat 0 0;
+}
+#bottom2 {
+	        width: 100%;
+			height: 128px;
+			background-color: #000;
+			float: left;
+}
+#bottom3 {
+	        width: 1200px;
+			height: 128px;
+			margin:0 auto;
+}
+#bottom4 {
+	        width: 1200px;
+			height: 20px;
+			float: left;
+			margin-top: 15px;
+}
+#bottom5 {
+	        float: left;
+			font-size: 12px;
+			line-height: 25px;
+			color: #999;
+}
+#top2 img {
+	       width:300px;
+		   height:48px;
+}
