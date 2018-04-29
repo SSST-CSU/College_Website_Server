@@ -16,6 +16,7 @@ Including another URLconf
 from django.urls import path, include
 from UserManagement import views
 from rest_framework import routers
+<<<<<<< HEAD
 # import django_cas
 
 router = routers.DefaultRouter()
@@ -27,5 +28,15 @@ urlpatterns = [
     path('', views.UserLoginAPIView.as_view()),
     # path('login/', django_cas.views.login),
     # path('logout/', django_cas.views.logout),
+=======
+import django_cas
+
+router = routers.DefaultRouter()
+router.register('/', views.LoginViewSet)
+
+urlpatterns = [
+    path('login/', django_cas.views.login),
+    path('logout/', django_cas.views.logout),
+>>>>>>> 9ec56b0552ed3ae9bb5351c316795c332c080acb
 
 ]
