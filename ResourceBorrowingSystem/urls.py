@@ -5,7 +5,6 @@ from .ClassroomBorrowing.views import *
 router = DefaultRouter()
 router.register('Room', RoomViewSet)
 router.register('RoomBorrowingApply', RoomBorrowingApplyViewSet)
-router.register('RoomBorrowingRecord', RoomBorrowingRecordViewSet)
 
 urlpatterns = [
 

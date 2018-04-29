@@ -1,8 +1,8 @@
 # College Website Server
-This is the official website of the software institute.  
-The web site server is written by Django-2.0.
+中南大学软件学院院网。网站使用Django-2.0编写，请使用python3.6及以上版本运行。  
 
-## Directory Structure
+
+## 目录结构
 - [**ArticleManagement**](ArticleManagement/README.md)
 - [**OnlineJudgeSystem**](OnlineJudgeSystem/README.md)
 - [**Pages**](Pages/READEME.md)
@@ -21,4 +21,4 @@ The web site server is written by Django-2.0.
 - db.sqlite3
 - manage.py
   
-The password of the super `user` root is 'admin123'
+The password of the super user `root` is 'admin123'

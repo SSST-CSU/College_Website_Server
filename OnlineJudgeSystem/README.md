@@ -1,20 +1,10 @@
-# Online Judge System
-Here is the django app which is the online judge system.  
-For the programming questions, there are two ways of online judge.
-One is the same evaluation system as the ACM competition, the 
-other is the same evaluation system with the OI competition.
-The former is not divided into steps,
-and there will be time to punish when the error code is submitted.
-The latter calculates the steps.
-As long as part of the test samples are available,
-the corresponding step points can be obtained, allowing the code
-to be submitted multiple times without time penalty.
-For multiple-choice questions and blank filling questions, 
-the score is directly compared with standard answers. 
-For the simple answer, it is necessary to make an artificial
-review.
-This app is made up of three parts,
-which are `Content`, `Problem`, `Registion`.
+# 在线测评系统
+这个App负责在线测评。有两种测评方式，一种是ACM赛制，另一种是OI赛制。
+对于ACM赛制，应该有罚时，没有步骤分，具体参考ACM竞赛的比赛规则。
+对于OI赛制，当通过部分测试样例的时候会有步骤分。  
+在线测评系统也应该要有选择题和填空题的测评功能，此类测评必须要保证答案唯一。  
+这个App有三个部分组成，分别是`Content`, `Problem`, `Registion`.
+分别代表比赛、题目和报名三种基本功能
   
 ## Content
 

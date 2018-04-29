@@ -15,8 +15,3 @@ class RoomViewSet(ModelViewSet):
 class RoomBorrowingApplyViewSet(ModelViewSet):
     serializer_class = RoomBorrowingApplySerializer
     queryset = RoomBorrowingApply.objects.all()
-
-
-class RoomBorrowingRecordViewSet(ModelViewSet):
-    serializer_class = RoomBorrowingRecordSerializer
-    queryset = RoomBorrowingRecord.objects.all()

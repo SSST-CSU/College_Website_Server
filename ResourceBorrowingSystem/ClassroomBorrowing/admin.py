@@ -8,13 +8,8 @@ class RoomAdmin(admin.ModelAdmin):
 
 
 class RoomBorrowingApplyAdmin(admin.ModelAdmin):
-    list_display = ['user', 'room', 'start_time', 'end_time']
-
-
-class RoomBorrowingRecordAdmin(admin.ModelAdmin):
-    list_display = ['user', 'room', 'start_time', 'end_time']
+    list_display = ['user', 'room', 'apply_time', 'start_time', 'end_time', 'stat']
 
 
 admin.site.register(Room, RoomAdmin)
 admin.site.register(RoomBorrowingApply, RoomBorrowingApplyAdmin)
-admin.site.register(RoomBorrowingRecord, RoomBorrowingRecordAdmin)

@@ -13,9 +13,3 @@ class RoomBorrowingApplySerializer(serializers.ModelSerializer):
     class Meta:
         model = RoomBorrowingApply
         fields = ['user', 'room', 'start_time', 'end_time']
-
-
-class RoomBorrowingRecordSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = RoomBorrowingRecord
-        fields = ['user', 'room', 'start_time', 'end_time']
