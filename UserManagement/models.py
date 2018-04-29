@@ -16,7 +16,6 @@ class UserLoginLog(models.Model):
     id = models.AutoField(primary_key=True)  # 日志编号：自动生成
     time = models.DateTimeField(auto_now=True)  # 时间：插入时生成
     user = models.ForeignKey(User, on_delete=models.CASCADE)  # 关联用户，级联删除
-<<<<<<< HEAD
 
     def __str__(self):
         return str(self.time) + str(' ') + str(self.user.name)
@@ -38,8 +37,3 @@ class UserPermission(models.Model):
 
     def __str__(self):
         return str(self.user.name) + '-' + str(self.permission.name)
-=======
-
-    def __str__(self):
-        return str(self.time) + ' ' + str(self.user.name)
->>>>>>> 9ec56b0552ed3ae9bb5351c316795c332c080acb

@@ -1,22 +1,16 @@
 from rest_framework.response import Response
-<<<<<<< HEAD
 from rest_framework.views import APIView
 from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
 from rest_framework.permissions import AllowAny
 # from rest_framework.decorators import action
-from rest_framework import viewsets
 # from UserManagement import models
-=======
-# from rest_framework.decorators import action
 from rest_framework import viewsets
 from UserManagement.models import *
->>>>>>> 9ec56b0552ed3ae9bb5351c316795c332c080acb
 from UserManagement.serializer import *
 
 # Create your views here.
 
 
-<<<<<<< HEAD
 # 登录
 class UserLoginAPIView(APIView):
     queryset = User.objects.all()
@@ -57,9 +51,8 @@ class UserViewSet(viewsets.ModelViewSet):
 class UserLoginLogViewSet(viewsets.ModelViewSet):
     queryset = UserLoginLog.objects.all()
     serializer_class = UserLoginLogSerializers
-=======
-class LoginViewSet(viewsets.ModelViewSet):
 
+
+class LoginViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializers
->>>>>>> 9ec56b0552ed3ae9bb5351c316795c332c080acb
