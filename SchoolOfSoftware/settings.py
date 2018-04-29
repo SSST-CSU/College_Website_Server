@@ -63,6 +63,12 @@ MIDDLEWARE = [
     'django_cas.middleware.CASMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ],
+}
+
 ROOT_URLCONF = 'SchoolOfSoftware.urls'
 
 # Use CAS Backend
