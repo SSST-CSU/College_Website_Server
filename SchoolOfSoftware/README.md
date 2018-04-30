@@ -1,1 +1,1 @@
-This is the project root directory.
+这是Django项目根目录

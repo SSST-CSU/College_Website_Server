@@ -1,4 +1,3 @@
 # HTML Pages Control
-This app is responsible for interacting with the front-end HTML,
-rendering all kinds of pages through `render()`,
-and this app also has to adjust the content of the interface.  
+这个App主要负责与前端交互，并且还承担部分显示界面的工作，
+在显示界面的部分使用`render()`进行。
