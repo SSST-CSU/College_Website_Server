@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- <link rel="stylesheet" href="css/style.css" /> -->
+	<link rel="stylesheet" href="../static/editor.md-master/css/editormd.css" />
+</head>
+<body>
+	<div id="my-editormd" >
+<textarea id="my-editormd-markdown-doc" name="my-editormd-markdown-doc" style="display:none;"></textarea>
+<!-- 注意：name属性的值-->
+<textarea id="my-editormd-html-code" name="my-editormd-html-code" style="display:none;"></textarea>
+</div>
+	<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="../static/editor.md-master/editormd.js"></script>
+<script type="text/javascript">
+  $(function() {
+      editormd("my-editormd", {//注意1：这里的就是上面的DIV的id属性值
+          width   : "90%",
+          height  : 640,
+          syncScrolling : "single",
+          path    : "../static/editor.md-master/lib/",//注意2：你的路径
+          saveHTMLToTextarea : true,//注意3：这个配置，方便post提交表单
+
+         /**上传图片相关配置如下*/
+         imageUpload : true,
+         imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+         imageUploadURL : "",//注意你后端的上传图片服务地址,指向了你处理图片上传的action
+      });
+  });
+</script>
+</body>
+</html>
