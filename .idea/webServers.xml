@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="e3b04e14-9ef0-4fa8-8e5f-2ad109c40c98" name="腾讯云服务器1" url="http://115.159.217.104">
+        <fileTransfer host="115.159.217.104" port="22" rootFolder="/home/ubuntu/ssust" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
