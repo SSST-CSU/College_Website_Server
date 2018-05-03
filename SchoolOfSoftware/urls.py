@@ -20,7 +20,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sso/', include('django_cas.urls')),
+    # path('sso/', include('django_cas.urls')),
     path('user/', include('UserManagement.urls')),
     path('borrow/', include('ResourceBorrowingSystem.urls')),
     path('oj/', include('OnlineJudgeSystem.urls')),

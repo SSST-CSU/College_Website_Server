@@ -18,7 +18,17 @@ class DutyAdmin(admin.ModelAdmin):
     list_display = ['name', 'department']
 
 
+class DutyPermitionAdmin(admin.ModelAdmin):
+    list_display = ['permition', 'duty']
+
+
+class UserDutyAdmin(admin.ModelAdmin):
+    list_display = ['user', 'duty']
+
+
 admin.site.register(User, UserAdmin)
 admin.site.register(Permition, PermitionAdmin)
 admin.site.register(Department, DepartmentAdmin)
 admin.site.register(Duty, DutyAdmin)
+admin.site.register(Duty_Permition, DutyPermitionAdmin)
+admin.site.register(User_Duty, UserDutyAdmin)
