@@ -1,11 +1,17 @@
 # 用户管理系统
 这是负责用户认证的App
-## Start 
-你需要安装django-cas-sso:  
-```
-pip install django-cas-sso
-```
-`django-cas-sso` 已经在`setting.py` 中的`MIDDLEWARE_CLASSES` 进行了设置，无需重复设置。  
-如果使用Django-2.0，有可能需要修改`django-cas-sso` 的源代码，或者你需要选择Django-2.0的分支进行安装。  
-如果对Django-sso有任何疑问，可以 [访问页面](https://pypi.org/project/django-cas-sso/).  
-  
+
+## 用户认证
+所有用户认证代码在 `Authentication.py` 中。认证完成后，用户的ID和密码将会保存在session中。  
+此处应当使用sso认证。
+
+## 权限树管理
+- 权限列表树（含有上级权限，上级权限可为空）
+
+
+## 部门树管理
+- 部门列表（含有上级部门，上级部门可为空）
+- 部门职务（将职务与部门绑定）
+- 任职表（用户与职务绑定，当人员更改后，只需要更改用户绑定的职务就可以直接更改权限）
+
+职务权限（职务与权限绑定，以防人员流动，修改次数多）

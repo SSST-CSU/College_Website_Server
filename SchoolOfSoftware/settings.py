@@ -25,7 +25,7 @@ SECRET_KEY = 'x7qi*_08(6#goiqwf3%l4fivq3fq4x5t9xkny+huf)teh7gj%!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', '115.159.217.104']
 
 
 # Application definition
@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_jinja',
     'django_filters',
-    'django_cas',
+    # 'django_cas',
 
     'ArticleManagement',
     'OnlineJudgeSystem',
@@ -60,22 +60,22 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 
     # Use CAS
-    'django_cas.middleware.CASMiddleware',
+    # 'django_cas.middleware.CASMiddleware',
 ]
 
 ROOT_URLCONF = 'SchoolOfSoftware.urls'
 
 # Use CAS Backend
-CAS_SERVER_URL = '127.0.0.1'    # Your Cas Server
-CAS_LOGOUT_COMPLETELY = False
+# CAS_SERVER_URL = '127.0.0.1'    # Your Cas Server
+# CAS_LOGOUT_COMPLETELY = False
 
 # If disabled CAS authentication for the entire django admin app, set False
-CAS_ADMIN_AUTH = False
+# CAS_ADMIN_AUTH = False
 
-AUTHENTICATION_BACKENDS = [
-  'django.contrib.auth.backends.ModelBackend',
-  'django_cas.backends.CASBackend',
-]
+# AUTHENTICATION_BACKENDS = [
+#   'django.contrib.auth.backends.ModelBackend',
+#   'django_cas.backends.CASBackend',
+# ]
 
 TEMPLATES = [
     {
