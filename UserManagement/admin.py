@@ -3,11 +3,31 @@ from .models import *
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'pwd']
+    list_display = ['id', 'name', 'pwd', 'stat']
+
+
+class TeacherAdmin(admin.ModelAdmin):
+    list_display = ['user']
+
+
+class MajorAdmin(admin.ModelAdmin):
+    list_display = ['name']
+
+
+class StudentGradeAdmin(admin.ModelAdmin):
+    list_display = ['name', 'major']
+
+
+class StudentClassAdmin(admin.ModelAdmin):
+    list_display = ['name', 'grade', 'headmaster', 'instructor']
+
+
+class StudentAdmin(admin.ModelAdmin):
+    list_display = ['user', 'student_class', 'birthday', 'instructor']
 
 
 class PermitionAdmin(admin.ModelAdmin):
-    list_display = ['name']
+    list_display = ['name', 'superior']
 
 
 class DepartmentAdmin(admin.ModelAdmin):
@@ -23,10 +43,15 @@ class DutyPermitionAdmin(admin.ModelAdmin):
 
 
 class UserDutyAdmin(admin.ModelAdmin):
-    list_display = ['user', 'duty']
+    list_display = ['user', 'duty', 'level']
 
 
 admin.site.register(User, UserAdmin)
+admin.site.register(Teacher, TeacherAdmin)
+admin.site.register(Major, MajorAdmin)
+admin.site.register(Student_Grade, StudentGradeAdmin)
+admin.site.register(Student_Class, StudentClassAdmin)
+admin.site.register(Student, StudentAdmin)
 admin.site.register(Permition, PermitionAdmin)
 admin.site.register(Department, DepartmentAdmin)
 admin.site.register(Duty, DutyAdmin)
