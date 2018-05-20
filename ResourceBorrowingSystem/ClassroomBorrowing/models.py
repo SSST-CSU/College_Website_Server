@@ -1,5 +1,5 @@
 from django.db import models
-from UserManagement.models import User
+from UserManagement.models.User import User
 
 
 class Room(models.Model):

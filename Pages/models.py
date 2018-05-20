@@ -11,7 +11,7 @@ class Page(models.Model):
     type = models.IntegerField(default=0)
 
     def __str__(self):
-        return str(self.name) + str('-') + str(type)
+        return str(self.name) + str('-') + str(self.type)
 
     class Meta:
         verbose_name = '页面显示状态'

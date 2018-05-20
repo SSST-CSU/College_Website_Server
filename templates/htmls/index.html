@@ -43,23 +43,27 @@
                     {% endif %}
                 </ul>
                 <ul class="nav navbar-nav">
-                    <li><a href="#">学院概况</a></li>
-                    <li><a href="#">师资队伍</a></li>
+                {% for nav in navbar %}
+                    {% if nav.len == 1 %}
+                    <li><a href="{{ nav.val.0.herf }}">{{ nav.val.0.name }}</a></li>
+                    {% else %}
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">教育教学<span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">本科生教育</a></li>
-                            <li><a href="#">研究生教育</a></li>
-                        </ul>
+                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown">
+                        {{ nav.val.0.name }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% for subnav in nav.val %}
+                        {% if forloop.counter0 != 0 %}
+                        <li><a href="{{ subnav.herf }}">{{ subnav.name }}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
                     </li>
-                    <li><a href="#">实践教学</a></li>
-                    <li><a href="#">科学研究</a></li>
-                    <li><a href="#">学生工作</a></li>
-                    <li><a href="#">信息服务</a></li>
-                    <li><a href="#">国际教育</a></li>
-                    {% if user != None %}
-                    <li><a href="#">个人中心</a></li>
                     {% endif %}
+                {% endfor %}
+
+                {% if user != None %}
+                    <li><a href="#">个人中心</a></li>
+                {% endif %}
                 </ul>
             </div>
         </div>
@@ -134,22 +138,11 @@
 
         <!-- 简介 -->
         <div class="row" id="summary-container">
-            <div class="col-md-4">
+        {% if column != None %}
+            {% for col in column %}
+            <div class="{{ col_md }}">
 
-                <h2>栏目</h2>
-
-                <p>
-                    <li>内容</li>
-                    <li>内容</li>
-                    <li>内容</li>
-                </p>
-
-                <p><a class="btn btn-default" href="#" role="button">更多</a></p>
-            </div>
-
-            <div class="col-md-4">
-
-                <h2>栏目</h2>
+                <h2>{{ col.column.name }}</h2>
 
                 <p>
                     <li>内容</li>
@@ -159,26 +152,16 @@
 
                 <p><a class="btn btn-default" href="#" role="button">更多</a></p>
             </div>
-            <div class="col-md-4">
-
-                <h2>栏目</h2>
-
-                <p>
-                    <li>内容</li>
-                    <li>内容</li>
-                    <li>内容</li>
-                </p>
-
-                <p><a class="btn btn-default" href="#" role="button">更多</a></p>
-            </div>
+            {% endfor %}
+        {% endif %}
         </div>
 
         <!-- 版权 -->
         <footer>
             <hr>
-            <p class="pull-right"><a href="#top">回到顶部</a></p>
+{#            <p class="pull-right"><a href="#top">回到顶部</a></p>#}
 
-            <p>&copy; 2002-2018 中南大学软件学院 </p>
+            <p align="center">&copy; 2002-2018 中南大学软件学院 </p>
         </footer>
     </div>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->

@@ -21,4 +21,4 @@
 - db.sqlite3
 - manage.py
   
-The password of the super user `root` is 'admin123'
+超级管理员`root` 的密码是 admin123

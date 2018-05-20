@@ -1,5 +1,15 @@
 from django.contrib import admin
-from .models import *
+from .models.Department import Department
+from .models.Duty import Duty
+from .models.Duty_Permition import Duty_Permition
+from .models.Major import Major
+from .models.Permition import Permition
+from .models.Student import Student
+from .models.Student_Class import Student_Class
+from .models.Student_Grade import Student_Grade
+from .models.Teacher import Teacher
+from .models.User import User
+from .models.User_Duty import User_Duty
 
 
 class UserAdmin(admin.ModelAdmin):

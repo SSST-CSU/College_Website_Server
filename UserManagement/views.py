@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from UserManagement.models import User
+from UserManagement.models.User import User
 import json
 
 
