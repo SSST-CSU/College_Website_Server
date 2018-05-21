@@ -4,6 +4,11 @@ body {
     color: #5a5a5a;
 }
 
+/* 超链接去掉下划线 */
+a {
+    text-decoration: none
+}
+
 /* 轮播广告 */
 #carousel-example-generic {
     width: 100%;

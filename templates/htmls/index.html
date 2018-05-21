@@ -31,7 +31,7 @@
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <!--商标-->
-                <a class="navbar-brand" href="#">中南大学软件学院</a>
+                <a class="navbar-brand" href="/">中南大学软件学院</a>
             </div>
 
             <div class="navbar-collapse collapse">
@@ -39,7 +39,8 @@
                     {% if user == None %}
                     <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user"></span>  登录  </a></li>
                     {% else %}
-                    <li><a href="#" onclick="logout()"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
+                    <li><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
                     {% endif %}
                 </ul>
                 <ul class="nav navbar-nav">
@@ -62,7 +63,7 @@
                 {% endfor %}
 
                 {% if user != None %}
-                    <li><a href="#">个人中心</a></li>
+                    <li><a href="/usercenter/">个人中心</a></li>
                 {% endif %}
                 </ul>
             </div>
@@ -135,22 +136,25 @@
 
     <!-- 主要内容 -->
     <div class="container summary">
-
-        <!-- 简介 -->
         <div class="row" id="summary-container">
         {% if column != None %}
             {% for col in column %}
             <div class="{{ col_md }}">
 
-                <h2>{{ col.column.name }}</h2>
+                <h2 onclick="gotoColumn('{{ col.title.column.name }}')">{{ col.title.column.name }}</h2>
 
                 <p>
-                    <li>内容</li>
-                    <li>内容</li>
-                    <li>内容</li>
+                {% if col.article.0 != None %}
+                    <li onclick="gotoArticle('{{ col.article.0.id }}')">{{ col.article.0.title }}</li>
+                {% endif %}
+                {% if col.article.1 != None %}
+                    <li onclick="gotoArticle('{{ col.article.0.id }}')">{{ col.article.1.title }}</li>
+                {% endif %}
+                {% if col.article.2 != None %}
+                    <li onclick="gotoArticle('{{ col.article.0.id }}')">{{ col.article.2.title }}</li>
+                {% endif %}
                 </p>
-
-                <p><a class="btn btn-default" href="#" role="button">更多</a></p>
+{#                <p><a class="btn btn-default" href="#" role="button">更多</a></p>#}
             </div>
             {% endfor %}
         {% endif %}

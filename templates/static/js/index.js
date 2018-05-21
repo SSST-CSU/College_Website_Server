@@ -46,3 +46,11 @@ function logout() {
 function back() {
     history.back()
 }
+
+function gotoColumn(name) {
+    
+}
+
+function gotoArticle(id) {
+    
+}
