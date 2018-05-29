@@ -13,7 +13,7 @@ from .models.User_Duty import User_Duty
 
 
 class UserAdmin(admin.ModelAdmin):
-    list_display = ['id', 'name', 'pwd', 'stat']
+    list_display = ['id', 'name', 'pwd', 'stat', 'creator']
 
 
 class TeacherAdmin(admin.ModelAdmin):

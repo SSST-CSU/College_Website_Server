@@ -21,11 +21,11 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('sso/', include('django_cas.urls')),
-    path('user/', include('UserManagement.urls')),
-    path('borrow/', include('ResourceBorrowingSystem.urls')),
-    path('oj/', include('OnlineJudgeSystem.urls')),
+    path('user/', include('UserManagement.urls', namespace='user')),
+    path('borrow/', include('ResourceBorrowingSystem.urls', namespace='borrow')),
+    path('oj/', include('OnlineJudgeSystem.urls', namespace='oj')),
 
-    path('', include('Pages.urls')),
+    path('', include('Pages.urls', namespace='page')),
 ]
 
 # urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
