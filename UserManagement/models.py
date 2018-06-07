@@ -6,6 +6,6 @@ from .models import Student_Class
 from .models import Student
 from .models import Permition
 from .models import Department
-from .models import Duty
+from .models import Duty_Department
 from .models import Duty_Permition
 from .models import User_Duty

@@ -6,6 +6,8 @@ router = DefaultRouter()
 router.register('Room', RoomViewSet)
 router.register('RoomBorrowingApply', RoomBorrowingApplyViewSet)
 
+app_name = 'ResourceBorrowingSystem'
+
 urlpatterns = [
 
 ]

@@ -1,12 +1,11 @@
 from django.contrib import admin
 from .models.Department import Department
-from .models.Duty import Duty
-from .models.Duty_Permition import Duty_Permition
-from .models.Major import Major
-from .models.Permition import Permition
-from .models.Student import Student
-from .models.Student_Class import Student_Class
-from .models.Student_Grade import Student_Grade
+from .models.Duty_Department import Duty_Department
+from .models.Student import Major
+from .models.Student import Undergraduate_Student
+from .models.Student import Graduate_Student
+from .models.Student import Student_Class
+from .models.Student import Student_Grade
 from .models.Teacher import Teacher
 from .models.User import User
 from .models.User_Duty import User_Duty
@@ -17,7 +16,7 @@ class UserAdmin(admin.ModelAdmin):
 
 
 class TeacherAdmin(admin.ModelAdmin):
-    list_display = ['user']
+    list_display = ['user', 'title', 'is_external_unit']
 
 
 class MajorAdmin(admin.ModelAdmin):
@@ -36,24 +35,16 @@ class StudentAdmin(admin.ModelAdmin):
     list_display = ['user', 'student_class', 'birthday', 'instructor']
 
 
-class PermitionAdmin(admin.ModelAdmin):
-    list_display = ['name', 'superior']
-
-
 class DepartmentAdmin(admin.ModelAdmin):
     list_display = ['name', 'superior']
 
 
-class DutyAdmin(admin.ModelAdmin):
-    list_display = ['name', 'department']
-
-
-class DutyPermitionAdmin(admin.ModelAdmin):
-    list_display = ['permition', 'duty']
+class DutyDepartmentAdmin(admin.ModelAdmin):
+    list_display = ['duty', 'department']
 
 
 class UserDutyAdmin(admin.ModelAdmin):
-    list_display = ['user', 'duty', 'level']
+    list_display = ['user', 'duty']
 
 
 admin.site.register(User, UserAdmin)
@@ -62,8 +53,6 @@ admin.site.register(Major, MajorAdmin)
 admin.site.register(Student_Grade, StudentGradeAdmin)
 admin.site.register(Student_Class, StudentClassAdmin)
 admin.site.register(Student, StudentAdmin)
-admin.site.register(Permition, PermitionAdmin)
 admin.site.register(Department, DepartmentAdmin)
-admin.site.register(Duty, DutyAdmin)
-admin.site.register(Duty_Permition, DutyPermitionAdmin)
+admin.site.register(Duty_Department, DutyDepartmentAdmin)
 admin.site.register(User_Duty, UserDutyAdmin)
