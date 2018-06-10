@@ -4,6 +4,7 @@ from .Teacher import Teacher
 
 
 class Major_Manager(models.Manager):
+    @staticmethod
     def get_major_from_student(self, student):
         """
         获取学生专业
@@ -104,6 +105,16 @@ class Undergraduate_Student(models.Model):
     class Meta:
         verbose_name = '本科生'
         verbose_name_plural = '本科生列表'
+        permissions = (
+            ('view_undergraduate', '可以查看本科生'),
+            ('create_undergraduate', '可以增加本科生'),
+            ('update_undergraduate', '可以修改本科生'),
+            ('delete_undergraduate', '可以删除本科生'),
+        )
+
+
+class Graduate_Student_Manager(models.Manager):
+    pass
 
 
 class Graduate_Student(models.Model):
@@ -112,6 +123,7 @@ class Graduate_Student(models.Model):
     instructor = models.ForeignKey(Teacher, verbose_name='导师', on_delete=models.CASCADE, null=True, blank=True)
     on_the_job = models.BooleanField(verbose_name='是否在职')
     company = models.CharField(verbose_name='工作单位', max_length=50, null=True, blank=True)
+    objects = Graduate_Student_Manager()
 
     def __str__(self):
         return str(self.user)
@@ -122,5 +134,11 @@ class Graduate_Student(models.Model):
     class Meta:
         verbose_name = '研究生'
         verbose_name_plural = '研究生列表'
+        permissions = (
+            ('view_graduate', '可以查看研究生'),
+            ('create_graduate', '可以增加研究生'),
+            ('update_graduate', '可以修改研究生'),
+            ('delete_graduate', '可以删除研究生'),
+        )
 
 
