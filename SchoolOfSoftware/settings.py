@@ -83,6 +83,11 @@ TEMPLATES = [
     },
 ]
 
+# session 设置
+SESSION_COOKIE_AGE = 60 * 20 # 20分钟
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True # 关闭浏览器，则COOKIE失效
+
 WSGI_APPLICATION = 'SchoolOfSoftware.wsgi.application'
 
 

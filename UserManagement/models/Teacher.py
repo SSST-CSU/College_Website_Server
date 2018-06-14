@@ -2,8 +2,7 @@ from django.db import models
 from .User import *
 
 
-class Teacher(models.Model):
-    user = models.ForeignKey(User, verbose_name='教师用户', on_delete=models.CASCADE, primary_key=True)
+class Teacher(User):
     title_choice = (
         ('教授', '教授'),
         ('副教授', '副教授'),
@@ -50,7 +49,7 @@ class Teacher(models.Model):
     is_external_unit = models.BooleanField(verbose_name='是否外聘', default=False)
 
     def __str__(self):
-        return str(self.user)
+        return super.__str__(self)
 
     class Meta:
         verbose_name = '教师'

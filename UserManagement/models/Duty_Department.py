@@ -4,7 +4,7 @@ from .Department import Department
 
 
 class Duty_Department(models.Model):
-    duty = models.ForeignKey(DutyUser, on_delete=models.CASCADE, verbose_name='职务', max_length=30)
+    duty = models.ForeignKey(DutyUser, on_delete=models.CASCADE, verbose_name='职务')
     department = models.ForeignKey(Department, verbose_name='部门', on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):

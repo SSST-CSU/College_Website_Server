@@ -1,5 +1,7 @@
 from django.db import models
 from .User_Duty import User_Duty
+from .Student import Undergraduate_Student, Graduate_Student, Student_Class, Student_Grade
+from .Teacher import Teacher
 
 
 class User_Manager(models.Manager):
@@ -29,6 +31,32 @@ class User_Manager(models.Manager):
         :return: queryset<User_Duty>
         """
         return User_Duty.objects.filter(user=self)
+
+    def get_class_users(self, user):
+        """
+        返回自己班级的所有用户
+        :return: queryset<User>
+        """
+        if isinstance(user, Undergraduate_Student):
+            return self.filter(student_class=user.student_class)
+        elif isinstance(user, Graduate_Student):
+            return self.filter(student_class=user.student_class)
+        else:
+            return User.objects.none()
+
+    def get_grade_users(self, user):
+        """
+        返回自己年级的所有用户
+        :param user:
+        :return: queryset<User>
+        """
+        result = User.objects.none()
+        if isinstance(user, Undergraduate_Student) or isinstance(user, Graduate_Student):
+            student_grade = user.student_class.grade
+            student_classes = Student_Class.objects.filter(grade=student_grade)
+            for student_class in student_classes:
+                result = result | self.filter(student_class=student_class)
+        return result
 
 
 class User(models.Model):
@@ -271,9 +299,59 @@ class User(models.Model):
         ('ZR', 'ZR扎伊尔'),
         ('ZW', 'ZW津巴布韦'),
     )
-    country_and_region = models.CharField(verbose_name='国家或地区', max_length=3, choices=country_and_region_choices, default='CN')
-    creator = models.ForeignKey('self', on_delete=models.SET_NULL, null=True, blank=True, verbose_name='用户创建者')
+    country_and_region = models.CharField(verbose_name='国家或地区', max_length=3, choices=country_and_region_choices,
+                                          default='CN')
+    creator = models.ForeignKey('self', on_delete=models.SET_NULL, verbose_name='用户创建者')
     objects = User_Manager()
+
+    def to_student(self):
+        """
+        返回student对象，如果不存在student，则为None
+        :return: object<student>
+        """
+        result = None
+        try:
+            # 如果本科生
+            result = Undergraduate_Student.objects.get(id=self.id)
+        except:
+            try:
+                # 如果研究生
+                result = Graduate_Student.objects.get(id=self.id)
+            except:
+                # 非学生用户，或学生用户非在籍
+                pass
+        return result
+
+    def to_teacher(self):
+        """
+        返回teacher对象，如果不存在teacher，则为None
+        :return:
+        """
+        result = None
+        try:
+            # 如果Tescher
+            result = Teacher.objects.get(id=self.id)
+        except:
+            pass
+        return result
+
+    def get_user_class(self):
+        """
+        返回用户的班级，如果没有班级，则为None
+        :return: object<student_class>
+        """
+        result = None
+        try:
+            # 如果本科生
+            result = Undergraduate_Student.objects.get(id=self.id).student_class
+        except:
+            try:
+                # 如果研究生
+                result = Graduate_Student.objects.get(id=self.id).student_class
+            except:
+                # 非学生用户，或学生用户非在籍
+                pass
+        return result
 
     def __str__(self):
         return str(self.id) + str('-') + str(self.name)
@@ -283,11 +361,16 @@ class User(models.Model):
         verbose_name_plural = '用户列表'
         permissions = (
             ('view_my_users', '可以查看自己创建的用户'),
+            ('view_class_users', '可以查看自己班级的用户'),
+            ('view_grade_users', '可以查看自己年级的用户'),
             ('view_all_users', '可以查看所有用户'),
             ('create_user', '可以增加用户'),
             ('update_my_users', '可以修改自己创建的用户'),
+            ('update_class_users', '可以修改自己班级的用户'),
+            ('update_grade_users', '可以修改自己年级的用户'),
             ('update_all_users', '可以修改所有用户'),
             ('delete_my_users', '可以删除自己创建的用户'),
+            ('delete_class_users', '可以删除自己班级的用户'),
+            ('delete_grade_users', '可以删除自己年级的用户'),
             ('delete_all_users', '可以删除所有用户'),
         )
-

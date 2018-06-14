@@ -1,5 +1,5 @@
 from django.db import models
-from .User import User
+from .User import User, User_Manager
 from .Teacher import Teacher
 
 
@@ -87,17 +87,16 @@ class Student_Class(models.Model):
         )
 
 
-class Undergraduate_Student_Manager(models.Manager):
+class Undergraduate_Student_Manager(User_Manager):
     pass
 
 
-class Undergraduate_Student(models.Model):
-    user = models.ForeignKey(User, verbose_name='本科生用户', on_delete=models.CASCADE, primary_key=True)
+class Undergraduate_Student(User):
     student_class = models.ForeignKey(Student_Class, verbose_name='班级', on_delete=models.DO_NOTHING, null=True, blank=True)
     objects = Undergraduate_Student_Manager()
 
     def __str__(self):
-        return str(self.user)
+        return super.__str__(self)
 
     def get_major(self):
         return self.student_class.grade.major
@@ -113,12 +112,11 @@ class Undergraduate_Student(models.Model):
         )
 
 
-class Graduate_Student_Manager(models.Manager):
+class Graduate_Student_Manager(User_Manager):
     pass
 
 
-class Graduate_Student(models.Model):
-    user = models.ForeignKey(User, verbose_name='研究生用户', on_delete=models.CASCADE, primary_key=True)
+class Graduate_Student(User):
     student_class = models.ForeignKey(Student_Class, verbose_name='班级', on_delete=models.DO_NOTHING, null=True, blank=True)
     instructor = models.ForeignKey(Teacher, verbose_name='导师', on_delete=models.CASCADE, null=True, blank=True)
     on_the_job = models.BooleanField(verbose_name='是否在职')
@@ -126,7 +124,7 @@ class Graduate_Student(models.Model):
     objects = Graduate_Student_Manager()
 
     def __str__(self):
-        return str(self.user)
+        return super.__str__(self)
 
     def get_major(self):
         return self.student_class.grade.major
