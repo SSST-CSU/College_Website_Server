@@ -1,20 +1,21 @@
 from django.contrib import admin
 from .models import *
 
+
 class PageAdmin(admin.ModelAdmin):
     list_display = ['name', 'type']
 
 
 class NavbarObjectAdmin(admin.ModelAdmin):
-    list_display = ['page_name', 'serial_number', 'name', 'herf', 'superior']
+    list_display = ['page', 'serial_number', 'name', 'herf', 'superior']
 
 
 class DisplayImageAdmin(admin.ModelAdmin):
-    list_display = ['page_name', 'serial_number', 'name', 'herf']
+    list_display = ['page', 'serial_number', 'name', 'herf']
 
 
 class DisplayColumnAdmin(admin.ModelAdmin):
-    list_display = ['page_name', 'serial_number', 'column']
+    list_display = ['page', 'serial_number', 'column']
 
 
 admin.site.register(Page, PageAdmin)

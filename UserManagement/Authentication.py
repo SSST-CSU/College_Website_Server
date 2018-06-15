@@ -1,4 +1,4 @@
-from UserManagement.models import *
+from UserManagement.models.User import User
 
 
 def AuthenticateUser(user_id, user_pwd):

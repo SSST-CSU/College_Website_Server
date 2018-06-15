@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_jinja',
     'django_filters',
-    # 'django_cas',
 
     'ArticleManagement',
     'OnlineJudgeSystem',
@@ -58,24 +57,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-
-    # Use CAS
-    # 'django_cas.middleware.CASMiddleware',
 ]
 
 ROOT_URLCONF = 'SchoolOfSoftware.urls'
 
-# Use CAS Backend
-# CAS_SERVER_URL = '127.0.0.1'    # Your Cas Server
-# CAS_LOGOUT_COMPLETELY = False
-
-# If disabled CAS authentication for the entire django admin app, set False
-# CAS_ADMIN_AUTH = False
-
-# AUTHENTICATION_BACKENDS = [
-#   'django.contrib.auth.backends.ModelBackend',
-#   'django_cas.backends.CASBackend',
-# ]
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 TEMPLATES = [
     {
@@ -93,6 +82,11 @@ TEMPLATES = [
         },
     },
 ]
+
+# session 设置
+SESSION_COOKIE_AGE = 60 * 20 # 20分钟
+SESSION_SAVE_EVERY_REQUEST = True
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True # 关闭浏览器，则COOKIE失效
 
 WSGI_APPLICATION = 'SchoolOfSoftware.wsgi.application'
 

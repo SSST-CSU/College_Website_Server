@@ -3,7 +3,7 @@ from .models import *
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ['creation_time', 'title', 'author', 'editor', 'content']
+    list_display = ['creation_time', 'title', 'author', 'editor']
 
 
 class ColumnAdmin(admin.ModelAdmin):

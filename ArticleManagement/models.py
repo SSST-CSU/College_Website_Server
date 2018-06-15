@@ -44,6 +44,7 @@ class ArchivalArticles(models.Model):
         return str(self.article) + str('-') + str(self.column)
 
     class Meta:
+        unique_together = ('article', 'column')
         verbose_name = '文章的栏目'
         verbose_name_plural = '文章的栏目'
 

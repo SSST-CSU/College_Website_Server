@@ -1,0 +1,14 @@
+body {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: #5a5a5a;
+}
+
+#carousel-example-generic.carousel-caption {
+    z-index: 10;
+}
+#carousel-example-generic.carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 1.8;
+}
