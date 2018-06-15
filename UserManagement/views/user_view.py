@@ -28,7 +28,6 @@ class UserViewSet(ModelViewSet):
             perm = True
             queryset = queryset | User.objects.get_my_users()
         if 'UserManagement.view_class_users' in perm_set:
-
             try:
                 user = User.objects.get(id=request.session['user_id'])
                 queryset = queryset | User.objects.get_class_users(user)
@@ -37,7 +36,6 @@ class UserViewSet(ModelViewSet):
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
         if 'UserManagement.view_grade_users' in perm_set:
-
             try:
                 user = User.objects.get(id=request.session['user_id'])
                 queryset = queryset | User.objects.get_grade_users(user)
@@ -77,7 +75,6 @@ class UserViewSet(ModelViewSet):
             perm = True
             queryset = queryset | User.objects.get_my_users()
         if 'UserManagement.update_class_users' in perm_set:
-
             try:
                 user = User.objects.get(id=request.session['user_id'])
                 queryset = queryset | User.objects.get_class_users(user)
@@ -86,7 +83,6 @@ class UserViewSet(ModelViewSet):
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
         if 'UserManagement.update_grade_users' in perm_set:
-
             try:
                 user = User.objects.get(id=request.session['user_id'])
                 queryset = queryset | User.objects.get_grade_users(user)
@@ -115,7 +111,6 @@ class UserViewSet(ModelViewSet):
             perm = True
             queryset = queryset | User.objects.get_my_users()
         if 'UserManagement.delete_class_users' in perm_set:
-
             try:
                 user = User.objects.get(id=request.session['user_id'])
                 queryset = queryset | User.objects.get_class_users(user)
@@ -124,7 +119,6 @@ class UserViewSet(ModelViewSet):
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
         if 'UserManagement.delete_grade_users' in perm_set:
-
             try:
                 user = User.objects.get(id=request.session['user_id'])
                 queryset = queryset | User.objects.get_grade_users(user)

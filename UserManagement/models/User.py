@@ -63,7 +63,7 @@ class User(models.Model):
     id = models.CharField(verbose_name='学工号', max_length=12, primary_key=True)
     name = models.CharField(verbose_name='姓名', max_length=10)
     pwd = models.CharField(verbose_name='密码', max_length=25)
-    stat = models.CharField(verbose_name='用户状态', max_length=20, null=True, blank=True)
+    stat = models.BooleanField(verbose_name='用户状态', default=True)  # 0 不可用 1 可用
     name_used_before = models.CharField(verbose_name='曾用名', max_length=10, null=True, blank=True)
     sex = models.IntegerField(verbose_name='性别', max_length=1, choices=((0, '男'), (1, '女')))
     birthday = models.DateField(verbose_name='出生日期')

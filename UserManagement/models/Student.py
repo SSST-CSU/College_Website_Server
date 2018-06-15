@@ -4,7 +4,6 @@ from .Teacher import Teacher
 
 
 class Major_Manager(models.Manager):
-    @staticmethod
     def get_major_from_student(self, student):
         """
         获取学生专业
