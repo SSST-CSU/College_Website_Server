@@ -51,12 +51,15 @@ class Teacher(User):
     def __str__(self):
         return super.__str__(self)
 
-    class Meta:
+    class Meta(User.Meta):
         verbose_name = '教师'
         verbose_name_plural = '教师列表'
         permissions = (
-            ('view_teacher', '可以查看老师'),
-            ('create_teacher', '可以增加老师'),
-            ('update_teacher', '可以修改老师'),
-            ('delete_teacher', '可以删除老师'),
+            ('view_my_teachers', '可以查看自己创建的教师用户'),
+            ('view_all_teachers', '可以查看所有教师用户'),
+            ('create_teacher', '可以增加教师用户'),
+            ('update_my_teachers', '可以修改自己创建的教师用户'),
+            ('update_all_teachers', '可以修改所有教师用户'),
+            ('delete_my_teachers', '可以删除自己创建的教师用户'),
+            ('delete_all_teachers', '可以删除所有教师用户'),
         )

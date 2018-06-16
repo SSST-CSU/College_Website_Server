@@ -364,11 +364,14 @@ class User(models.Model):
             ('view_class_users', '可以查看自己班级的用户'),
             ('view_grade_users', '可以查看自己年级的用户'),
             ('view_all_users', '可以查看所有用户'),
+
             ('create_user', '可以增加用户'),
+
             ('update_my_users', '可以修改自己创建的用户'),
             ('update_class_users', '可以修改自己班级的用户'),
             ('update_grade_users', '可以修改自己年级的用户'),
             ('update_all_users', '可以修改所有用户'),
+
             ('delete_my_users', '可以删除自己创建的用户'),
             ('delete_class_users', '可以删除自己班级的用户'),
             ('delete_grade_users', '可以删除自己年级的用户'),

@@ -7,8 +7,11 @@ from rest_framework.viewsets import ModelViewSet
 
 from ..models.Student import *
 from ..serializers.student_serializer import *
+from .user_view import UserViewSet
 
 import json
 
+class UndergraduateStudentViewSet(UserViewSet):
+    pass
 
 

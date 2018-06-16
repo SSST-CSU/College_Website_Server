@@ -100,19 +100,35 @@ class Undergraduate_Student(User):
     def get_major(self):
         return self.student_class.grade.major
 
-    class Meta:
+    class Meta(User.Meta):
         verbose_name = '本科生'
         verbose_name_plural = '本科生列表'
         permissions = (
-            ('view_undergraduate', '可以查看本科生'),
-            ('create_undergraduate', '可以增加本科生'),
-            ('update_undergraduate', '可以修改本科生'),
-            ('delete_undergraduate', '可以删除本科生'),
+            ('view_my_us', '可以查看自己创建的本科生'),
+            ('view_class_us', '可以查看自己班级的本科生'),
+            ('view_grade_us', '可以查看自己年级的本科生'),
+            ('view_all_us', '可以查看所有本科生'),
+
+            ('create_us', '可以增加本科生'),
+
+            ('update_my_us', '可以修改自己创建的本科生'),
+            ('update_class_us', '可以修改自己班级的本科生'),
+            ('update_grade_us', '可以修改自己年级的本科生'),
+            ('update_all_us', '可以修改所有本科生'),
+
+            ('delete_my_us', '可以删除自己创建的本科生'),
+            ('delete_class_us', '可以删除自己班级的本科生'),
+            ('delete_grade_us', '可以删除自己年级的本科生'),
+            ('delete_all_us', '可以删除所有本科生'),
         )
 
 
 class Graduate_Student_Manager(User_Manager):
-    pass
+    def get_teacher_gs(self):
+        """
+        返回同一个导师的用户
+        :return: queryset<gs>
+        """
 
 
 class Graduate_Student(User):
@@ -128,14 +144,29 @@ class Graduate_Student(User):
     def get_major(self):
         return self.student_class.grade.major
 
-    class Meta:
+    class Meta(User.Meta):
         verbose_name = '研究生'
         verbose_name_plural = '研究生列表'
         permissions = (
-            ('view_graduate', '可以查看研究生'),
-            ('create_graduate', '可以增加研究生'),
-            ('update_graduate', '可以修改研究生'),
-            ('delete_graduate', '可以删除研究生'),
+            ('view_my_gs', '可以查看自己创建的研究生'),
+            ('view_class_gs', '可以查看自己班级的研究生'),
+            ('view_grade_gs', '可以查看自己年级的研究生'),
+            ('view_teacher_gs', '可以查看自己导师的研究生'),
+            ('view_all_gs', '可以查看所有研究生'),
+
+            ('create_gs', '可以增加研究生'),
+
+            ('update_my_gs', '可以修改自己创建的研究生'),
+            ('update_class_gs', '可以修改自己班级的研究生'),
+            ('update_grade_gs', '可以修改自己年级的研究生'),
+            ('update_teacher_gs', '可以修改自己导师的研究生'),
+            ('update_all_gs', '可以修改所有研究生'),
+
+            ('delete_my_gs', '可以删除自己创建的研究生'),
+            ('delete_class_gs', '可以删除自己班级的研究生'),
+            ('delete_grade_gs', '可以删除自己年级的研究生'),
+            ('delete_teacher_gs', '可以删除自己导师的研究生'),
+            ('delete_all_gs', '可以删除所有研究生'),
         )
 
 
