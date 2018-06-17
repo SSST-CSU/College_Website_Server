@@ -1,11 +1,7 @@
 from .models import User
 from .models import Teacher
-from .models import Major
-from .models import Student_Grade
-from .models import Student_Class
 from .models import Student
-from .models import Permition
+# from .models import Permition
 from .models import Department
 from .models import Duty_Department
-from .models import Duty_Permition
 from .models import User_Duty
