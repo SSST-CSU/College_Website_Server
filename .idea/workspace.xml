@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="298f0d6c-6e09-421b-bf2e-f593cdce1f17" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/models.py" afterPath="$PROJECT_DIR$/UserManagement/models.py" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/models/Student.py" afterPath="$PROJECT_DIR$/UserManagement/models/Student.py" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/models/User.py" afterPath="$PROJECT_DIR$/UserManagement/models/User.py" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/models/User_Duty.py" afterPath="$PROJECT_DIR$/UserManagement/models/User_Duty.py" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/serializers/student_serializer.py" afterPath="$PROJECT_DIR$/UserManagement/serializers/student_serializer.py" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/views/student_view.py" afterPath="$PROJECT_DIR$/UserManagement/views/student_view.py" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/views/user_view.py" afterPath="$PROJECT_DIR$/UserManagement/views/user_view.py" />
     </list>
     <ignored path="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\website\.idea\shelf/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,24 +28,12 @@
       <file leaf-file-name="User.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="373" column="0" lean-forward="false" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+            <state relative-caret-position="2430">
+              <caret line="84" column="79" lean-forward="true" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <element signature="e#2412#2685#0" expanded="false" />
-                <element signature="e#3027#8384#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Student.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserManagement/models/Student.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="26" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
+                <element signature="e#3097#3370#0" expanded="false" />
+                <element signature="e#3712#9069#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -49,11 +42,57 @@
       <file leaf-file-name="user_view.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserManagement/views/user_view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+            <state relative-caret-position="1080">
+              <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Student.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserManagement/models/Student.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="147" column="49" lean-forward="true" selection-start-line="147" selection-start-column="49" selection-end-line="147" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student_view.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UserManagement/views/student_view.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3510">
+              <caret line="504" column="13" lean-forward="true" selection-start-line="504" selection-start-column="13" selection-end-line="504" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="268">
+              <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_serializer.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UserManagement/serializers/user_serializer.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -74,23 +113,11 @@
         <entry file="file://$PROJECT_DIR$/UserManagement/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="1393">
-                <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+              <first_editor relative-caret-position="343">
+                <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="8" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="student_view.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/UserManagement/views/student_view.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1290">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -149,7 +176,6 @@
         <option value="$PROJECT_DIR$/templates/htmls/index.html" />
         <option value="$PROJECT_DIR$/templates/htmls/user_center.html" />
         <option value="$PROJECT_DIR$/templates/htmls/403.html" />
-        <option value="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py" />
         <option value="$PROJECT_DIR$/UserManagement/Authentication.py" />
         <option value="$PROJECT_DIR$/UserManagement/views.py" />
         <option value="$PROJECT_DIR$/SchoolOfSoftware/urls.py" />
@@ -159,11 +185,9 @@
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/urls.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/Duty.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/Duty_Permition.py" />
-        <option value="$PROJECT_DIR$/UserManagement/models/User_Duty.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/Student_Class.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/Student_Grade.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/Major.py" />
-        <option value="$PROJECT_DIR$/UserManagement/serializers/student_serializer.py" />
         <option value="$PROJECT_DIR$/UserManagement/views/teacher_view.py" />
         <option value="$PROJECT_DIR$/UserManagement/urls.py" />
         <option value="$PROJECT_DIR$/UserManagement/serializers/teacher_serializer.py" />
@@ -172,11 +196,14 @@
         <option value="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/Duty_Department.py" />
         <option value="$PROJECT_DIR$/UserManagement/serializers/user_serializer.py" />
-        <option value="$PROJECT_DIR$/UserManagement/views/user_view.py" />
         <option value="$PROJECT_DIR$/UserManagement/README.md" />
         <option value="$PROJECT_DIR$/UserManagement/models/Teacher.py" />
-        <option value="$PROJECT_DIR$/UserManagement/models/User.py" />
         <option value="$PROJECT_DIR$/UserManagement/models.py" />
+        <option value="$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py" />
+        <option value="$PROJECT_DIR$/UserManagement/models/User_Duty.py" />
+        <option value="$PROJECT_DIR$/UserManagement/serializers/student_serializer.py" />
+        <option value="$PROJECT_DIR$/UserManagement/views/user_view.py" />
+        <option value="$PROJECT_DIR$/UserManagement/models/User.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/Student.py" />
         <option value="$PROJECT_DIR$/UserManagement/views/student_view.py" />
       </list>
@@ -189,10 +216,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="377" />
-    <option name="y" value="-25" />
-    <option name="width" value="1089" />
-    <option name="height" value="722" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1456" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="添加" />
@@ -223,6 +250,18 @@
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
               <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
               <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="models" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
+              <item name="serializers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
@@ -700,7 +739,21 @@
       <option name="project" value="LOCAL" />
       <updated>1529220172876</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="完善用户管理模块Student">
+      <created>1529220192015</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1529220192015</updated>
+    </task>
+    <task id="LOCAL-00027" summary="完善用户管理模块Student，完善view">
+      <created>1529335444067</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1529335444067</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -711,7 +764,7 @@
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="16" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32286024" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26218852" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3257066" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32286024" sideWeight="0.4978678" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27665246" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -759,7 +812,8 @@
     <MESSAGE value="完善用户管理模块User类" />
     <MESSAGE value="完善用户管理模块，将student与user的关系改为继承" />
     <MESSAGE value="完善用户管理模块Student" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善用户管理模块Student" />
+    <MESSAGE value="完善用户管理模块Student，完善view" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善用户管理模块Student，完善view" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -874,13 +928,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-60">
-          <caret line="1" column="41" lean-forward="false" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -957,13 +1004,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/537167425/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="4431" column="8" lean-forward="false" selection-start-line="4431" selection-start-column="8" selection-end-line="4431" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Anaconda3/Lib/site-packages/django/contrib/auth/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1021,36 +1061,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models/User_Duty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/serializers/user_serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="70" lean-forward="false" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/serializers/student_serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/models/Teacher.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="490">
@@ -1058,29 +1068,6 @@
           <folding>
             <element signature="e#101#1118#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="373" column="0" lean-forward="false" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-            <element signature="e#2412#2685#0" expanded="false" />
-            <element signature="e#3027#8384#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="1393">
-            <caret line="56" column="29" lean-forward="false" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1100,10 +1087,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.3/system/python_stubs/537167425/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1502">
+          <caret line="5246" column="25" lean-forward="true" selection-start-line="5246" selection-start-column="25" selection-end-line="5246" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/serializers/user_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="16" lean-forward="true" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="268">
+          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/models/User_Duty.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/serializers/student_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="343">
+            <caret line="21" column="8" lean-forward="false" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2430">
+          <caret line="84" column="79" lean-forward="true" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#3097#3370#0" expanded="false" />
+            <element signature="e#3712#9069#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/views/user_view.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="37" column="21" lean-forward="true" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+        <state relative-caret-position="1080">
+          <caret line="52" column="29" lean-forward="false" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
@@ -1112,8 +1166,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/models/Student.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="286">
+          <caret line="147" column="49" lean-forward="true" selection-start-line="147" selection-start-column="49" selection-end-line="147" selection-end-column="49" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
@@ -1122,8 +1176,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/views/student_view.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+        <state relative-caret-position="3510">
+          <caret line="504" column="13" lean-forward="true" selection-start-line="504" selection-start-column="13" selection-end-line="504" selection-end-column="13" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>

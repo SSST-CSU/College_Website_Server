@@ -1,6 +1,6 @@
 from django.db import models
-from .User import User
 from django.contrib.auth.models import User as DutyUser
+from .User import User
 
 
 class User_Duty(models.Model):

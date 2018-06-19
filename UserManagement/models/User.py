@@ -18,11 +18,13 @@ class User_Manager(models.Manager):
                 permissions.append(permission)
         return permissions
 
-    def get_my_users(self):
+    def get_my_users(self, user=None):
         """
         返回自己创建的所有用户
         :return: queryset<User>
         """
+        if user is not None:
+            return self.filter(creator=user)
         return self.filter(creator=self)
 
     def get_user_duty(self):
@@ -32,7 +34,7 @@ class User_Manager(models.Manager):
         """
         return User_Duty.objects.filter(user=self)
 
-    def get_class_users(self, user):
+    def get_class_users(self, user, instructor=False, headmaster=False):
         """
         返回自己班级的所有用户
         :return: queryset<User>
@@ -41,21 +43,38 @@ class User_Manager(models.Manager):
             return self.filter(student_class=user.student_class)
         elif isinstance(user, Graduate_Student):
             return self.filter(student_class=user.student_class)
+        elif isinstance(user, Teacher):
+            result = self.none()
+            # 辅导员
+            if instructor:
+                result = result | self.filter()
+            # 班导师
+            if headmaster:
+                result = result | self.filter()
+            return result
         else:
-            return User.objects.none()
+            return self.none()
 
-    def get_grade_users(self, user):
+    def get_grade_users(self, user, instructor=False, headmaster=False):
         """
         返回自己年级的所有用户
         :param user:
         :return: queryset<User>
         """
-        result = User.objects.none()
+        result = self.none()
         if isinstance(user, Undergraduate_Student) or isinstance(user, Graduate_Student):
             student_grade = user.student_class.grade
             student_classes = Student_Class.objects.filter(grade=student_grade)
             for student_class in student_classes:
                 result = result | self.filter(student_class=student_class)
+        elif isinstance(user, Teacher):
+            result = self.none()
+            # 辅导员
+            if instructor:
+                result = result | self.filter()
+            # 班导师
+            if headmaster:
+                result = result | self.filter()
         return result
 
 
