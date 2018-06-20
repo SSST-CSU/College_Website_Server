@@ -2,9 +2,10 @@ from rest_framework import serializers
 from rest_framework.serializers import ModelSerializer, BaseSerializer, Serializer
 
 from ..models.Teacher import *
+from .user_serializer import UserSerializer
 
 
-class TeacherSerializer(serializers.ModelSerializer):
-    class Meta:
+class TeacherSerializer(UserSerializer):
+    class Meta(UserSerializer.Meta):
         model = Teacher
-        fields = ['user', 'title', 'is_external_unit']
+        fields = super().fields + ['title', 'is_external_unit']

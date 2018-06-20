@@ -127,20 +127,7 @@ class Undergraduate_Student(User):
 
 
 class Graduate_Student_Manager(User_Manager):
-    def get_teacher_gs(self, user):
-        """
-        返回同一个导师的用户
-        :return: queryset<gs>
-        """
-        if isinstance(user, User):
-            try:
-                user = Graduate_Student.objects.get(id=user.id)
-            except:
-                return None
-        if isinstance(user, Graduate_Student):
-            return self.filter(instructor=user.instructor)
-        elif isinstance(user, Teacher):
-            return self.filter(instructor=user)
+    pass
 
 
 class Graduate_Student(User):

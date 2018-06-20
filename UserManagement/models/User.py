@@ -77,6 +77,28 @@ class User_Manager(models.Manager):
                 result = result | self.filter()
         return result
 
+    def get_teacher_gs(self, user):
+        """
+        返回同一个导师的用户
+        :return: queryset<gs>
+        """
+        if isinstance(user, User):
+            try:
+                user = Graduate_Student.objects.get(id=user.id)
+            except:
+                return None
+        if isinstance(user, Graduate_Student):
+            return self.filter(instructor=user.instructor)
+        elif isinstance(user, Teacher):
+            return self.filter(instructor=user)
+
+    def get_department_user(self, user):
+        """
+        获取同一部门的人员
+        :return:queryset<User>
+        """
+        # todo
+
 
 class User(models.Model):
     id = models.CharField(verbose_name='学工号', max_length=12, primary_key=True)
