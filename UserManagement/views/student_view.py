@@ -21,7 +21,7 @@ class MajorViewSet(ModelViewSet):
         查看
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.view_major' in perm_set:
+        if 'UserManagement.view_majors' in perm_set:
             return super(MajorViewSet, self).list(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}
@@ -43,7 +43,7 @@ class MajorViewSet(ModelViewSet):
         修改
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.update_major' in perm_set:
+        if 'UserManagement.update_majors' in perm_set:
             return super(MajorViewSet, self).update(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}
@@ -54,7 +54,7 @@ class MajorViewSet(ModelViewSet):
         删除
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.delete_major' in perm_set:
+        if 'UserManagement.delete_majors' in perm_set:
             return super(MajorViewSet, self).destroy(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}

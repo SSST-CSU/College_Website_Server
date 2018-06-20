@@ -29,10 +29,10 @@ class Major(models.Model):
         verbose_name = '专业'
         verbose_name_plural = '专业列表'
         permissions = (
-            ('view_major', '可以查看专业'),
+            ('view_majors', '可以查看专业'),
             ('create_major', '可以增加专业'),
-            ('update_major', '可以修改专业'),
-            ('delete_major', '可以删除专业'),
+            ('update_majors', '可以修改专业'),
+            ('delete_majors', '可以删除专业'),
         )
 
 
@@ -103,7 +103,7 @@ class Undergraduate_Student(User):
     def get_major(self):
         return self.student_class.grade.major
 
-    class Meta(User.Meta):
+    class Meta:
         verbose_name = '本科生'
         verbose_name_plural = '本科生列表'
         permissions = (
@@ -144,7 +144,7 @@ class Graduate_Student(User):
     def get_major(self):
         return self.student_class.grade.major
 
-    class Meta(User.Meta):
+    class Meta:
         verbose_name = '研究生'
         verbose_name_plural = '研究生列表'
         permissions = (

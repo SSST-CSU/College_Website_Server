@@ -1,5 +1,5 @@
 from django.db import models
-from .User import *
+from .User import User, User_Manager
 
 
 class Teacher_Manager(User_Manager):
@@ -56,7 +56,7 @@ class Teacher(User):
     def __str__(self):
         return super.__str__(self)
 
-    class Meta(User.Meta):
+    class Meta:
         verbose_name = '教师'
         verbose_name_plural = '教师列表'
         permissions = (

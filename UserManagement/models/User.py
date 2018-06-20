@@ -1,7 +1,4 @@
 from django.db import models
-from .User_Duty import User_Duty
-from .Student import Undergraduate_Student, Graduate_Student, Student_Class, Student_Grade
-from .Teacher import Teacher
 
 
 class User_Manager(models.Manager):
@@ -32,6 +29,7 @@ class User_Manager(models.Manager):
         返回用户职务，若没有职务则为空
         :return: queryset<User_Duty>
         """
+        from .User_Duty import User_Duty
         return User_Duty.objects.filter(user=self)
 
     def get_class_users(self, user, instructor=False, headmaster=False):
@@ -39,6 +37,10 @@ class User_Manager(models.Manager):
         返回自己班级的所有用户
         :return: queryset<User>
         """
+
+        from .Student import Undergraduate_Student, Graduate_Student, Student_Class
+        from .Teacher import Teacher
+
         if isinstance(user, Undergraduate_Student):
             return self.filter(student_class=user.student_class)
         elif isinstance(user, Graduate_Student):
@@ -61,6 +63,10 @@ class User_Manager(models.Manager):
         :param user:
         :return: queryset<User>
         """
+
+        from .Student import Undergraduate_Student, Graduate_Student, Student_Class
+        from .Teacher import Teacher
+
         result = self.none()
         if isinstance(user, Undergraduate_Student) or isinstance(user, Graduate_Student):
             student_grade = user.student_class.grade
@@ -82,6 +88,10 @@ class User_Manager(models.Manager):
         返回同一个导师的用户
         :return: queryset<gs>
         """
+
+        from .Student import Graduate_Student
+        from .Teacher import Teacher
+
         if isinstance(user, User):
             try:
                 user = Graduate_Student.objects.get(id=user.id)
@@ -106,7 +116,7 @@ class User(models.Model):
     pwd = models.CharField(verbose_name='密码', max_length=25)
     stat = models.BooleanField(verbose_name='用户状态', default=True)  # 0 不可用 1 可用
     name_used_before = models.CharField(verbose_name='曾用名', max_length=10, null=True, blank=True)
-    sex = models.IntegerField(verbose_name='性别', max_length=1, choices=((0, '男'), (1, '女')))
+    sex = models.IntegerField(verbose_name='性别', choices=((0, '男'), (1, '女')))
     birthday = models.DateField(verbose_name='出生日期')
     political_choices = (
         (1, '中共党员'),
@@ -342,7 +352,7 @@ class User(models.Model):
     )
     country_and_region = models.CharField(verbose_name='国家或地区', max_length=3, choices=country_and_region_choices,
                                           default='CN')
-    creator = models.ForeignKey('self', on_delete=models.SET_NULL, verbose_name='用户创建者')
+    creator = models.ForeignKey('self', on_delete=models.SET_NULL, verbose_name='用户创建者', null=True, blank=True)
     objects = User_Manager()
 
     def to_student(self):
@@ -350,6 +360,7 @@ class User(models.Model):
         返回student对象，如果不存在student，则为None
         :return: object<student>
         """
+        from .Student import Undergraduate_Student, Graduate_Student
         result = None
         try:
             # 如果本科生
@@ -368,6 +379,9 @@ class User(models.Model):
         返回teacher对象，如果不存在teacher，则为None
         :return:
         """
+
+        from .Teacher import Teacher
+
         result = None
         try:
             # 如果Tescher
@@ -381,6 +395,7 @@ class User(models.Model):
         返回用户的班级，如果没有班级，则为None
         :return: object<student_class>
         """
+        from .Student import Undergraduate_Student, Graduate_Student
         result = None
         try:
             # 如果本科生
@@ -418,3 +433,7 @@ class User(models.Model):
             ('delete_grade_users', '可以删除自己年级的用户'),
             ('delete_all_users', '可以删除所有用户'),
         )
+
+
+def get_usermanagement_user():
+    return User

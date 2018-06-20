@@ -1,3 +1,3 @@
-from ResourceBorrowingSystem.ClassroomBorrowing import models
-from ResourceBorrowingSystem.EquipmentBorrowing import models
-from ResourceBorrowingSystem.LaboratoryBorrowing import models
+from ResourceBorrowingSystem.ClassroomBorrowing.models import *
+from ResourceBorrowingSystem.EquipmentBorrowing.models import *
+from ResourceBorrowingSystem.LaboratoryBorrowing.models import *

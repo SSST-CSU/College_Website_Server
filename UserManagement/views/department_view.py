@@ -22,7 +22,7 @@ class DutyDepartmentViewSet(ModelViewSet):
         查看
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.view_duty_department' in perm_set:
+        if 'UserManagement.view_duty_departments' in perm_set:
             return super(DutyDepartmentViewSet, self).list(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}
@@ -44,7 +44,7 @@ class DutyDepartmentViewSet(ModelViewSet):
         修改
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.update_duty_department' in perm_set:
+        if 'UserManagement.update_duty_departments' in perm_set:
             return super(DutyDepartmentViewSet, self).update(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}
@@ -55,7 +55,7 @@ class DutyDepartmentViewSet(ModelViewSet):
         删除
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.delete_duty_department' in perm_set:
+        if 'UserManagement.delete_duty_departments' in perm_set:
             return super(DutyDepartmentViewSet, self).destroy(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}
@@ -71,7 +71,7 @@ class UserDutyViewSet(ModelViewSet):
         查看
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.view_user_duty' in perm_set:
+        if 'UserManagement.view_user_duties' in perm_set:
             return super(UserDutyViewSet, self).list(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}
@@ -93,7 +93,7 @@ class UserDutyViewSet(ModelViewSet):
         修改
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.update_user_duty' in perm_set:
+        if 'UserManagement.update_user_duties' in perm_set:
             return super(UserDutyViewSet, self).update(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}
@@ -104,7 +104,7 @@ class UserDutyViewSet(ModelViewSet):
         删除
         """
         perm_set = request.session['perm_set']
-        if 'UserManagement.delete_user_duty' in perm_set:
+        if 'UserManagement.delete_user_duties' in perm_set:
             return super(UserDutyViewSet, self).destroy(request, *args, **kwargs)
         else:
             data = {'detail': '没有权限'}

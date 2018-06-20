@@ -27,10 +27,14 @@ class StudentClassSerializer(serializers.ModelSerializer):
 class UndergraduateStudentSerializer(UserSerializer):
     class Meta(UserSerializer.Meta):
         model = Undergraduate_Student
-        fields = super().fields + ['student_class']
+        fields = ['id', 'name', 'pwd', 'stat', 'name_used_before', 'sex', 'birthday',
+                  'political', 'native_place', 'id_number', 'phone_number', 'country_and_region',
+                  'creator', 'student_class']
 
 
 class GraduateStudentSerializer(UserSerializer):
     class Meta(UserSerializer.Meta):
         model = Graduate_Student
-        fields = super().fields + ['student_class', 'instructor', 'on_the_job', 'company']
+        fields = ['id', 'name', 'pwd', 'stat', 'name_used_before', 'sex', 'birthday',
+                  'political', 'native_place', 'id_number', 'phone_number', 'country_and_region',
+                  'creator', 'student_class', 'instructor', 'on_the_job', 'company']
