@@ -39,7 +39,7 @@
                     {% if user == None %}
                     <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user"></span>  登录  </a></li>
                     {% else %}
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
+                    <li><a href="/usercenter/"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
                     <li><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
                     {% endif %}
                 </ul>

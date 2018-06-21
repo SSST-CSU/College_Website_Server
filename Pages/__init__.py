@@ -3,7 +3,7 @@ import os
 
 default_app_config = 'Pages.PrimaryBlogConfig'
 
-VERBOSE_APP_NAME = '页面管理系统'
+VERBOSE_APP_NAME = '01-页面管理系统'
 
 
 def get_current_app_name(_file):

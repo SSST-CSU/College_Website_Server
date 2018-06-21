@@ -65,24 +65,26 @@ def index(request):
 
     # 栏目下内容
     articles = []
-    for col_index in range(len(displaycolumn)):
-        col = displaycolumn[col_index].column
-        article = ArchivalArticles.objects.filter(column=col).order_by('article__creation_time').reverse().values('article')
-        articles.append([])
-        for atc in article:
-            pk = atc['article']
-            a = Article.objects.get(pk=pk)
-            stat = ArticleStat.objects.filter(article=a)
-            if len(stat) == 0 or stat.first().stat == '发布':
-                articles[col_index].append(Article.objects.get(pk=pk))
+    if displaycolumn is not None:
+        for col_index in range(len(displaycolumn)):
+            col = displaycolumn[col_index].column
+            article = ArchivalArticles.objects.filter(column=col).order_by('article__creation_time').reverse().values('article')
+            articles.append([])
+            for atc in article:
+                pk = atc['article']
+                a = Article.objects.get(pk=pk)
+                stat = ArticleStat.objects.filter(article=a)
+                if len(stat) == 0 or stat.first().stat == '发布':
+                    articles[col_index].append(Article.objects.get(pk=pk))
 
     # 将栏目和栏目下内容整合
     column = []
-    for col_index in range(len(displaycolumn)):
-        col = {}
-        col["title"] = displaycolumn[col_index]
-        col["article"] = articles[col_index]
-        column.append(col)
+    if displaycolumn is not None:
+        for col_index in range(len(displaycolumn)):
+            col = {}
+            col["title"] = displaycolumn[col_index]
+            col["article"] = articles[col_index]
+            column.append(col)
 
 
     return render(request, 'htmls/index.html', {

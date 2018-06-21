@@ -196,8 +196,9 @@ def login(request):
             perms = duty.duty.get_all_permissions()
             for perm in perms:
                 perm_set.add(perm)
-        request.session['admin_set'] = admin_set
-        request.session['perm_set'] = perm_set
+
+        request.session['admin_set'] = list(admin_set)
+        request.session['perm_set'] = list(perm_set)
     except:
         msg = -1
     ret = {

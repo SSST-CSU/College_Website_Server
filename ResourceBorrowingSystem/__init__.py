@@ -3,7 +3,7 @@ import os
 
 default_app_config = 'ResourceBorrowingSystem.PrimaryBlogConfig'
 
-VERBOSE_APP_NAME = '资源借用系统'
+VERBOSE_APP_NAME = '04-资源借用系统'
 
 
 def get_current_app_name(_file):

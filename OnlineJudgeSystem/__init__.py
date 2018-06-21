@@ -3,7 +3,7 @@ import os
 
 default_app_config = 'OnlineJudgeSystem.PrimaryBlogConfig'
 
-VERBOSE_APP_NAME = '在线测评系统'
+VERBOSE_APP_NAME = '05-在线测评系统'
 
 
 def get_current_app_name(_file):

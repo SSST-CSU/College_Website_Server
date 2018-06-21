@@ -3,7 +3,7 @@ import os
 
 default_app_config = 'ArticleManagement.PrimaryBlogConfig'
 
-VERBOSE_APP_NAME = '文章管理系统'
+VERBOSE_APP_NAME = '02-文章管理系统'
 
 
 def get_current_app_name(_file):
