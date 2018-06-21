@@ -24,13 +24,13 @@ class User_Manager(models.Manager):
             return self.filter(creator=user)
         return self.filter(creator=self)
 
-    def get_user_duty(self):
+    def get_user_duty(self, user):
         """
         返回用户职务，若没有职务则为空
         :return: queryset<User_Duty>
         """
         from .User_Duty import User_Duty
-        return User_Duty.objects.filter(user=self)
+        return User_Duty.objects.filter(user=user)
 
     def get_class_users(self, user, instructor=False, headmaster=False):
         """

@@ -35,7 +35,7 @@
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
+                    <li><a href="/usercenter/"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
                     <li><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
                 </ul>
                 <ul class="nav navbar-nav">
@@ -58,22 +58,26 @@
                 {% endfor %}
 
                 {% if user != None %}
-                    <li><a href="/usercenter">个人中心</a></li>
+                    <li><a href="/usercenter/">个人中心</a></li>
                 {% endif %}
                 </ul>
             </div>
         </div>
     </div>
     <br>
+
     <!-- 左侧选项栏  -->
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked sidebar" style="background-color: #f5f5f5; height: 100%">
-            <li id="home" class="active"><a>个人中心</a></li>
+            <li id="home" class="active"><a>个人信息</a></li>
+            <li id="page"><a>页面管理</a></li>
+            <li id="page"><a>用户管理</a></li>
             <li id="article"><a onclick="article()">文章管理</a></li>
             <li><a href="#">会议室借用</a></li>
         </ul>
     </div>
 
+    <!-- 右侧内容 -->
     <div id="page" class="col-md-10">
         <p>个人中心</p>
     </div>
@@ -91,4 +95,48 @@
     $.ajaxSetup({
         data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
     });
+    function login() {
+        var user_id = $("#user_id").val();
+        var user_pwd = $("#user_pwd").val();
+        $.ajax({
+            url: "/user/login/",
+            type: "POST",
+            data: {
+                user_id:user_id,
+                user_pwd:user_pwd
+            },
+            success:function(callback){
+                var callback_dict = $.parseJSON(callback);
+                var msg = callback_dict.msg;
+                if(msg === -1) {
+                    document.getElementById("LoginMsg").innerText = "用户名错误";
+                } else if(msg === 1) {
+                    document.getElementById("LoginMsg").innerText = "密码错误";
+                } else {
+                    // 登陆成功
+                    location.reload();
+                }
+            }
+        });
+    }
+    function logout() {
+        var user_id = USER_ID;
+        $.ajax({
+            url: "/user/logout/",
+            type: "POST",
+            data: {
+                user_id:user_id
+            },
+            success:function(callback){
+                var callback_dict = $.parseJSON(callback);
+                var msg = callback_dict.msg;
+                if(msg === 0) {
+                    alert("登出失败");
+                } else {
+                    // 登出成功
+                    location.reload();
+                }
+            }
+        });
+    }
 </script>

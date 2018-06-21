@@ -172,6 +172,7 @@ def login(request):
     pwd = request.POST['user_pwd']
     msg = 0
     # 认证账户密码是否匹配
+    user = None
     try:
         user = User.objects.get(id=id)
         if pwd == user.pwd:
@@ -184,20 +185,20 @@ def login(request):
         msg = -1
 
     # 管理员用户集合
-    admin_set = set()
+    # admin_set = set()
     # 权限集合
     perm_set = set()
 
     # 将权限和管理员信息加入session
     try:
-        duties = User.objects.get_user_duty()
+        duties = User.objects.get_user_duty(user)
         for duty in duties:
-            admin_set.add(duty.duty)
+            # admin_set.add(duty.duty)
             perms = duty.duty.get_all_permissions()
             for perm in perms:
                 perm_set.add(perm)
 
-        request.session['admin_set'] = list(admin_set)
+        # request.session['admin_set'] = list(admin_set)
         request.session['perm_set'] = list(perm_set)
     except:
         msg = -1
