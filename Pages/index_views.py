@@ -68,7 +68,7 @@ def index(request):
     if displaycolumn is not None:
         for col_index in range(len(displaycolumn)):
             col = displaycolumn[col_index].column
-            article = ArchivalArticles.objects.filter(column=col).order_by('article__creation_time').reverse().values('article')
+            article = ArchivalArticles.objects.filter(column=col).order_by('article__edit_time').reverse().values('article')
             articles.append([])
             for atc in article:
                 pk = atc['article']

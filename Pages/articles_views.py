@@ -54,7 +54,7 @@ def article_page(request, id):
     except:
         pass
 
-    # 栏目
+    # 导航路径
 
     return render(request, 'htmls/articles.html', {
         "user": user,

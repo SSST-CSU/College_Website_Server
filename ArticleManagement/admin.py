@@ -3,22 +3,35 @@ from .models import *
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ['creation_time', 'title', 'author', 'editor']
+    list_display = ['id', 'edit_time', 'title', 'author', 'editor', 'creator']
+
+
+admin.site.register(Article, ArticleAdmin)
 
 
 class ColumnAdmin(admin.ModelAdmin):
-    list_display = ['name']
+    list_display = ['name', 'superior']
+
+
+admin.site.register(Column, ColumnAdmin)
 
 
 class ArchivalArticlesAdmin(admin.ModelAdmin):
     list_display = ['article', 'column']
 
 
+admin.site.register(ArchivalArticles, ArchivalArticlesAdmin)
+
+
 class ArticleStatAdmin(admin.ModelAdmin):
     list_display = ['article', 'stat']
 
 
-admin.site.register(Article, ArticleAdmin)
-admin.site.register(Column, ColumnAdmin)
-admin.site.register(ArchivalArticles, ArchivalArticlesAdmin)
 admin.site.register(ArticleStat, ArticleStatAdmin)
+
+
+class ArticlePermissionAdmin(admin.ModelAdmin):
+    list_display = ['duty', 'column', 'permission']
+
+
+admin.site.register(ArticlePermission, ArticlePermissionAdmin)

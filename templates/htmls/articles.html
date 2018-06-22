@@ -100,6 +100,7 @@
     <br>
 
     <!-- 左侧列表 -->
+    <!--
     <div class="col-md-2">
         <ul class="nav nav-pills nav-stacked sidebar" style="background-color: whitesmoke; height: 100%">
             <li id="home" style="text-align: center"><a>同级栏目</a></li>
@@ -108,26 +109,32 @@
 
         </ul>
     </div>
+    -->
 
     <!-- 右侧内容 -->
 
     <!-- 路径导航 -->
-    <ol class="breadcrumb" style="background-color: white">
-        <li><a href="#">上级栏目</a></li>
-        <li><a href="#">上级栏目</a></li>
-        <li class="active">{{ article.title }}</li>
-    </ol>
+    <div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <ol class="breadcrumb" style="background-color: white; text-align: left">
+                <li><a href="/">软件学院</a></li>
+                <li><a href="#">上级栏目</a></li>
+                <li><a href="#">上级栏目</a></li>
+                <li class="active">{{ article.title }}</li>
+            </ol>
 
-    <!-- 文章内容 -->
-    <div class="col-md-10">
-        <h1 style="text-align: center">{{ article.title }}</h1>
-        <table border="0" align="center">
-            <th width="30%" style="text-align: center">{{ article.creation_time }}</th>
-            <th width="30%" style="text-align: center">作者：{{ article.author }}</th>
-            <th width="30%" style="text-align: center">编辑：{{ article.editor }}</th>
-        </table>
-        <hr>
-        {{ article.content }}
+            <!-- 文章内容 -->
+            <h1 style="text-align: center">{{ article.title }}</h1>
+            <table border="0" align="center">
+                <th width="30%" style="text-align: center">{{ article.edit_time }}</th>
+                <th width="30%" style="text-align: center">作者：{{ article.author }}</th>
+                <th width="30%" style="text-align: center">编辑：{{ article.editor }}</th>
+            </table>
+            <hr>
+            {{ article.content }}
+        </div>
+        <div class="col-md-2"></div>
     </div>
 
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
