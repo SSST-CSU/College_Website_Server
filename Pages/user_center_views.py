@@ -34,7 +34,6 @@ def user_center(request):
 
                 navbar[num]["val"].append(nav)
                 navbar[num]["len"] += 1
-
             except:
                 navbar.append({
                     "len": 0,
@@ -44,7 +43,39 @@ def user_center(request):
                 navbar[num]["len"] += 1
             num += 1
 
-    return render(request, 'htmls/user_center.html', {
+    return render(request, 'htmls/user_center/user_center.html', {
         "user": user,
         "navbar": navbar,
+    })
+
+
+def user_center_articles(request):
+    user = None
+    try:
+        user_id = request.session['user_id']
+        user_pwd = request.session['user_pwd']
+        user = AuthenticateUser(user_id, user_pwd)
+    except:
+        return HttpResponseRedirect('/')
+    # 未登录
+    if user is None:
+        return HttpResponseRedirect('/')
+    return render(request, 'htmls/user_center/user_center_articles.html', {
+        "user": user,
+    })
+
+
+def user_center_home(request):
+    user = None
+    try:
+        user_id = request.session['user_id']
+        user_pwd = request.session['user_pwd']
+        user = AuthenticateUser(user_id, user_pwd)
+    except:
+        return HttpResponseRedirect('/')
+    # 未登录
+    if user is None:
+        return HttpResponseRedirect('/')
+    return render(request, 'htmls/user_center/user_center_home.html', {
+        "user": user,
     })

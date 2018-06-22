@@ -60,4 +60,5 @@ def article_page(request, id):
         "user": user,
         "navbar": navbar,
         "article": article,
+
     })

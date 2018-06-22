@@ -30,7 +30,7 @@
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <!--商标-->
-                <a class="navbar-brand" href="/">中南大学软件学院</a>
+                <a id="navbar-brand" class="navbar-brand" href="/">中南大学软件学院</a>
             </div>
 
             <div class="navbar-collapse collapse">
@@ -68,18 +68,18 @@
 
     <!-- 左侧选项栏  -->
     <div class="col-md-2">
-        <ul class="nav nav-pills nav-stacked sidebar" style="background-color: #f5f5f5; height: 100%">
-            <li id="home" class="active"><a>个人信息</a></li>
-            <li id="page"><a>页面管理</a></li>
-            <li id="page"><a>用户管理</a></li>
-            <li id="article"><a onclick="article()">文章管理</a></li>
-            <li><a href="#">会议室借用</a></li>
+        <ul id="left_ul" class="nav nav-pills nav-stacked sidebar" style="background-color: #f5f5f5; height: 100%">
+            <li id="home" class="active"><a href="home" target="right_page">个人信息</a></li>
+            <li id="pages"><a href="pages" target="right_page">页面管理</a></li>
+            <li id="users"><a href="users" target="right_page">用户管理</a></li>
+            <li id="articles"><a href="articles" target="right_page">文章管理</a></li>
+            <li id="meetingroom"><a href="meetingroom" target="right_page">会议室借用</a></li>
         </ul>
     </div>
 
     <!-- 右侧内容 -->
-    <div id="page" class="col-md-10">
-        <p>个人中心</p>
+    <div class="col-md-10">
+        <iframe id="right_page" name="right_page" width="100%" style="border: 0"></iframe>
     </div>
 
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
@@ -139,4 +139,14 @@
             }
         });
     }
+    $("ul.nav-stacked > li").click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        var h = $(this)[0].children[0].href;
+        $("#right_page").attr("src", h.toString());
+    });
+    window.onload = function (ev) {
+        $("#home").click();
+    }
+
 </script>
