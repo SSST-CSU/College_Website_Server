@@ -79,3 +79,51 @@ def user_center_home(request):
     return render(request, 'htmls/user_center/user_center_home.html', {
         "user": user,
     })
+
+
+def user_center_pages(request):
+    user = None
+    try:
+        user_id = request.session['user_id']
+        user_pwd = request.session['user_pwd']
+        user = AuthenticateUser(user_id, user_pwd)
+    except:
+        return HttpResponseRedirect('/')
+    # 未登录
+    if user is None:
+        return HttpResponseRedirect('/')
+    return render(request, 'htmls/user_center/user_center_pages.html', {
+        "user": user,
+    })
+
+
+def user_center_users(request):
+    user = None
+    try:
+        user_id = request.session['user_id']
+        user_pwd = request.session['user_pwd']
+        user = AuthenticateUser(user_id, user_pwd)
+    except:
+        return HttpResponseRedirect('/')
+    # 未登录
+    if user is None:
+        return HttpResponseRedirect('/')
+    return render(request, 'htmls/user_center/user_center_users.html', {
+        "user": user,
+    })
+
+
+def user_center_meetingroom(request):
+    user = None
+    try:
+        user_id = request.session['user_id']
+        user_pwd = request.session['user_pwd']
+        user = AuthenticateUser(user_id, user_pwd)
+    except:
+        return HttpResponseRedirect('/')
+    # 未登录
+    if user is None:
+        return HttpResponseRedirect('/')
+    return render(request, 'htmls/user_center/user_center_meetingroom.html', {
+        "user": user,
+    })
