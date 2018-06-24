@@ -64,11 +64,10 @@
             </div>
         </div>
     </div>
-    <br>
 
     <!-- 左侧选项栏  -->
-    <div class="col-md-2">
-        <ul id="left_ul" class="nav nav-pills nav-stacked sidebar" style="background-color: #f5f5f5; height: 100%">
+    <div class="col-md-2 sidebar" id="left">
+        <ul id="left_ul" class="nav nav-sidebar">
             <li id="home" class="active"><a href="home" target="right_page">个人信息</a></li>
             <li id="pages"><a href="pages" target="right_page">页面管理</a></li>
             <li id="users"><a href="users" target="right_page">用户管理</a></li>
@@ -78,8 +77,8 @@
     </div>
 
     <!-- 右侧内容 -->
-    <div class="col-md-10">
-        <iframe id="right_page" name="right_page" width="100%" style="border: 0"></iframe>
+    <div class="col-sm-9 col-sm-offset-3 col-md-offset-2 col-md-10 main" id="right">
+        <iframe id="right_page" name="right_page" width="100%" frameborder="0"></iframe>
     </div>
 
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
@@ -139,7 +138,7 @@
             }
         });
     }
-    $("ul.nav-stacked > li").click(function (e) {
+    $("ul.nav-sidebar > li").click(function (e) {
         e.preventDefault();
         $(this).tab('show');
         var h = $(this)[0].children[0].href;
@@ -147,6 +146,29 @@
     });
     window.onload = function (ev) {
         $("#home").click();
+        var winheight = window.innerHeight;
+        var navheight = document.getElementById("menu-nav").offsetHeight;
+        var winwidth = window.innerWidth;
+        if(winwidth > 768) {
+            document.getElementById("right_page").height = winheight - navheight - 24;
+            var leftwidth = document.getElementById("left").offsetWidth;
+            document.getElementById("right_page").width = winwidth * 5 / 6 - 20;
+        } else {
+            document.getElementById("right_page").width = winwidth - 40;
+            document.getElementById("right_page").height = document.getElementById("right_page").contentWindow.document.body.scrollHeight;
+        }
+    };
+    window.onresize = function () {
+        var winheight = window.innerHeight;
+        var navheight = document.getElementById("menu-nav").offsetHeight;
+        var winwidth = window.innerWidth;
+        if(winwidth > 768) {
+            document.getElementById("right_page").height = winheight - navheight - 24;
+            var leftwidth = document.getElementById("left").offsetWidth;
+            document.getElementById("right_page").width = winwidth * 5 / 6 - 20;
+        } else {
+            document.getElementById("right_page").width = winwidth - 40;
+            document.getElementById("right_page").height = document.getElementById("right_page").contentWindow.document.body.scrollHeight;
+        }
     }
-
 </script>

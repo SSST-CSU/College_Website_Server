@@ -140,7 +140,7 @@
         <div class="row" id="summary-container">
         {% if column != None %}
             {% for col in column %}
-            <div class="{{ col_md }}">
+            <div class="{{ col_md }} ">
 
                 <h2 onclick="gotoColumn('{{ col.title.column.name }}')">{{ col.title.column.name }}</h2>
 
@@ -154,8 +154,11 @@
                 {% if col.article.2 != None %}
                     <li onclick="gotoArticle({{ col.article.2.id }})">{{ col.article.2.title }}</li>
                 {% endif %}
-                </p>
-{#                <p><a class="btn btn-default" href="#" role="button">更多</a></p>#}
+
+                <!--
+                <p><a class="btn btn-default" href="#" role="button">更多</a></p>
+                -->
+
             </div>
             {% endfor %}
         {% endif %}
