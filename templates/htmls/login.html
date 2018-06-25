@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中南大学软件学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="{% static "css/index.css" %}" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation" id="menu-nav">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <!--屏幕较小时，右上角显示为三条横线，导航栏折叠-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <!--商标-->
+                <a id="navbar-brand" class="navbar-brand" href="/" style="color: whitesmoke">   中南大学软件学院</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+
+                <ul class="nav navbar-nav">
+                {% for nav in navbar %}
+                    {% if nav.len == 1 %}
+                    <li><a href="{{ nav.val.0.herf }}" style="color: whitesmoke">{{ nav.val.0.name }}</a></li>
+                    {% else %}
+                    <li class="dropdown">
+                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown" style="color: whitesmoke">
+                        {{ nav.val.0.name }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% for subnav in nav.val %}
+                        {% if forloop.counter0 != 0 %}
+                        <li class="subnav"><a href="{{ subnav.herf }}" style="color: black">
+                            {{ subnav.name }}
+                        </a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if user != None %}
+                    <li><a href="/usercenter/">个人中心</a></li>
+                {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <div>
+        <div class="col-md-6 col-md-offset-1 visible-md-block visible-lg-block" id="login_img">
+            <div class="col-md-11">
+                <br>
+                <img src="{% static "images/img-2.png" %}" width="100%">
+            </div>
+
+            <div class="col-md-1">
+
+            </div>
+        </div>
+
+        <div class="col-md-3" id="login_area">
+            <br>
+
+            <div>
+                <h2 style="text-align: center">用户登录</h2>
+                <hr>
+            </div>
+
+            <form>
+                <div class="form-group input-group-lg">
+                    <h4 for="recipient-name" class="control-label">学号</h4>
+                    <input type="text" class="form-control" id="user_id">
+                </div>
+                <div class="form-group input-group-lg">
+                    <h4 for="message-text" class="control-label">密码</h4>
+                    <input type="password" class="form-control" id="user_pwd">
+                </div>
+            </form>
+            <h4 style="color: red" id="LoginMsg"></h4>
+
+            <div>
+                <br>
+                <button type="button" class="btn btn-primary btn-lg" style="width: 100%" onclick="login()">登录</button>
+            </div>
+
+            <div class="col-md-1">
+
+            </div>
+        </div>
+    </div>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+<script src="{% static "js/index.js" %}"></script>
+
+</body>
+</html>
+<script>
+    var USER_ID = "{{ user.id }}";
+    $.ajaxSetup({
+        data: {
+            csrfmiddlewaretoken: "{{ csrf_token }}"
+        }
+    });
+</script>

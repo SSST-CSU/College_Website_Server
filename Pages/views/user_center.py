@@ -15,7 +15,7 @@ def user_center(request):
         return HttpResponseRedirect('/')
     # 未登录
     if user is None:
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/login')
 
     # 导航栏
     navbarobj = NavbarObject.objects.filter(page__name='index').order_by('serial_number')
@@ -59,7 +59,7 @@ def user_center_articles(request):
         return HttpResponseRedirect('/')
     # 未登录
     if user is None:
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/login')
     return render(request, 'htmls/user_center/user_center_articles.html', {
         "user": user,
     })
@@ -75,7 +75,7 @@ def user_center_home(request):
         return HttpResponseRedirect('/')
     # 未登录
     if user is None:
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/login')
     return render(request, 'htmls/user_center/user_center_home.html', {
         "user": user,
     })
@@ -91,7 +91,7 @@ def user_center_pages(request):
         return HttpResponseRedirect('/')
     # 未登录
     if user is None:
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/login')
     return render(request, 'htmls/user_center/user_center_pages.html', {
         "user": user,
     })
@@ -107,7 +107,7 @@ def user_center_users(request):
         return HttpResponseRedirect('/')
     # 未登录
     if user is None:
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/login')
     return render(request, 'htmls/user_center/user_center_users.html', {
         "user": user,
     })
@@ -123,7 +123,7 @@ def user_center_meetingroom(request):
         return HttpResponseRedirect('/')
     # 未登录
     if user is None:
-        return HttpResponseRedirect('/')
+        return HttpResponseRedirect('/login')
     return render(request, 'htmls/user_center/user_center_meetingroom.html', {
         "user": user,
     })

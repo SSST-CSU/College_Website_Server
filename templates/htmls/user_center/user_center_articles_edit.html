@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中南大学软件学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="{% static "css/iframe.css" %}" rel="stylesheet">
+    <link href="{% static "css/editormd.css" %}" rel="stylesheet"/>
+</head>
+
+<body>
+<div class="col-md-12">
+    {% if article != None %}
+    <div id="info">
+        <form class="form-horizontal">
+
+            <div class="form-group">
+                <label for="article_id" class="col-sm-1 control-label">文章ID</label>
+                <div class="col-sm-11">
+                    <input class="form-control" id="article_id" value="{{ article.article_id }}" disabled="disabled">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="title" class="col-sm-1 control-label">文章标题</label>
+                <div class="col-sm-11">
+                    <input class="form-control" id="title" value="{{ article.title }}">
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-7">
+                    <div class="col-sm-6">
+                        <label for="author" class="col-sm-3 control-label">作者</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" id="author" value="{{ article.author }}">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="editor" class="col-sm-3 control-label">编辑</label>
+                        <div class="col-sm-9">
+                            <input class="form-control" id="editor" value="{{ article.editor }}">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-5">
+                    <div class="col-sm-3"><button type="button" class="btn btn-default" style="width: 100%" id="btn_history" onclick="get_history()">历史版本</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-default" style="width: 100%" id="btn_cancel" onclick="cancel()">取消</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-danger" style="width: 100%" id="btn_delete" onclick="delete_article()">删除</button></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-primary" style="width: 100%" id="btn_edit" onclick="edit()">修改</button></div>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% endif %}
+    <div id="editormd">{% if article != None %}
+        <textarea style="display:none;" id="ts">{{ article.content }}</textarea>{% else %}
+        <textarea style="display:none;" id="ts"></textarea>{% endif %}
+    </div>
+</div>
+</body>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<!-- 本地js文件 -->
+<script src="{% static "js/iframe.js" %}"></script>
+<script src="{% static "js/editor/editormd.js" %}"></script>
+</html>
+<script type="text/javascript">
+var testEditor;
+$(function() {
+    testEditor = editormd("editormd", {
+        width: "100%",
+        autoHeight: true,
+        autoFixed: true,
+        syncScrolling: "single",
+        path: "{% static "js/editor/" %}",
+        tex: true,
+        emoji: true,
+        taskList: true,
+        flowChart: true,
+        sequenceDiagram: true,
+        imageUpload: true,
+        imageFormats: ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+        imageUploadURL: "/upload/",
+        /*
+            上传的后台只需要返回一个 JSON 数据，结构如下：
+            {
+                success : 0 | 1,           // 0 表示上传失败，1 表示上传成功
+                message : "提示的信息，上传成功或上传失败及错误信息等。",
+                url     : "图片地址"        // 上传成功时才返回
+            }
+        */
+        toolbarIcons: [
+            "undo", "redo", "|",
+            "bold", "del", "italic", "quote", "ucwords", "uppercase", "lowercase", "|",
+            "h1", "h2", "h3", "h4", "h5", "|",
+            "list-ul", "list-ol", "hr", "|",
+            "link", "reference-link", "image", "code", "preformatted-text", "code-block", "table", "datetime", "emoji", "html-entities", "pagebreak"
+        ]
+    });
+});
+function get_history() {
+
+}
+function cancel() {
+    window.history.back();
+}
+function delete_article() {
+
+}
+function edit() {
+
+}
+</script>

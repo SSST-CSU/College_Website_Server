@@ -3,7 +3,7 @@ from .models import *
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ['id', 'edit_time', 'title', 'author', 'editor', 'creator']
+    list_display = ['id', 'article_id', 'edit_time', 'title', 'author', 'editor', 'creator']
 
 
 admin.site.register(Article, ArticleAdmin)

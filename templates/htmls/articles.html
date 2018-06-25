@@ -17,6 +17,7 @@
     <![endif]-->
 
     <link href="{% static "css/index.css" %}" rel="stylesheet">
+    <link href="{% static "css/editormd.css" %}" rel="stylesheet"/>
 </head>
 
 <body>
@@ -30,30 +31,32 @@
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <!--商标-->
-                <a id="navbar-brand" class="navbar-brand" href="/">   中南大学软件学院</a>
+                <a id="navbar-brand" class="navbar-brand" href="/" style="color: whitesmoke">   中南大学软件学院</a>
             </div>
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if user == None %}
-                    <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user"></span>  登录  </a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#LoginModal" style="color: whitesmoke"><span class="glyphicon glyphicon-user"></span>  登录  </a></li>
                     {% else %}
-                    <li><a href="/usercenter/"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
-                    <li><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
+                    <li><a href="/usercenter/" style="color: whitesmoke"><span class="glyphicon glyphicon-user" style="color: whitesmoke"></span>  {{ user.name }}  </a></li>
+                    <li><a href="#" onclick="logout()" style="color: whitesmoke"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
                     {% endif %}
                 </ul>
                 <ul class="nav navbar-nav">
                 {% for nav in navbar %}
                     {% if nav.len == 1 %}
-                    <li><a href="{{ nav.val.0.herf }}">{{ nav.val.0.name }}</a></li>
+                    <li><a href="{{ nav.val.0.herf }}" style="color: whitesmoke">{{ nav.val.0.name }}</a></li>
                     {% else %}
                     <li class="dropdown">
-                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown" style="color: whitesmoke">
                         {{ nav.val.0.name }}<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {% for subnav in nav.val %}
                         {% if forloop.counter0 != 0 %}
-                        <li><a href="{{ subnav.herf }}">{{ subnav.name }}</a></li>
+                        <li class="subnav"><a href="{{ subnav.herf }}" style="color: black">
+                            {{ subnav.name }}
+                        </a></li>
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -62,12 +65,13 @@
                 {% endfor %}
 
                 {% if user != None %}
-                    <li><a href="/usercenter/">个人中心</a></li>
+                    <li><a href="/usercenter/" style="color: whitesmoke">个人中心</a></li>
                 {% endif %}
                 </ul>
             </div>
         </div>
     </div>
+
     <!-- LoginModal -->
     <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -117,22 +121,34 @@
     <div>
         <div class="col-md-2"></div>
         <div class="col-md-8">
-            <ol class="breadcrumb" style="background-color: white; text-align: left">
-                <li><a href="/">软件学院</a></li>
-                <li><a href="#">上级栏目</a></li>
-                <li><a href="#">上级栏目</a></li>
-                <li class="active">{{ article.title }}</li>
-            </ol>
+            <div class="center_main">
+                <ol class="breadcrumb" style="background-color: white; text-align: left">
+                    <li><a href="/">软件学院</a></li>
+                    <li><a href="#">上级栏目</a></li>
+                    <li><a href="#">上级栏目</a></li>
+                    <li class="active">{{ article.title }}</li>
+                </ol>
 
-            <!-- 文章内容 -->
-            <h1 style="text-align: center">{{ article.title }}</h1>
-            <table border="0" align="center">
-                <th width="30%" style="text-align: center">{{ article.edit_time }}</th>
-                <th width="30%" style="text-align: center">作者：{{ article.author }}</th>
-                <th width="30%" style="text-align: center">编辑：{{ article.editor }}</th>
-            </table>
-            <hr>
-            {{ article.content }}
+                <!-- 文章内容 -->
+                <h1 style="text-align: center">{{ article.title }}</h1>
+                <table border="0" align="center">
+                    <th width="30%" style="text-align: center">{{ article.edit_time }}</th>
+                    <th width="30%" style="text-align: center">作者：{{ article.author }}</th>
+                    <th width="30%" style="text-align: center">编辑：{{ article.editor }}</th>
+                </table>
+                <hr>
+                <div id="md-view">
+                    <textarea style="display:none;" id="ts">{{ article.content }}</textarea>
+                </div>
+            </div>
+            <!-- 版权 -->
+            <footer id="footer">
+                <br>
+                <hr>
+
+                <p align="center">&copy; 2002-2018 中南大学软件学院 </p>
+            </footer>
+
         </div>
         <div class="col-md-2"></div>
     </div>
@@ -142,7 +158,18 @@
 <!-- 包括所有已编译的插件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 <!-- 本地js文件 -->
-<script src="{% static "js/user_center.js" %}"></script>
+<script src="{% static "js/index.js" %}"></script>
+<script src="{% static "js/editor/editormd.js" %}"></script>
+
+<script src="{% static "js/editor/marked.min.js" %}"></script>
+<script src="{% static "js/editor/prettify.min.js" %}"></script>
+
+<script src="{% static "js/editor/raphael.min.js" %}"></script>
+<script src="{% static "js/editor/underscore.min.js" %}"></script>
+<script src="{% static "js/editor/sequence-diagram.min.js" %}"></script>
+<script src="{% static "js/editor/flowchart.min.js" %}"></script>
+<script src="{% static "js/editor/jquery.flowchart.min.js" %}"></script>
+
 </body>
 </html>
 <script>
@@ -150,48 +177,16 @@
     $.ajaxSetup({
         data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
     });
-    function login() {
-        var user_id = $("#user_id").val();
-        var user_pwd = $("#user_pwd").val();
-        $.ajax({
-            url: "/user/login/",
-            type: "POST",
-            data: {
-                user_id:user_id,
-                user_pwd:user_pwd
-            },
-            success:function(callback){
-                var callback_dict = $.parseJSON(callback);
-                var msg = callback_dict.msg;
-                if(msg === -1) {
-                    document.getElementById("LoginMsg").innerText = "用户名错误";
-                } else if(msg === 1) {
-                    document.getElementById("LoginMsg").innerText = "密码错误";
-                } else {
-                    // 登陆成功
-                    location.reload();
-                }
-            }
+
+    $(function() {
+        var testEditormdView;
+        testEditormdView = editormd.markdownToHTML("md-view", {
+            htmlDecode      : "style,script,iframe",  // you can filter tags decode
+            emoji           : true,
+            taskList        : true,
+            tex             : true,  // 默认不解析
+            flowChart       : true,  // 默认不解析
+            sequenceDiagram : true  // 默认不解析
         });
-    }
-    function logout() {
-        var user_id = USER_ID;
-        $.ajax({
-            url: "/user/logout/",
-            type: "POST",
-            data: {
-                user_id:user_id
-            },
-            success:function(callback){
-                var callback_dict = $.parseJSON(callback);
-                var msg = callback_dict.msg;
-                if(msg === 0) {
-                    alert("登出失败");
-                } else {
-                    // 登出成功
-                    location.reload();
-                }
-            }
-        });
-    }
+    });
 </script>

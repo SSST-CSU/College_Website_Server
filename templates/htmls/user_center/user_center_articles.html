@@ -24,7 +24,8 @@
 
   <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist" id="tab">
-        <li role="presentation"><a href="#articles" role="tab" data-toggle="tab">文章内容管理</a></li>
+        <li role="presentation"><a href="#articles" role="tab" data-toggle="tab">文章内容编辑</a></li>
+        <li role="presentation"><a href="#articles_stat" role="tab" data-toggle="tab">文章状态设置</a></li>
         <li role="presentation"><a href="#columns" role="tab" data-toggle="tab">栏目设置</a></li>
     </ul>
 
@@ -36,26 +37,59 @@
         <!-- 文章内容管理 -->
 
         <div role="tabpanel" class="tab-pane" id="articles">
-            <div class="col-md-2">
-                <div class="input-group">
-                <label>栏目：</label>
-                <div class="input-group-btn" style="align-self: left">
-                    <button type="button" class="btn btn-default dropdown-toggle"
-                            data-toggle="dropdown" aria-haspopup="true">
-                        一级栏目<span class="caret"></span>
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                    </ul>
+            <!-- 选择栏目 -->
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">选择栏目</div>
+                    <br>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label>栏目：</label>
+                        </div>
+
+                        <button type="button" class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true">
+                            一级栏目<span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </div>
                 </div>
+            </div>
+
+            <br>
+
+            <div class="col-md-12">
+                <!-- 文章列表 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">文章列表</div>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tr>
+                                <th>文章编号</th>
+                                <th>修改时间</th>
+                                <th>文章标题</th>
+                                <th>作者</th>
+                                <th>编辑</th>
+                                <th>修改人</th>
+
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <div role="tabpanel" class="tab-pane" id="columns">
+        <div role="tabpanel" class="tab-pane" id="articles_stat">
             2
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="columns">
+            3
         </div>
 
     </div>
@@ -72,6 +106,10 @@
 </body>
 </html>
 <script>
+    var USER_ID = "{{ user.id }}";
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
+    });
     $("ul.nav-tabs > li").click(function (e) {
         e.preventDefault();
         $(this).tab('show');

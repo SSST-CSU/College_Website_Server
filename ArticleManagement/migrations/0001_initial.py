@@ -28,7 +28,8 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Article',
             fields=[
-                ('id', models.IntegerField(primary_key=True, serialize=False, verbose_name='文章编号')),
+                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('article_id', models.IntegerField(verbose_name='文章编号')),
                 ('edit_time', models.DateTimeField(verbose_name='修改时间')),
                 ('title', models.CharField(max_length=30, verbose_name='标题')),
                 ('author', models.CharField(max_length=30, verbose_name='作者')),
@@ -104,7 +105,7 @@ class Migration(migrations.Migration):
         ),
         migrations.AlterUniqueTogether(
             name='article',
-            unique_together={('id', 'edit_time', 'title')},
+            unique_together={('id', 'edit_time')},
         ),
         migrations.AlterUniqueTogether(
             name='archivalarticles',

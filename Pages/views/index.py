@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from UserManagement.Authentication import AuthenticateUser
 from Pages.models import *
@@ -92,4 +93,56 @@ def index(request):
         "navbar": navbar,
         "column": column,
         "col_md": col_md,
+    })
+
+
+def login_page(request):
+    """
+    登录页
+    :param request:
+    :return:
+    """
+    # 导航栏
+    navbarobj = NavbarObject.objects.filter(page__name='index').order_by('serial_number')
+    navbar = []
+    num = 0
+    for nav in navbarobj:
+        if nav.serial_number - int(nav.serial_number) == 0:
+            navbar.append({
+                "len": 1,
+                "val": [nav],
+            })
+            num += 1
+        else:
+            num -= 1
+            try:
+
+                navbar[num]["val"].append(nav)
+                navbar[num]["len"] += 1
+
+            except:
+                navbar.append({
+                    "len": 0,
+                    "val": [],
+                })
+                navbar[num]["val"].append(nav)
+                navbar[num]["len"] += 1
+            num += 1
+
+    # 登录
+    user = None
+    try:
+        user_id = request.session['user_id']
+        user_pwd = request.session['user_pwd']
+        user = AuthenticateUser(user_id, user_pwd)
+    except:
+        request.session['user_name'] = None
+
+    # 已登录
+    if user is not None:
+        return HttpResponseRedirect('/usercenter')
+
+    return render(request, 'htmls/login.html', {
+        "user": user,
+        "navbar": navbar,
     })

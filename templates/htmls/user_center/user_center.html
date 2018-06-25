@@ -30,26 +30,28 @@
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <!--商标-->
-                <a id="navbar-brand" class="navbar-brand" href="/">中南大学软件学院</a>
+                <a id="navbar-brand" class="navbar-brand" href="/" style="color: whitesmoke">   中南大学软件学院</a>
             </div>
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/usercenter/"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
-                    <li><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
+                    <li><a href="/usercenter/" style="color: whitesmoke"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
+                    <li><a href="#" onclick="logout()" style="color: whitesmoke"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
                 </ul>
                 <ul class="nav navbar-nav">
                 {% for nav in navbar %}
                     {% if nav.len == 1 %}
-                    <li><a href="{{ nav.val.0.herf }}">{{ nav.val.0.name }}</a></li>
+                    <li><a href="{{ nav.val.0.herf }}" style="color: whitesmoke">{{ nav.val.0.name }}</a></li>
                     {% else %}
                     <li class="dropdown">
-                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown" style="color: whitesmoke">
                         {{ nav.val.0.name }}<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {% for subnav in nav.val %}
                         {% if forloop.counter0 != 0 %}
-                        <li><a href="{{ subnav.herf }}">{{ subnav.name }}</a></li>
+                        <li class="subnav"><a href="{{ subnav.herf }}" style="color: black">
+                            {{ subnav.name }}
+                        </a></li>
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -58,7 +60,7 @@
                 {% endfor %}
 
                 {% if user != None %}
-                    <li><a href="/usercenter/">个人中心</a></li>
+                    <li><a href="/usercenter/" style="color: whitesmoke">个人中心</a></li>
                 {% endif %}
                 </ul>
             </div>
@@ -68,11 +70,16 @@
     <!-- 左侧选项栏  -->
     <div class="col-md-2 sidebar" id="left">
         <ul id="left_ul" class="nav nav-sidebar">
-            <li id="home" class="active"><a href="home" target="right_page">个人信息</a></li>
-            <li id="pages"><a href="pages" target="right_page">页面管理</a></li>
+            <li id="home" class="active"><a href="home" target="right_page">个人设置</a></li>
+            <li id="pages"><a href="pages" target="right_page">网站页面管理</a></li>
             <li id="users"><a href="users" target="right_page">用户管理</a></li>
             <li id="articles"><a href="articles" target="right_page">文章管理</a></li>
             <li id="meetingroom"><a href="meetingroom" target="right_page">会议室借用</a></li>
+            <li id="laboratory"><a href="#" target="right_page">实验室申请</a></li>
+            <li id="equipment"><a href="#" target="right_page">设备借用</a></li>
+            <li id="leave"><a href="#" target="right_page">线上请假系统</a></li>
+            <li id="oj"><a href="#" target="right_page">线上考试系统</a></li>
+            <li id="student_cadres"><a href="#" target="right_page">学生机构招新</a></li>
         </ul>
     </div>
 
@@ -94,81 +101,4 @@
     $.ajaxSetup({
         data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
     });
-    function login() {
-        var user_id = $("#user_id").val();
-        var user_pwd = $("#user_pwd").val();
-        $.ajax({
-            url: "/user/login/",
-            type: "POST",
-            data: {
-                user_id:user_id,
-                user_pwd:user_pwd
-            },
-            success:function(callback){
-                var callback_dict = $.parseJSON(callback);
-                var msg = callback_dict.msg;
-                if(msg === -1) {
-                    document.getElementById("LoginMsg").innerText = "用户名错误";
-                } else if(msg === 1) {
-                    document.getElementById("LoginMsg").innerText = "密码错误";
-                } else {
-                    // 登陆成功
-                    location.reload();
-                }
-            }
-        });
-    }
-    function logout() {
-        var user_id = USER_ID;
-        $.ajax({
-            url: "/user/logout/",
-            type: "POST",
-            data: {
-                user_id:user_id
-            },
-            success:function(callback){
-                var callback_dict = $.parseJSON(callback);
-                var msg = callback_dict.msg;
-                if(msg === 0) {
-                    alert("登出失败");
-                } else {
-                    // 登出成功
-                    location.reload();
-                }
-            }
-        });
-    }
-    $("ul.nav-sidebar > li").click(function (e) {
-        e.preventDefault();
-        $(this).tab('show');
-        var h = $(this)[0].children[0].href;
-        $("#right_page").attr("src", h.toString());
-    });
-    window.onload = function (ev) {
-        $("#home").click();
-        var winheight = window.innerHeight;
-        var navheight = document.getElementById("menu-nav").offsetHeight;
-        var winwidth = window.innerWidth;
-        if(winwidth > 768) {
-            document.getElementById("right_page").height = winheight - navheight - 24;
-            var leftwidth = document.getElementById("left").offsetWidth;
-            document.getElementById("right_page").width = winwidth * 5 / 6 - 20;
-        } else {
-            document.getElementById("right_page").width = winwidth - 40;
-            document.getElementById("right_page").height = document.getElementById("right_page").contentWindow.document.body.scrollHeight;
-        }
-    };
-    window.onresize = function () {
-        var winheight = window.innerHeight;
-        var navheight = document.getElementById("menu-nav").offsetHeight;
-        var winwidth = window.innerWidth;
-        if(winwidth > 768) {
-            document.getElementById("right_page").height = winheight - navheight - 24;
-            var leftwidth = document.getElementById("left").offsetWidth;
-            document.getElementById("right_page").width = winwidth * 5 / 6 - 20;
-        } else {
-            document.getElementById("right_page").width = winwidth - 40;
-            document.getElementById("right_page").height = document.getElementById("right_page").contentWindow.document.body.scrollHeight;
-        }
-    }
 </script>

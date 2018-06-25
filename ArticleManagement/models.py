@@ -11,7 +11,7 @@ class Article(models.Model):
     """
     一篇文章
     """
-    id = models.IntegerField(verbose_name='文章编号', primary_key=True)
+    article_id = models.IntegerField(verbose_name='文章编号')
     edit_time = models.DateTimeField(verbose_name='修改时间')  # 第一次创建的时间也是这个
     title = models.CharField(verbose_name='标题', max_length=30)
     author = models.CharField(verbose_name='作者', max_length=30)
@@ -25,7 +25,7 @@ class Article(models.Model):
 
     class Meta:
         # 为版本管理，一个文章有多个版本记录，但id相同，按标题获取时应该返回时间最晚的那个
-        unique_together = ('id', 'edit_time', 'title')
+        unique_together = ('id', 'edit_time')
         verbose_name = '文章'
         verbose_name_plural = '文章'
 
