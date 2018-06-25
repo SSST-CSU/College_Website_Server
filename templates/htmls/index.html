@@ -115,6 +115,7 @@
                 <img src="{% static "images/carousel1.jpg" %}">
                 <div class="carousel-caption"></div>
             </div>
+
             <div class="item">
                 <img src="{% static "images/carousel2.jpg" %}">
                 <div class="carousel-caption"></div>
@@ -144,22 +145,18 @@
             {% for col in column %}
             <div class="{{ col_md }} ">
 
-                <h2 onclick="gotoColumn('{{ col.title.column.name }}')">{{ col.title.column.name }}</h2>
+                <h2 onclick="gotoColumn('{{ col.title.column.id }}')" class="column_item">{{ col.title.column.name }}</h2>
 
                 <p>
                 {% if col.article.0 != None %}
-                    <li onclick="gotoArticle({{ col.article.0.id }})">{{ col.article.0.title }}</li>
+                    <li onclick="gotoArticle({{ col.article.0.id }})" class="article_item">{{ col.article.0.title }}</li>
                 {% endif %}
                 {% if col.article.1 != None %}
-                    <li onclick="gotoArticle({{ col.article.1.id }})">{{ col.article.1.title }}</li>
+                    <li onclick="gotoArticle({{ col.article.1.id }})" class="article_item">{{ col.article.1.title }}</li>
                 {% endif %}
                 {% if col.article.2 != None %}
-                    <li onclick="gotoArticle({{ col.article.2.id }})">{{ col.article.2.title }}</li>
+                    <li onclick="gotoArticle({{ col.article.2.id }})" class="article_item">{{ col.article.2.title }}</li>
                 {% endif %}
-
-                <!--
-                <p><a class="btn btn-default" href="#" role="button">更多</a></p>
-                -->
 
             </div>
             {% endfor %}

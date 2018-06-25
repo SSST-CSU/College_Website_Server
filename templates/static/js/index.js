@@ -48,6 +48,6 @@ function logout() {
 function gotoArticle(id) {
     window.location.href = "/article/id/" + id.toString();
 }
-function gotoColumn(name) {
-
+function gotoColumn(id) {
+    window.location.href = "/column/id/" + id.toString();
 }

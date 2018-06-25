@@ -4,7 +4,33 @@ from UserManagement.models.User import User
 
 
 class ArticleManager(models.Manager):
-    pass
+    def get_column_articles(self, column):
+        """
+        获取当前栏目下所有文章
+        :param column: 栏目
+        :return: query<Article>
+        """
+        # 获取所有存档文章
+        archival_articles = ArchivalArticles.objects.filter(column=column)
+        result = self.none()
+        for a in archival_articles:
+            result = result | self.filter(id=a.article.id)
+        return result
+
+    def get_same_column_articles(self, article):
+        """
+        获取相同栏目的所有文章
+        :param article: 文章
+        :return: query<Article>
+        """
+        # 获取栏目
+        try:
+            column = ArchivalArticles.objects.get(article=article).column
+        except:
+            return self.none()
+
+        return self.get_column_articles(column)
+
 
 
 class Article(models.Model):
@@ -23,6 +49,26 @@ class Article(models.Model):
     def __str__(self):
         return str(self.title)
 
+    def get_article_route(self):
+        """
+        返回文章的栏目导航路径，若有多条，则返回最短的，若长度相等，则返回默认排序的第一个
+        :return: list<column>
+        """
+        result = []
+        list_len = 1000
+        archival_articles_queryset = ArchivalArticles.objects.filter(article=self).order_by('-column__name')
+        for aaq in archival_articles_queryset:
+            tmp = []
+            col = aaq.column
+            while col.superior is not None:
+                tmp.insert(0, col)
+                col = col.superior
+            tmp.insert(0, col)
+            if len(tmp) < list_len:
+                result = tmp
+        return result
+
+
     class Meta:
         # 为版本管理，一个文章有多个版本记录，但id相同，按标题获取时应该返回时间最晚的那个
         unique_together = ('id', 'edit_time')
@@ -38,14 +84,37 @@ class Column(models.Model):
     """
     栏目
     """
-    name = models.CharField('栏目名称', primary_key=True, max_length=30)
+    name = models.CharField('栏目名称', max_length=30)
     superior = models.ForeignKey('self', on_delete=models.SET_NULL, verbose_name='上级栏目', null=True, blank=True)
     objects = ColumnManager()
 
     def __str__(self):
         return str(self.name)
 
+    def get_column_route(self):
+        """
+        返回栏目路径
+        :return: list<column>
+        """
+        result = []
+        col = self
+        while col.superior is not None:
+            result.insert(0, col)
+            col = col.superior
+        result.insert(0, col)
+        # 去掉最后一个
+        result.__delitem__(len(result)-1)
+        return result
+
+    def get_sub_column(self):
+        """
+        获取所有的子栏目
+        :return: queryset<Column>
+        """
+        return Column.objects.filter(superior=self)
+
     class Meta:
+        unique_together = ('name', 'superior')
         verbose_name = '栏目'
         verbose_name_plural = '栏目'
 

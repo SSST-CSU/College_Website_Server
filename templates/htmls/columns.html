@@ -17,7 +17,6 @@
     <![endif]-->
 
     <link href="{% static "css/index.css" %}" rel="stylesheet">
-    <link href="{% static "css/editormd.css" %}" rel="stylesheet"/>
 </head>
 
 <body>
@@ -124,22 +123,24 @@
                 <ol class="breadcrumb" style="background-color: white; text-align: left">
                     <li><a href="/">软件学院</a></li>
                     {% for col in path %}
-                    <li onclick="gotoColumn('{{ col.id }}')"><a href="#">{{ col.name }}</a></li>
+                    <li onclick="gotoColumn('{{ col.name }}')"><a href="#">{{ col.name }}</a></li>
                     {% endfor %}
-                    <li class="active">{{ article.title }}</li>
+                    <li class="active">{{ column.name }}</li>
                 </ol>
 
-                <!-- 文章内容 -->
-                <h1 style="text-align: center">{{ article.title }}</h1>
-                <table border="0" align="center">
-                    <th width="30%" style="text-align: center">{{ article.edit_time }}</th>
-                    <th width="30%" style="text-align: center">作者：{{ article.author }}</th>
-                    <th width="30%" style="text-align: center">编辑：{{ article.editor }}</th>
-                </table>
+                <!-- 栏目标题 -->
+                <h1 style="text-align: center">{{ column.name }}</h1>
                 <hr>
-                <div id="md-view">
-                    <textarea style="display:none;" id="ts">{{ article.content }}</textarea>
-                </div>
+
+                <!-- 栏目列表 -->{% if sub_column != None %}
+                {% for sub in sub_column %}
+                <li onclick="gotoColumn('{{ sub.id }}')" class="column_item">{{ sub.name }}</li>
+                {% endfor %}<hr>{% endif %}
+
+                <!-- 文章列表 -->{% if articles != None %}
+                {% for art in articles %}
+                <li onclick="gotoArticle('{{ art.article.id }}')" class="article_item">{{ art.article.title }}</li>
+                {% endfor %}{% endif %}
             </div>
             <!-- 版权 -->
             <footer id="footer">
@@ -159,16 +160,6 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 <!-- 本地js文件 -->
 <script src="{% static "js/index.js" %}"></script>
-<script src="{% static "js/editor/editormd.js" %}"></script>
-
-<script src="{% static "js/editor/marked.min.js" %}"></script>
-<script src="{% static "js/editor/prettify.min.js" %}"></script>
-
-<script src="{% static "js/editor/raphael.min.js" %}"></script>
-<script src="{% static "js/editor/underscore.min.js" %}"></script>
-<script src="{% static "js/editor/sequence-diagram.min.js" %}"></script>
-<script src="{% static "js/editor/flowchart.min.js" %}"></script>
-<script src="{% static "js/editor/jquery.flowchart.min.js" %}"></script>
 
 </body>
 </html>
@@ -176,17 +167,5 @@
     var USER_ID = "{{ user.id }}";
     $.ajaxSetup({
         data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
-    });
-
-    $(function() {
-        var testEditormdView;
-        testEditormdView = editormd.markdownToHTML("md-view", {
-            htmlDecode      : "style,script,iframe",  // you can filter tags decode
-            emoji           : true,
-            taskList        : true,
-            tex             : true,  // 默认不解析
-            flowChart       : true,  // 默认不解析
-            sequenceDiagram : true  // 默认不解析
-        });
     });
 </script>

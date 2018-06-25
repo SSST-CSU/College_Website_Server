@@ -10,7 +10,7 @@ admin.site.register(Article, ArticleAdmin)
 
 
 class ColumnAdmin(admin.ModelAdmin):
-    list_display = ['name', 'superior']
+    list_display = ['id', 'name', 'superior']
 
 
 admin.site.register(Column, ColumnAdmin)

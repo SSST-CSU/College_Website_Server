@@ -1,6 +1,6 @@
 body {
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     color: #0a0a0a;
 }
 
@@ -36,8 +36,17 @@ body {
 }
 #footer hr {
     height: 1px;
-    background-color: #aaaaaa;
+    background-color: #c5c5c5;
 }
 .center_main {
     padding-bottom: 100px;
+}
+.column_item {
+    cursor: pointer;
+    padding-bottom: 20px;
+}
+.article_item {
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

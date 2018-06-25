@@ -24,5 +24,7 @@ urlpatterns = [
     path('usercenter/meetingroom/', user_center_meetingroom),
 
     path('article/id/<int:id>/', article_page),
-    path('article/id/<slug>/', article_page),
+    path('article/name/<str:name>/', article_page),
+
+    path('column/id/<int:id>/', columns_page),
 ]
