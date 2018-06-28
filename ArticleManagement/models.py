@@ -17,6 +17,16 @@ class ArticleManager(models.Manager):
             result = result | self.filter(id=a.article.id)
         return result
 
+    def get_all_column_articles(self, column):
+        """
+        获取栏目以及子栏目的所有文章
+        :return: query<Article>
+        """
+        archival_articles = ArchivalArticles.objects.filter(column=column)
+        result = self.none()
+        for a in archival_articles:
+            result = result | self.filter(id=a.article.id)
+
     def get_same_column_articles(self, article):
         """
         获取相同栏目的所有文章
@@ -30,7 +40,6 @@ class ArticleManager(models.Manager):
             return self.none()
 
         return self.get_column_articles(column)
-
 
 
 class Article(models.Model):
@@ -68,7 +77,6 @@ class Article(models.Model):
                 result = tmp
         return result
 
-
     class Meta:
         # 为版本管理，一个文章有多个版本记录，但id相同，按标题获取时应该返回时间最晚的那个
         unique_together = ('id', 'edit_time')
@@ -103,7 +111,7 @@ class Column(models.Model):
             col = col.superior
         result.insert(0, col)
         # 去掉最后一个
-        result.__delitem__(len(result)-1)
+        result.__delitem__(len(result) - 1)
         return result
 
     def get_sub_column(self):
@@ -140,6 +148,10 @@ class ArchivalArticles(models.Model):
         verbose_name_plural = '文章的栏目'
 
 
+class ArticleStatManager(models.Manager):
+    pass
+
+
 class ArticleStat(models.Model):
     """
     文章状态
@@ -150,6 +162,7 @@ class ArticleStat(models.Model):
         (1, '发布'),
     )
     stat = models.IntegerField(choices=stat_choices, default=1)
+    objects = ArchivalArticlesManager()
 
     def __str__(self):
         return str(self.article) + str('-') + str(self.stat)
@@ -169,6 +182,7 @@ class ArticlePermission(models.Model):
     按照栏目给不同职务权限
     每个用户自身都有权限修改或删除自己创建的文章
     获得栏目权限后将会自动获得子栏目的所有权限，无法按照单个文章进行权限赋予
+
     """
 
     from django.contrib.auth.models import User as DutyUser
