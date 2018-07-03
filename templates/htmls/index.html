@@ -31,30 +31,32 @@
                     <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                 </button>
                 <!--商标-->
-                <a class="navbar-brand" href="/">   中南大学软件学院</a>
+                <a id="navbar-brand" class="navbar-brand" href="/" style="color: whitesmoke">   中南大学软件学院</a>
             </div>
 
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     {% if user == None %}
-                    <li><a data-toggle="modal" data-target="#LoginModal"><span class="glyphicon glyphicon-user"></span>  登录  </a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#LoginModal" style="color: whitesmoke"><span class="glyphicon glyphicon-user"></span>  登录  </a></li>
                     {% else %}
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span>  {{ user.name }}  </a></li>
-                    <li><a href="#" onclick="logout()"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
+                    <li><a href="/usercenter/"><span class="glyphicon glyphicon-user" style="color: whitesmoke"></span>  {{ user.name }}  </a></li>
+                    <li><a href="#" onclick="logout()" style="color: whitesmoke"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
                     {% endif %}
                 </ul>
                 <ul class="nav navbar-nav">
                 {% for nav in navbar %}
                     {% if nav.len == 1 %}
-                    <li><a href="{{ nav.val.0.herf }}">{{ nav.val.0.name }}</a></li>
+                    <li><a href="{{ nav.val.0.herf }}" style="color: whitesmoke">{{ nav.val.0.name }}</a></li>
                     {% else %}
                     <li class="dropdown">
-                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown">
+                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown" style="color: whitesmoke">
                         {{ nav.val.0.name }}<span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         {% for subnav in nav.val %}
                         {% if forloop.counter0 != 0 %}
-                        <li><a href="{{ subnav.herf }}">{{ subnav.name }}</a></li>
+                        <li class="subnav"><a href="{{ subnav.herf }}" style="color: black">
+                            {{ subnav.name }}
+                        </a></li>
                         {% endif %}
                         {% endfor %}
                     </ul>
@@ -63,12 +65,13 @@
                 {% endfor %}
 
                 {% if user != None %}
-                    <li><a href="/usercenter/">个人中心</a></li>
+                    <li><a href="/usercenter/" style="color: whitesmoke">个人中心</a></li>
                 {% endif %}
                 </ul>
             </div>
         </div>
     </div>
+
     <!-- LoginModal -->
     <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
@@ -112,6 +115,7 @@
                 <img src="{% static "images/carousel1.jpg" %}">
                 <div class="carousel-caption"></div>
             </div>
+
             <div class="item">
                 <img src="{% static "images/carousel2.jpg" %}">
                 <div class="carousel-caption"></div>
@@ -139,46 +143,46 @@
         <div class="row" id="summary-container">
         {% if column != None %}
             {% for col in column %}
-            <div class="{{ col_md }}">
+            <div class="{{ col_md }} ">
 
-                <h2 onclick="gotoColumn('{{ col.title.column.name }}')">{{ col.title.column.name }}</h2>
+                <h2 onclick="gotoColumn('{{ col.title.column.id }}')" class="column_item">{{ col.title.column.name }}</h2>
 
                 <p>
                 {% if col.article.0 != None %}
-                    <li onclick="gotoArticle('{{ col.article.0.id }}')">{{ col.article.0.title }}</li>
+                    <li onclick="gotoArticle({{ col.article.0.id }})" class="article_item">{{ col.article.0.title }}</li>
                 {% endif %}
                 {% if col.article.1 != None %}
-                    <li onclick="gotoArticle('{{ col.article.1.id }}')">{{ col.article.1.title }}</li>
+                    <li onclick="gotoArticle({{ col.article.1.id }})" class="article_item">{{ col.article.1.title }}</li>
                 {% endif %}
                 {% if col.article.2 != None %}
-                    <li onclick="gotoArticle('{{ col.article.2.id }}')">{{ col.article.2.title }}</li>
+                    <li onclick="gotoArticle({{ col.article.2.id }})" class="article_item">{{ col.article.2.title }}</li>
                 {% endif %}
-                </p>
-{#                <p><a class="btn btn-default" href="#" role="button">更多</a></p>#}
+
             </div>
             {% endfor %}
         {% endif %}
         </div>
-
         <!-- 版权 -->
-        <footer>
+        <footer id="footer">
+            <br>
             <hr>
-{#            <p class="pull-right"><a href="#top">回到顶部</a></p>#}
-
             <p align="center">&copy; 2002-2018 中南大学软件学院 </p>
         </footer>
+
     </div>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
-<!-- 本地js文件 -->
+
 <script src="{% static "js/index.js" %}"></script>
 </body>
 </html>
 <script>
     var USER_ID = "{{ user.id }}";
     $.ajaxSetup({
-        data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
+        data: {
+            csrfmiddlewaretoken: "{{ csrf_token }}"
+        }
     });
 </script>

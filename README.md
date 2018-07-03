@@ -20,5 +20,21 @@
 - [**UserManagerment**](UserManagement/README.md)
 - db.sqlite3
 - manage.py
-  
-超级管理员`root` 的密码是 admin123
+
+## 部署与运行
+```
+sudo apt-get install python-pip
+pip install django
+pip install djangorestframework
+pip install django-jinja
+pip install django-filter
+
+git clone github.com/pzf0000/College_Website_Server.git
+cd College_Website_Server
+
+python manage.py makemigration
+python manage.py migrate
+python manage.py createsuperuser
+```
+注意：已配置好超级管理员`root` ，其密码是 admin123，可以不用重复配置，若需要清空数据，请删除数据库，重新做ORM迁移。
+

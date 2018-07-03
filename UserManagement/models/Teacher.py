@@ -1,5 +1,9 @@
 from django.db import models
-from .User import *
+from .User import User, User_Manager
+
+
+class Teacher_Manager(User_Manager):
+    pass
 
 
 class Teacher(User):
@@ -47,6 +51,7 @@ class Teacher(User):
     )
     title = models.CharField(verbose_name='职称', max_length=10, choices=title_choice)
     is_external_unit = models.BooleanField(verbose_name='是否外聘', default=False)
+    objects = Teacher_Manager()
 
     def __str__(self):
         return super.__str__(self)
@@ -55,8 +60,17 @@ class Teacher(User):
         verbose_name = '教师'
         verbose_name_plural = '教师列表'
         permissions = (
-            ('view_teacher', '可以查看老师'),
-            ('create_teacher', '可以增加老师'),
-            ('update_teacher', '可以修改老师'),
-            ('delete_teacher', '可以删除老师'),
+            ('view_my_teachers', '可以查看自己创建的教师用户'),
+            ('view_department_teachers', '可以查看自己部门的教师用户'),
+            ('view_all_teachers', '可以查看所有教师用户'),
+
+            ('create_teacher', '可以增加教师用户'),
+
+            ('update_my_teachers', '可以修改自己创建的教师用户'),
+            ('update_department_teachers', '可以修改自己部门的教师用户'),
+            ('update_all_teachers', '可以修改所有教师用户'),
+
+            ('delete_my_teachers', '可以删除自己创建的教师用户'),
+            ('delete_department_teachers', '可以删除自己部门的教师用户'),
+            ('delete_all_teachers', '可以删除所有教师用户'),
         )

@@ -21,12 +21,21 @@ class UserViewSet(ModelViewSet):
         perm_set = request.session['perm_set']
         queryset = User.objects.none()
         perm = False
+
         if 'UserManagement.view_all_users' in perm_set:
             perm = True
             queryset = queryset | User.objects.all()
+
         if 'UserManagement.view_my_users' in perm_set:
             perm = True
-            queryset = queryset | User.objects.get_my_users()
+            try:
+                my_id = request.session['user_id']
+                me = User.objects.get(id=my_id)
+                queryset = queryset | User.objects.get_my_users(me)
+            except:
+                data = {'detail': '未登录'}
+                return Response(data, status=status.HTTP_403_FORBIDDEN)
+
         if 'UserManagement.view_class_users' in perm_set:
             try:
                 user = User.objects.get(id=request.session['user_id'])
@@ -35,6 +44,7 @@ class UserViewSet(ModelViewSet):
                 data = {'detail': '未登录'}
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
+
         if 'UserManagement.view_grade_users' in perm_set:
             try:
                 user = User.objects.get(id=request.session['user_id'])
@@ -43,6 +53,7 @@ class UserViewSet(ModelViewSet):
                 data = {'detail': '未登录'}
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
+
         if not perm:
             data = {'detail': '没有权限'}
             return Response(data, status=status.HTTP_403_FORBIDDEN)
@@ -68,12 +79,21 @@ class UserViewSet(ModelViewSet):
         perm_set = request.session['perm_set']
         queryset = User.objects.none()
         perm = False
+
         if 'UserManagement.update_all_users' in perm_set:
             perm = True
             queryset = queryset | User.objects.all()
+
         if 'UserManagement.update_my_users' in perm_set:
             perm = True
-            queryset = queryset | User.objects.get_my_users()
+            try:
+                my_id = request.session['user_id']
+                me = User.objects.get(id=my_id)
+                queryset = queryset | User.objects.get_my_users(me)
+            except:
+                data = {'detail': '未登录'}
+                return Response(data, status=status.HTTP_403_FORBIDDEN)
+
         if 'UserManagement.update_class_users' in perm_set:
             try:
                 user = User.objects.get(id=request.session['user_id'])
@@ -82,6 +102,7 @@ class UserViewSet(ModelViewSet):
                 data = {'detail': '未登录'}
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
+
         if 'UserManagement.update_grade_users' in perm_set:
             try:
                 user = User.objects.get(id=request.session['user_id'])
@@ -90,6 +111,7 @@ class UserViewSet(ModelViewSet):
                 data = {'detail': '未登录'}
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
+
         if not perm:
             data = {'detail': '没有权限'}
             return Response(data, status=status.HTTP_403_FORBIDDEN)
@@ -104,12 +126,21 @@ class UserViewSet(ModelViewSet):
         perm_set = request.session['perm_set']
         queryset = User.objects.none()
         perm = False
+
         if 'UserManagement.delete_all_users' in perm_set:
             perm = True
             queryset = queryset | User.objects.all()
+
         if 'UserManagement.delete_my_users' in perm_set:
             perm = True
-            queryset = queryset | User.objects.get_my_users()
+            try:
+                my_id = request.session['user_id']
+                me = User.objects.get(id=my_id)
+                queryset = queryset | User.objects.get_my_users(me)
+            except:
+                data = {'detail': '未登录'}
+                return Response(data, status=status.HTTP_403_FORBIDDEN)
+
         if 'UserManagement.delete_class_users' in perm_set:
             try:
                 user = User.objects.get(id=request.session['user_id'])
@@ -118,6 +149,7 @@ class UserViewSet(ModelViewSet):
                 data = {'detail': '未登录'}
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
+
         if 'UserManagement.delete_grade_users' in perm_set:
             try:
                 user = User.objects.get(id=request.session['user_id'])
@@ -126,6 +158,7 @@ class UserViewSet(ModelViewSet):
                 data = {'detail': '未登录'}
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
+
         if not perm:
             data = {'detail': '没有权限'}
             return Response(data, status=status.HTTP_403_FORBIDDEN)
@@ -139,6 +172,7 @@ def login(request):
     pwd = request.POST['user_pwd']
     msg = 0
     # 认证账户密码是否匹配
+    user = None
     try:
         user = User.objects.get(id=id)
         if pwd == user.pwd:
@@ -151,20 +185,21 @@ def login(request):
         msg = -1
 
     # 管理员用户集合
-    admin_set = set()
+    # admin_set = set()
     # 权限集合
     perm_set = set()
 
     # 将权限和管理员信息加入session
     try:
-        duties = User.objects.get_user_duty()
+        duties = User.objects.get_user_duty(user)
         for duty in duties:
-            admin_set.add(duty.duty)
+            # admin_set.add(duty.duty)
             perms = duty.duty.get_all_permissions()
             for perm in perms:
                 perm_set.add(perm)
-        request.session['admin_set'] = admin_set
-        request.session['perm_set'] = perm_set
+
+        # request.session['admin_set'] = list(admin_set)
+        request.session['perm_set'] = list(perm_set)
     except:
         msg = -1
     ret = {

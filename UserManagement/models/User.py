@@ -1,7 +1,4 @@
 from django.db import models
-from .User_Duty import User_Duty
-from .Student import Undergraduate_Student, Graduate_Student, Student_Class, Student_Grade
-from .Teacher import Teacher
 
 
 class User_Manager(models.Manager):
@@ -18,45 +15,99 @@ class User_Manager(models.Manager):
                 permissions.append(permission)
         return permissions
 
-    def get_my_users(self):
+    def get_my_users(self, user=None):
         """
         返回自己创建的所有用户
         :return: queryset<User>
         """
+        if user is not None:
+            return self.filter(creator=user)
         return self.filter(creator=self)
 
-    def get_user_duty(self):
+    def get_user_duty(self, user):
         """
         返回用户职务，若没有职务则为空
         :return: queryset<User_Duty>
         """
-        return User_Duty.objects.filter(user=self)
+        from .User_Duty import User_Duty
+        return User_Duty.objects.filter(user=user)
 
-    def get_class_users(self, user):
+    def get_class_users(self, user, instructor=False, headmaster=False):
         """
         返回自己班级的所有用户
         :return: queryset<User>
         """
+
+        from .Student import Undergraduate_Student, Graduate_Student, Student_Class
+        from .Teacher import Teacher
+
         if isinstance(user, Undergraduate_Student):
             return self.filter(student_class=user.student_class)
         elif isinstance(user, Graduate_Student):
             return self.filter(student_class=user.student_class)
+        elif isinstance(user, Teacher):
+            result = self.none()
+            # 辅导员
+            if instructor:
+                result = result | self.filter()
+            # 班导师
+            if headmaster:
+                result = result | self.filter()
+            return result
         else:
-            return User.objects.none()
+            return self.none()
 
-    def get_grade_users(self, user):
+    def get_grade_users(self, user, instructor=False, headmaster=False):
         """
         返回自己年级的所有用户
         :param user:
         :return: queryset<User>
         """
-        result = User.objects.none()
+
+        from .Student import Undergraduate_Student, Graduate_Student, Student_Class
+        from .Teacher import Teacher
+
+        result = self.none()
         if isinstance(user, Undergraduate_Student) or isinstance(user, Graduate_Student):
             student_grade = user.student_class.grade
             student_classes = Student_Class.objects.filter(grade=student_grade)
             for student_class in student_classes:
                 result = result | self.filter(student_class=student_class)
+        elif isinstance(user, Teacher):
+            result = self.none()
+            # 辅导员
+            if instructor:
+                result = result | self.filter()
+            # 班导师
+            if headmaster:
+                result = result | self.filter()
         return result
+
+    def get_teacher_gs(self, user):
+        """
+        返回同一个导师的用户
+        :return: queryset<gs>
+        """
+
+        from .Student import Graduate_Student
+        from .Teacher import Teacher
+
+        if isinstance(user, User):
+            try:
+                user = Graduate_Student.objects.get(id=user.id)
+            except:
+                return None
+        if isinstance(user, Graduate_Student):
+            return self.filter(instructor=user.instructor)
+        elif isinstance(user, Teacher):
+            return self.filter(instructor=user)
+
+    def get_department_user(self, user):
+        """
+        获取同一部门的人员
+        :return:queryset<User>
+        """
+        # todo
 
 
 class User(models.Model):
@@ -65,7 +116,7 @@ class User(models.Model):
     pwd = models.CharField(verbose_name='密码', max_length=25)
     stat = models.BooleanField(verbose_name='用户状态', default=True)  # 0 不可用 1 可用
     name_used_before = models.CharField(verbose_name='曾用名', max_length=10, null=True, blank=True)
-    sex = models.IntegerField(verbose_name='性别', max_length=1, choices=((0, '男'), (1, '女')))
+    sex = models.IntegerField(verbose_name='性别', choices=((0, '男'), (1, '女')))
     birthday = models.DateField(verbose_name='出生日期')
     political_choices = (
         (1, '中共党员'),
@@ -301,7 +352,7 @@ class User(models.Model):
     )
     country_and_region = models.CharField(verbose_name='国家或地区', max_length=3, choices=country_and_region_choices,
                                           default='CN')
-    creator = models.ForeignKey('self', on_delete=models.SET_NULL, verbose_name='用户创建者')
+    creator = models.ForeignKey('self', on_delete=models.SET_NULL, verbose_name='用户创建者', null=True, blank=True)
     objects = User_Manager()
 
     def to_student(self):
@@ -309,6 +360,7 @@ class User(models.Model):
         返回student对象，如果不存在student，则为None
         :return: object<student>
         """
+        from .Student import Undergraduate_Student, Graduate_Student
         result = None
         try:
             # 如果本科生
@@ -327,6 +379,9 @@ class User(models.Model):
         返回teacher对象，如果不存在teacher，则为None
         :return:
         """
+
+        from .Teacher import Teacher
+
         result = None
         try:
             # 如果Tescher
@@ -340,6 +395,7 @@ class User(models.Model):
         返回用户的班级，如果没有班级，则为None
         :return: object<student_class>
         """
+        from .Student import Undergraduate_Student, Graduate_Student
         result = None
         try:
             # 如果本科生
@@ -364,13 +420,20 @@ class User(models.Model):
             ('view_class_users', '可以查看自己班级的用户'),
             ('view_grade_users', '可以查看自己年级的用户'),
             ('view_all_users', '可以查看所有用户'),
+
             ('create_user', '可以增加用户'),
+
             ('update_my_users', '可以修改自己创建的用户'),
             ('update_class_users', '可以修改自己班级的用户'),
             ('update_grade_users', '可以修改自己年级的用户'),
             ('update_all_users', '可以修改所有用户'),
+
             ('delete_my_users', '可以删除自己创建的用户'),
             ('delete_class_users', '可以删除自己班级的用户'),
             ('delete_grade_users', '可以删除自己年级的用户'),
             ('delete_all_users', '可以删除所有用户'),
         )
+
+
+def get_usermanagement_user():
+    return User

@@ -1,3 +1,6 @@
+function back() {
+    history.back()
+}
 function login() {
     var user_id = $("#user_id").val();
     var user_pwd = $("#user_pwd").val();
@@ -42,15 +45,9 @@ function logout() {
         }
     });
 }
-
-function back() {
-    history.back()
-}
-
-function gotoColumn(name) {
-    
-}
-
 function gotoArticle(id) {
-    
+    window.location.href = "/article/id/" + id.toString();
+}
+function gotoColumn(id) {
+    window.location.href = "/column/id/" + id.toString();
 }

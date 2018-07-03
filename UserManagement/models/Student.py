@@ -29,10 +29,10 @@ class Major(models.Model):
         verbose_name = '专业'
         verbose_name_plural = '专业列表'
         permissions = (
-            ('view_major', '可以查看专业'),
+            ('view_majors', '可以查看专业'),
             ('create_major', '可以增加专业'),
-            ('update_major', '可以修改专业'),
-            ('delete_major', '可以删除专业'),
+            ('update_majors', '可以修改专业'),
+            ('delete_majors', '可以删除专业'),
         )
 
 
@@ -67,8 +67,10 @@ class Student_Class_Manager(models.Manager):
 class Student_Class(models.Model):
     name = models.CharField(verbose_name='班级', max_length=30)
     grade = models.ForeignKey(Student_Grade, verbose_name='年级', on_delete=models.DO_NOTHING)
-    headmaster = models.ForeignKey(Teacher, verbose_name='班导师', on_delete=models.DO_NOTHING, related_name='headmaster_teacher')
-    instructor = models.ForeignKey(Teacher, verbose_name='辅导员', on_delete=models.DO_NOTHING, related_name='instructor_teacher')
+    headmaster = models.ForeignKey(Teacher, verbose_name='班导师', on_delete=models.DO_NOTHING,
+                                   related_name='headmaster_teacher', null=True, blank=True)  # 研究生没有班导师
+    instructor = models.ForeignKey(Teacher, verbose_name='辅导员', on_delete=models.DO_NOTHING,
+                                   related_name='instructor_teacher')
     objects = Student_Class_Manager()
 
     def __str__(self):
@@ -91,7 +93,8 @@ class Undergraduate_Student_Manager(User_Manager):
 
 
 class Undergraduate_Student(User):
-    student_class = models.ForeignKey(Student_Class, verbose_name='班级', on_delete=models.DO_NOTHING, null=True, blank=True)
+    student_class = models.ForeignKey(Student_Class, verbose_name='班级', on_delete=models.DO_NOTHING, null=True,
+                                      blank=True)
     objects = Undergraduate_Student_Manager()
 
     def __str__(self):
@@ -104,10 +107,22 @@ class Undergraduate_Student(User):
         verbose_name = '本科生'
         verbose_name_plural = '本科生列表'
         permissions = (
-            ('view_undergraduate', '可以查看本科生'),
-            ('create_undergraduate', '可以增加本科生'),
-            ('update_undergraduate', '可以修改本科生'),
-            ('delete_undergraduate', '可以删除本科生'),
+            ('view_my_us', '可以查看自己创建的本科生'),
+            ('view_class_us', '可以查看自己班级的本科生'),
+            ('view_grade_us', '可以查看自己年级的本科生'),
+            ('view_all_us', '可以查看所有本科生'),
+
+            ('create_us', '可以增加本科生'),
+
+            ('update_my_us', '可以修改自己创建的本科生'),
+            ('update_class_us', '可以修改自己班级的本科生'),
+            ('update_grade_us', '可以修改自己年级的本科生'),
+            ('update_all_us', '可以修改所有本科生'),
+
+            ('delete_my_us', '可以删除自己创建的本科生'),
+            ('delete_class_us', '可以删除自己班级的本科生'),
+            ('delete_grade_us', '可以删除自己年级的本科生'),
+            ('delete_all_us', '可以删除所有本科生'),
         )
 
 
@@ -116,7 +131,8 @@ class Graduate_Student_Manager(User_Manager):
 
 
 class Graduate_Student(User):
-    student_class = models.ForeignKey(Student_Class, verbose_name='班级', on_delete=models.DO_NOTHING, null=True, blank=True)
+    student_class = models.ForeignKey(Student_Class, verbose_name='班级', on_delete=models.DO_NOTHING, null=True,
+                                      blank=True)
     instructor = models.ForeignKey(Teacher, verbose_name='导师', on_delete=models.CASCADE, null=True, blank=True)
     on_the_job = models.BooleanField(verbose_name='是否在职')
     company = models.CharField(verbose_name='工作单位', max_length=50, null=True, blank=True)
@@ -132,10 +148,23 @@ class Graduate_Student(User):
         verbose_name = '研究生'
         verbose_name_plural = '研究生列表'
         permissions = (
-            ('view_graduate', '可以查看研究生'),
-            ('create_graduate', '可以增加研究生'),
-            ('update_graduate', '可以修改研究生'),
-            ('delete_graduate', '可以删除研究生'),
+            ('view_my_gs', '可以查看自己创建的研究生'),
+            ('view_class_gs', '可以查看自己班级的研究生'),
+            ('view_grade_gs', '可以查看自己年级的研究生'),
+            ('view_teacher_gs', '可以查看自己导师的研究生'),
+            ('view_all_gs', '可以查看所有研究生'),
+
+            ('create_gs', '可以增加研究生'),
+
+            ('update_my_gs', '可以修改自己创建的研究生'),
+            ('update_class_gs', '可以修改自己班级的研究生'),
+            ('update_grade_gs', '可以修改自己年级的研究生'),
+            ('update_teacher_gs', '可以修改自己导师的研究生'),
+            ('update_all_gs', '可以修改所有研究生'),
+
+            ('delete_my_gs', '可以删除自己创建的研究生'),
+            ('delete_class_gs', '可以删除自己班级的研究生'),
+            ('delete_grade_gs', '可以删除自己年级的研究生'),
+            ('delete_teacher_gs', '可以删除自己导师的研究生'),
+            ('delete_all_gs', '可以删除所有研究生'),
         )
-
-

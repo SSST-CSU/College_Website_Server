@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中南大学软件学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="{% static "css/iframe.css" %}" rel="stylesheet">
+</head>
+
+<body>
+<div>
+
+  <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist" id="tab">
+        <li role="presentation"><a href="#articles" role="tab" data-toggle="tab">文章内容编辑</a></li>
+        <li role="presentation"><a href="#articles_stat" role="tab" data-toggle="tab">文章状态设置</a></li>
+        <li role="presentation"><a href="#columns" role="tab" data-toggle="tab">栏目设置</a></li>
+    </ul>
+
+    <br>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+
+        <!-- 文章内容管理 -->
+
+        <div role="tabpanel" class="tab-pane" id="articles">
+            <!-- 选择栏目 -->
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">选择栏目</div>
+                    <br>
+                    <div class="form-inline">
+                        <div class="form-group">
+                            <label>栏目：</label>
+                        </div>
+
+                        <button type="button" class="btn btn-default dropdown-toggle"
+                                data-toggle="dropdown" aria-haspopup="true">
+                            一级栏目<span class="caret"></span>
+                        </button>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="col-md-12">
+                <!-- 文章列表 -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">文章列表</div>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tr>
+                                <th>文章编号</th>
+                                <th>修改时间</th>
+                                <th>文章标题</th>
+                                <th>作者</th>
+                                <th>编辑</th>
+                                <th>修改人</th>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="articles_stat">
+            2
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="columns">
+            3
+        </div>
+
+    </div>
+
+</div>
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<!-- 本地js文件 -->
+<script src="{% static "js/iframe.js" %}"></script>
+
+</body>
+</html>
+<script>
+    var USER_ID = "{{ user.id }}";
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
+    });
+    $("ul.nav-tabs > li").click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+        var h = $(this)[0].children[0].href;
+        $("div.tab-content div").removeClass("active");
+        $("#" + h.split("#")[1]).addClass("active");
+    });
+    window.onload = function (ev) {
+        $("#tab a:first").tab("show");
+    }
+</script>

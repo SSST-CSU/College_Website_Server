@@ -21,6 +21,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('user/', include('UserManagement.urls', namespace='user')),
+    path('article_manage/', include('ArticleManagement.urls', namespace='article_manage')),
     path('borrow/', include('ResourceBorrowingSystem.urls', namespace='borrow')),
     path('oj/', include('OnlineJudgeSystem.urls', namespace='oj')),
 

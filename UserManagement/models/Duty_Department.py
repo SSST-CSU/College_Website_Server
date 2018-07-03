@@ -14,4 +14,10 @@ class Duty_Department(models.Model):
         unique_together = ('duty', 'department')
         verbose_name = '职务'
         verbose_name_plural = '职务-部门对照表'
+        permissions = (
+            ('view_duty_departments', '可以查看部门职务'),
+            ('create_duty_department', '可以创建部门职务'),
+            ('update_duty_departments', '可以修改部门职务'),
+            ('delete_duty_departments', '可以删除部门职务'),
+        )
 

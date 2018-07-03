@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中南大学软件学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link href="{% static "css/index.css" %}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation" id="menu-nav">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <!--屏幕较小时，右上角显示为三条横线，导航栏折叠-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">切换导航</span>
+                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <!--商标-->
+                <a id="navbar-brand" class="navbar-brand" href="/" style="color: whitesmoke">   中南大学软件学院</a>
+            </div>
+
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    {% if user == None %}
+                    <li><a href="#" data-toggle="modal" data-target="#LoginModal" style="color: whitesmoke"><span class="glyphicon glyphicon-user"></span>  登录  </a></li>
+                    {% else %}
+                    <li><a href="/usercenter/" style="color: whitesmoke"><span class="glyphicon glyphicon-user" style="color: whitesmoke"></span>  {{ user.name }}  </a></li>
+                    <li><a href="#" onclick="logout()" style="color: whitesmoke"><span class="glyphicon glyphicon-log-out"></span> 登出 </a></li>
+                    {% endif %}
+                </ul>
+                <ul class="nav navbar-nav">
+                {% for nav in navbar %}
+                    {% if nav.len == 1 %}
+                    <li><a href="{{ nav.val.0.herf }}" style="color: whitesmoke">{{ nav.val.0.name }}</a></li>
+                    {% else %}
+                    <li class="dropdown">
+                    <a href="{{ nav.val.0.herf }}" class="dropdown-toggle" data-toggle="dropdown" style="color: whitesmoke">
+                        {{ nav.val.0.name }}<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        {% for subnav in nav.val %}
+                        {% if forloop.counter0 != 0 %}
+                        <li class="subnav"><a href="{{ subnav.herf }}" style="color: black">
+                            {{ subnav.name }}
+                        </a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                    </li>
+                    {% endif %}
+                {% endfor %}
+
+                {% if user != None %}
+                    <li><a href="/usercenter/" style="color: whitesmoke">个人中心</a></li>
+                {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- LoginModal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="LoginModalTitle">登录</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">学号</label>
+                            <input type="text" class="form-control" id="user_id">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">密码</label>
+                            <input type="password" class="form-control" id="user_pwd">
+                        </div>
+                    </form>
+                    <h4 style="color: red" id="LoginMsg"></h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+
+    <!-- 左侧列表 -->
+    <!--
+    <div class="col-md-2">
+        <ul class="nav nav-pills nav-stacked sidebar" style="background-color: whitesmoke; height: 100%">
+            <li id="home" style="text-align: center"><a>同级栏目</a></li>
+            <li id="page" style="text-align: center"><a>同级栏目</a></li>
+            <li id="page" style="text-align: center"><a>同级栏目</a></li>
+
+        </ul>
+    </div>
+    -->
+
+    <!-- 右侧内容 -->
+    <div>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <div class="center_main">
+                <!-- 路径导航 -->
+                <ol class="breadcrumb" style="background-color: white; text-align: left">
+                    <li><a href="/">软件学院</a></li>
+                    {% for col in path %}
+                    <li onclick="gotoColumn('{{ col.name }}')"><a href="#">{{ col.name }}</a></li>
+                    {% endfor %}
+                    <li class="active">{{ column.name }}</li>
+                </ol>
+
+                <!-- 栏目标题 -->
+                <h1 style="text-align: center">{{ column.name }}</h1>
+                <hr>
+
+                <!-- 栏目列表 -->{% if sub_column != None %}
+                {% for sub in sub_column %}
+                <li onclick="gotoColumn('{{ sub.id }}')" class="column_item">{{ sub.name }}</li>
+                {% endfor %}<hr>{% endif %}
+
+                <!-- 文章列表 -->{% if articles != None %}
+                {% for art in articles %}
+                <li onclick="gotoArticle('{{ art.article.id }}')" class="article_item">{{ art.article.title }}</li>
+                {% endfor %}{% endif %}
+            </div>
+            <!-- 版权 -->
+            <footer id="footer">
+                <br>
+                <hr>
+
+                <p align="center">&copy; 2002-2018 中南大学软件学院 </p>
+            </footer>
+
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<!-- 本地js文件 -->
+<script src="{% static "js/index.js" %}"></script>
+
+</body>
+</html>
+<script>
+    var USER_ID = "{{ user.id }}";
+    $.ajaxSetup({
+        data: {csrfmiddlewaretoken: "{{ csrf_token }}" }
+    });
+</script>
