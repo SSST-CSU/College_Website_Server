@@ -3,7 +3,7 @@ from UserManagement.models.User import User
 
 
 class Laboratory(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField('实验室名称', max_length=20)
 
     def __str__(self):
         return str(self.name)
@@ -13,15 +13,15 @@ class Laboratory(models.Model):
         verbose_name_plural = "实验室"
 
 
-class ApplyReason(models.Model):
-    reason = models.CharField(max_length=20)
+class LaboratoryApplyReason(models.Model):
+    reason = models.CharField('申请类型',  max_length=20)
 
     def __str__(self):
         return str(self.reason)
 
     class Meta:
-        verbose_name = "申请理由"
-        verbose_name_plural = "申请理由"
+        verbose_name = "实验室申请理由"
+        verbose_name_plural = "实验室申请理由"
 
 
 class LaboratoryBorrowingApplyManager(models.Manager):
@@ -39,7 +39,7 @@ class LaboratoryBorrowingApplyManager(models.Manager):
 
 
 class LaboratoryBorrowingApply(models.Model):
-    id = models.IntegerField("申请编号")
+    apply_id = models.IntegerField("申请编号")
     user = models.ForeignKey(User, verbose_name="申请人", on_delete=models.DO_NOTHING)
     room = models.CharField(verbose_name='申请实验室', max_length=20)
     apply_time = models.DateTimeField('申请提交时间')
@@ -55,6 +55,6 @@ class LaboratoryBorrowingApply(models.Model):
         return str(self.room) + str('@') + str(self.user)
 
     class Meta:
-        unique_together = ('id', 'stat')
+        unique_together = ('apply_id', 'stat')
         verbose_name = "实验室借用申请"
         verbose_name_plural = "实验室借用申请"

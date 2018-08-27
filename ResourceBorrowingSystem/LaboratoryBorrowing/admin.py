@@ -9,15 +9,15 @@ class LaboratoryAdmin(admin.ModelAdmin):
 admin.site.register(Laboratory, LaboratoryAdmin)
 
 
-class ApplyReasonAdmin(admin.ModelAdmin):
-    list_display = ['name']
+class LaboratoryApplyReasonAdmin(admin.ModelAdmin):
+    list_display = ['reason']
 
 
-admin.site.register(ApplyReason, ApplyReasonAdmin)
+admin.site.register(LaboratoryApplyReason, LaboratoryApplyReasonAdmin)
 
 
 class LaboratoryBorrowingApplyAdmin(admin.ModelAdmin):
-    list_display = ['user', 'room', 'apply_time', 'update_time', 'reason_type', 'reason', 'start_time', 'end_time', 'stat']
+    list_display = ['apply_id', 'user', 'room', 'apply_time', 'update_time', 'reason_type', 'reason', 'start_time', 'end_time', 'stat']
 
 
 admin.site.register(LaboratoryBorrowingApply, LaboratoryBorrowingApplyAdmin)

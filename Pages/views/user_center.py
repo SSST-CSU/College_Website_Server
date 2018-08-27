@@ -127,3 +127,19 @@ def user_center_meetingroom(request):
     return render(request, 'htmls/user_center/user_center_meetingroom.html', {
         "user": user,
     })
+
+
+def user_center_laboratory(request):
+    user = None
+    try:
+        user_id = request.session['user_id']
+        user_pwd = request.session['user_pwd']
+        user = AuthenticateUser(user_id, user_pwd)
+    except:
+        return HttpResponseRedirect('/')
+    # 未登录
+    if user is None:
+        return HttpResponseRedirect('/login')
+    return render(request, 'htmls/user_center/user_center_laboratory.html', {
+        "user": user,
+    })
