@@ -45,10 +45,11 @@ class LaboratoryBorrowingApply(models.Model):
     apply_time = models.DateTimeField('申请提交时间')
     update_time = models.DateTimeField('申请变更时间')
     reason_type = models.CharField('申请类型', max_length=20)
-    reason = models.TextField('申请理由', max_length=500)
+    reason = models.TextField('申请理由', max_length=500, blank=True, null=True)
     start_time = models.DateTimeField('申请开始时间')
     end_time = models.DateTimeField('申请结束时间')
     stat = models.CharField('申请状态', max_length=30)
+    proof_document = models.FilePathField()
     object = LaboratoryBorrowingApplyManager()
 
     def __str__(self):
