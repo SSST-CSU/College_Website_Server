@@ -38,6 +38,18 @@ class LaboratoryBorrowingApplyManager(models.Manager):
         return self.filter(id=id).order_by('update_time').reverse()
 
 
+def upload_to(instance, filename):
+    """
+    自定义附件上传路径
+    :param instance: 对象
+    :param filename: 文件名
+    :return: 文件路径
+    """
+    from django.conf import settings
+    import time
+    return '/'.join([settings.MEDIA_ROOT, str(instance.user), time.strftime('%Y-%m-%d',time.localtime(time.time())), filename])
+
+
 class LaboratoryBorrowingApply(models.Model):
     apply_id = models.IntegerField("申请编号")
     user = models.ForeignKey(User, verbose_name="申请人", on_delete=models.DO_NOTHING)
@@ -49,7 +61,9 @@ class LaboratoryBorrowingApply(models.Model):
     start_time = models.DateTimeField('申请开始时间')
     end_time = models.DateTimeField('申请结束时间')
     stat = models.CharField('申请状态', max_length=30)
-    proof_document = models.FilePathField()
+    proof_document = models.FileField('附件', upload_to=upload_to, null=True, blank=True)
+    seat_number = models.IntegerField('座位号', null=True, blank=True)
+    content = models.CharField('备注', max_length=50, null=True, blank=True)
     object = LaboratoryBorrowingApplyManager()
 
     def __str__(self):
@@ -59,3 +73,22 @@ class LaboratoryBorrowingApply(models.Model):
         unique_together = ('apply_id', 'stat')
         verbose_name = "实验室借用申请"
         verbose_name_plural = "实验室借用申请"
+
+
+class AdminUser(models.Model):
+    from django.contrib.auth.models import User as Duty
+    duty = models.ForeignKey(Duty, on_delete=models.CASCADE, verbose_name='职务')
+    laboratory = models.CharField(verbose_name='实验室', max_length=20)
+
+    class Meta:
+        verbose_name = '实验室管理员'
+        verbose_name_plural = '实验室借用申请'
+
+
+class ApplyUserGrade(models.Model):
+    from UserManagement.models.Student import Student_Grade
+    grade = models.ForeignKey(Student_Grade, on_delete=models.CASCADE, verbose_name='年级')
+
+    class Meta:
+        verbose_name = '可申请年级'
+        verbose_name_plural = '可申请年级'
