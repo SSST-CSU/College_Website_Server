@@ -22,6 +22,7 @@ urlpatterns = [
     path('usercenter/users/', user_center_users),
     path('usercenter/pages/', user_center_pages),
     path('usercenter/meetingroom/', user_center_meetingroom),
+    path('usercenter/laboratory/', user_center_laboratory),
 
     path('article/id/<int:id>/', article_page),
     path('article/name/<str:name>/', article_page),

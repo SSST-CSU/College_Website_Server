@@ -123,7 +123,7 @@
                 <ol class="breadcrumb" style="background-color: white; text-align: left">
                     <li><a href="/">软件学院</a></li>
                     {% for col in path %}
-                    <li onclick="gotoColumn('{{ col.name }}')"><a href="#">{{ col.name }}</a></li>
+                    <li onclick="gotoColumn('{{ col.id }}')"><a href="#">{{ col.name }}</a></li>
                     {% endfor %}
                     <li class="active">{{ column.name }}</li>
                 </ol>
