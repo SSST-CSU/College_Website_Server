@@ -19,7 +19,11 @@ class UserViewSet(ModelViewSet):
         """
         查看
         """
-        perm_set = request.session['perm_set']
+        try:
+            perm_set = request.session['perm_set']
+        except:
+            data = {'detail': '没有权限'}
+            return Response(data, status=status.HTTP_403_FORBIDDEN)
         queryset = User.objects.none()
         perm = False
 

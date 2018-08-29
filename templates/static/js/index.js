@@ -9,7 +9,8 @@ function login() {
         type: "POST",
         data: {
             user_id:user_id,
-            user_pwd:user_pwd
+            user_pwd:user_pwd,
+            csrfmiddlewaretoken: CSRF_TOKEN
         },
         success:function(callback){
             var callback_dict = $.parseJSON(callback);
@@ -39,7 +40,8 @@ function logout() {
         url: "/user/logout/",
         type: "POST",
         data: {
-            user_id:user_id
+            user_id:user_id,
+            csrfmiddlewaretoken: CSRF_TOKEN
         },
         success:function(callback){
             var callback_dict = $.parseJSON(callback);
@@ -63,15 +65,15 @@ function gotoColumn(id) {
 function getUserData() {
     var user_id = USER_ID;
     $.ajax({
-        url: "/user/user/" + user_id.trim(),
+        url: "/user/user/" + user_id.trim() + '/',
         type: "GET",
-        data: {
 
-        },
         success:function(callback){
-            var callback_dict = $.parseJSON(callback);
-            document.getElementById('modal_name').innerText = callback_dict.name;
-            document.getElementById('modal_name_used_before').innerText = callback_dict.name_used_before;
+            USER = $.parseJSON(callback);
+            alert("111111");
+            alert(callback);
+            document.getElementById('modal_name').innerText = USER.name;
+            document.getElementById('modal_name_used_before').innerText = USER.name_used_before;
         }
     });
 }

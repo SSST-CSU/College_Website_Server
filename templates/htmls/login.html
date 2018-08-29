@@ -115,25 +115,27 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                     <h4 class="modal-title" id="UpdateModalTitle">详细信息</h4>
                 </div>
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="message-text" class="control-label">姓名</label>
+                            <label for="modal_name" class="control-label">姓名</label>
                             <input type="text" class="form-control" id="modal_name" disabled="disabled">
                         </div>
                         <div class="form-group">
-                            <label for="recipient-name" class="control-label">学号</label>
+                            <label for="modal_id" class="control-label">学号</label>
                             <input type="text" class="form-control" id="modal_id" disabled="disabled">
                         </div>
                         <div class="form-group">
-                            <label for="message-text" class="control-label">密码</label>
+                            <label for="modal_pwd" class="control-label">密码</label>
                             <input type="password" class="form-control" id="modal_pwd">
                         </div>
                         <div class="form-group">
-                            <label for="message-text" class="control-label">曾用名</label>
+                            <label for="modal_name_used_before" class="control-label">曾用名</label>
                             <input type="text" class="form-control" id="modal_name_used_before">
                         </div>
                     </form>
@@ -141,7 +143,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+                    <button type="button" class="btn btn-primary" onclick="login()">修改</button>
                 </div>
             </div>
         </div>
@@ -157,9 +159,6 @@
 </html>
 <script>
     var USER_ID = "{{ user.id }}";
-    $.ajaxSetup({
-        data: {
-            csrfmiddlewaretoken: "{{ csrf_token }}"
-        }
-    });
+    var CSRF_TOKEN = "{{ csrf_token }}";
+    var USER = null;
 </script>
