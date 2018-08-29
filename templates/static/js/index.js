@@ -19,8 +19,16 @@ function login() {
             } else if(msg === 1) {
                 document.getElementById("LoginMsg").innerText = "密码错误";
             } else {
-                // 登陆成功
-                location.reload();
+                // 需要填写个人信息
+                if(msg === 2) {
+                    $('#UpdateModal').modal('show');
+                    USER_ID = user_id;
+                    getUserData();
+                }
+                else {
+                    // 登陆成功
+                    location.reload();
+                }
             }
         }
     });
@@ -50,4 +58,20 @@ function gotoArticle(id) {
 }
 function gotoColumn(id) {
     window.location.href = "/column/id/" + id.toString();
+}
+
+function getUserData() {
+    var user_id = USER_ID;
+    $.ajax({
+        url: "/user/user/" + user_id.trim(),
+        type: "GET",
+        data: {
+
+        },
+        success:function(callback){
+            var callback_dict = $.parseJSON(callback);
+            document.getElementById('modal_name').innerText = callback_dict.name;
+            document.getElementById('modal_name_used_before').innerText = callback_dict.name_used_before;
+        }
+    });
 }

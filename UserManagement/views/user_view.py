@@ -13,6 +13,7 @@ import json
 
 class UserViewSet(ModelViewSet):
     serializer_class = UserSerializer
+    queryset = User.objects.all()
 
     def list(self, request, *args, **kwargs):
         """
@@ -202,6 +203,18 @@ def login(request):
         request.session['perm_set'] = list(perm_set)
     except:
         msg = -1
+
+    # 检查用户是否为空，若是，需要修改信息
+    if user.sex is None or \
+        user.birthday is None or \
+        user.political_choices is None or \
+        user.political is None or \
+        user.native_place is None or \
+        user.id_number is None or \
+        user.phone_number is None or \
+        user.country_and_region is None:
+        msg = 10
+
     ret = {
         "msg": msg
     }

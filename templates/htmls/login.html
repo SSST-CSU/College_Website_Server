@@ -109,6 +109,43 @@
             </div>
         </div>
     </div>
+
+    <!-- UpdateModal -->
+    <div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="UpdateModalTitle">详细信息</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">姓名</label>
+                            <input type="text" class="form-control" id="modal_name" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">学号</label>
+                            <input type="text" class="form-control" id="modal_id" disabled="disabled">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">密码</label>
+                            <input type="password" class="form-control" id="modal_pwd">
+                        </div>
+                        <div class="form-group">
+                            <label for="message-text" class="control-label">曾用名</label>
+                            <input type="text" class="form-control" id="modal_name_used_before">
+                        </div>
+                    </form>
+                    <h4 style="color: red" id="UpdateMsg"></h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="login()">登录</button>
+                </div>
+            </div>
+        </div>
+    </div>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
