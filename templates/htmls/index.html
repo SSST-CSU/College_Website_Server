@@ -180,6 +180,7 @@
 </html>
 <script>
     var USER_ID = "{{ user.id }}";
+    var CSRF_TOKEN = "{{ csrf_token }}";
     $.ajaxSetup({
         data: {
             csrfmiddlewaretoken: "{{ csrf_token }}"
