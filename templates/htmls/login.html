@@ -121,6 +121,10 @@
                     <h4 class="modal-title" id="UpdateModalTitle">详细信息</h4>
                 </div>
                 <div class="modal-body">
+                    <p>
+                        欢迎使用新版中南大学软件学院官方网站，为保证您的正常使用，请填写以下信息。
+                    </p>
+                    <hr>
                     <form>
                         <div class="form-group">
                             <label for="modal_name" class="control-label">姓名</label>
@@ -138,12 +142,31 @@
                             <label for="modal_name_used_before" class="control-label">曾用名</label>
                             <input type="text" class="form-control" id="modal_name_used_before">
                         </div>
+                        <div class="form-group">
+                            <label for="modal_sex" class="control-label">性别</label>
+                            <select class="form-control" id="modal_sex">
+                                <option value=0>男</option>
+                                <option value=1>女</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="modal_phone_number" class="control-label">电话</label>
+                            <input type="text" class="form-control" id="modal_phone_number">
+                        </div>
+                        <div class="form-group">
+                            <label for="modal_qq" class="control-label">QQ</label>
+                            <input type="text" class="form-control" id="modal_qq">
+                        </div>
+                        <div class="form-group">
+                            <label for="modal_email" class="control-label">Email</label>
+                            <input type="text" class="form-control" id="modal_email">
+                        </div>
                     </form>
                     <h4 style="color: red" id="UpdateMsg"></h4>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
-                    <button type="button" class="btn btn-primary" onclick="login()">修改</button>
+                    <button type="button" class="btn btn-primary" onclick="update()">修改</button>
                 </div>
             </div>
         </div>

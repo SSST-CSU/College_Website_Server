@@ -137,6 +137,8 @@ class User(models.Model):
     native_place = models.CharField(verbose_name='籍贯', max_length=5)
     id_number = models.CharField(verbose_name='身份证号', max_length=20)
     phone_number = models.CharField(verbose_name='电话', max_length=20)
+    email = models.EmailField(verbose_name='email')
+    qq = models.CharField(verbose_name='QQ', max_length=20)
     country_and_region_choices = (
         ('AD', 'AD安道尔'),
         ('AE', 'AE阿联酋'),

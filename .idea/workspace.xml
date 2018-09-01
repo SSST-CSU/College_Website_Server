@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="298f0d6c-6e09-421b-bf2e-f593cdce1f17" name="默认的" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Update__at_2018_8_29_13_40___.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserManagement/migrations/0002_auto_20180901_2019.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UserManagement/migrations/0003_auto_20180901_2113.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/models/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/models/User.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserManagement/serializers/user_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/serializers/user_serializer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserManagement/views/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/views/user_view.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/htmls/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/js/index.js" afterDir="false" />
     </list>
@@ -30,26 +32,8 @@
       <file leaf-file-name="user_center.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Pages/views/user_center.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2220">
-              <caret line="77" column="45" lean-forward="true" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_center_home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6840">
-              <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
+            <state relative-caret-position="332">
+              <caret line="142" column="56" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -57,12 +41,8 @@
       <file leaf-file-name="user_center_laboratory.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#1763#1770#1#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="27" column="104" selection-start-line="27" selection-start-column="104" selection-end-line="27" selection-end-column="104" />
             </state>
           </provider>
         </entry>
@@ -71,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -79,20 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/static/js/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="user_view.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserManagement/views/user_view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="86" selection-start-line="86" selection-end-line="86" />
+            <state relative-caret-position="210">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -130,7 +101,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/UserManagement/models/Student.py" />
         <option value="$PROJECT_DIR$/UserManagement/views/student_view.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/User_Duty.py" />
         <option value="$PROJECT_DIR$/UserManagement/views/department_view.py" />
@@ -140,7 +110,6 @@
         <option value="$PROJECT_DIR$/UserManagement/__init__.py" />
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/__init__.py" />
         <option value="$PROJECT_DIR$/OnlineJudgeSystem/__init__.py" />
-        <option value="$PROJECT_DIR$/UserManagement/models/User.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Pages/articles_views.py" />
         <option value="$PROJECT_DIR$/templates/htmls/user_center_articles.html" />
@@ -176,10 +145,12 @@
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py" />
         <option value="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
         <option value="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
-        <option value="$PROJECT_DIR$/UserManagement/views/user_view.py" />
-        <option value="$PROJECT_DIR$/templates/static/js/index.js" />
-        <option value="$PROJECT_DIR$/templates/htmls/login.html" />
         <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html" />
+        <option value="$PROJECT_DIR$/UserManagement/views/user_view.py" />
+        <option value="$PROJECT_DIR$/UserManagement/models/User.py" />
+        <option value="$PROJECT_DIR$/UserManagement/serializers/user_serializer.py" />
+        <option value="$PROJECT_DIR$/templates/htmls/login.html" />
+        <option value="$PROJECT_DIR$/templates/static/js/index.js" />
         <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html" />
       </list>
     </option>
@@ -208,49 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="website" type="cbb8eebc:String" user="website" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="website" type="cbb8eebc:String" user="website" />
-              <item name="OnlineJudgeSystem" type="cbb8eebc:String" user="OnlineJudgeSystem" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="website" type="cbb8eebc:String" user="website" />
-              <item name="ResourceBorrowingSystem" type="cbb8eebc:String" user="ResourceBorrowingSystem" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="website" type="cbb8eebc:String" user="website" />
-              <item name="ResourceBorrowingSystem" type="cbb8eebc:String" user="ResourceBorrowingSystem" />
-              <item name="ClassroomBorrowing" type="cbb8eebc:String" user="ClassroomBorrowing" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="website" type="cbb8eebc:String" user="website" />
-              <item name="ResourceBorrowingSystem" type="cbb8eebc:String" user="ResourceBorrowingSystem" />
-              <item name="LaboratoryBorrowing" type="cbb8eebc:String" user="LaboratoryBorrowing" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="website" type="cbb8eebc:String" user="website" />
-              <item name="SchoolOfSoftware" type="cbb8eebc:String" user="SchoolOfSoftware" />
-            </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="website" type="cbb8eebc:String" user="website" />
-              <item name="UserManagement" type="cbb8eebc:String" user="UserManagement" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -314,12 +242,6 @@
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
               <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
               <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -333,6 +255,49 @@
               <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
               <item name="UserManagement" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="website" type="cbb8eebc:String" user="website" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="website" type="cbb8eebc:String" user="website" />
+              <item name="OnlineJudgeSystem" type="cbb8eebc:String" user="OnlineJudgeSystem" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="website" type="cbb8eebc:String" user="website" />
+              <item name="ResourceBorrowingSystem" type="cbb8eebc:String" user="ResourceBorrowingSystem" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="website" type="cbb8eebc:String" user="website" />
+              <item name="ResourceBorrowingSystem" type="cbb8eebc:String" user="ResourceBorrowingSystem" />
+              <item name="ClassroomBorrowing" type="cbb8eebc:String" user="ClassroomBorrowing" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="website" type="cbb8eebc:String" user="website" />
+              <item name="ResourceBorrowingSystem" type="cbb8eebc:String" user="ResourceBorrowingSystem" />
+              <item name="LaboratoryBorrowing" type="cbb8eebc:String" user="LaboratoryBorrowing" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="website" type="cbb8eebc:String" user="website" />
+              <item name="SchoolOfSoftware" type="cbb8eebc:String" user="SchoolOfSoftware" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="website" type="cbb8eebc:String" user="website" />
+              <item name="UserManagement" type="cbb8eebc:String" user="UserManagement" />
             </path>
           </expand>
           <select />
@@ -705,7 +670,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535390579482</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="用户信息不全时，必须输入完整信息才能登陆，修改实验室申请页面">
+      <created>1535568064680</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1535568064680</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView">
@@ -730,13 +702,13 @@
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="运行" order="12" sideWeight="0.49573562" visible="true" weight="0.32286024" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.27665246" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18656716" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18869936" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="manage.py@SchoolOfSoftware" order="13" weight="0.3261105" />
       <window_info anchor="right" id="SciView" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="manage.py@SchoolOfSoftware" order="13" weight="0.3261105" />
       <window_info anchor="bottom" id="Thumbnails" order="14" weight="0.32936078" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -759,7 +731,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add requirements.txt" />
     <MESSAGE value="add resource borrowing system and online judge system" />
     <MESSAGE value="update static files settings" />
     <MESSAGE value="修改了主页，进一步完成了数据库设计" />
@@ -784,7 +755,8 @@
     <MESSAGE value="加入md编辑器，完成文章编辑界面" />
     <MESSAGE value="文章管理view和文章权限" />
     <MESSAGE value="加入文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入文件" />
+    <MESSAGE value="用户信息不全时，必须输入完整信息才能登陆，修改实验室申请页面" />
+    <option name="LAST_COMMIT_MESSAGE" value="用户信息不全时，必须输入完整信息才能登陆，修改实验室申请页面" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -794,27 +766,10 @@
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/static/css/editormd.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" column="24" lean-forward="true" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/htmls/403.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/css/user_center.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="48" column="30" lean-forward="true" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Anaconda3/Lib/site-packages/rest_framework/static/rest_framework/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -917,13 +872,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Anaconda3/Lib/site-packages/rest_framework/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="167" column="32" selection-start-line="167" selection-start-column="32" selection-end-line="167" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1064,13 +1012,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/views/user_view.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/htmls/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
@@ -1082,13 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/htmls/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1109,52 +1043,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/views/user_center.py">
+    <entry file="file://D:/Python/Anaconda3/Lib/site-packages/rest_framework/viewsets.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2220">
-          <caret line="77" column="45" lean-forward="true" selection-start-line="77" selection-start-column="45" selection-end-line="77" selection-end-column="45" />
+        <state relative-caret-position="130">
+          <caret line="163" column="6" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html">
+    <entry file="file://$PROJECT_DIR$/UserManagement/models/Student.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6840">
-          <caret line="117" column="20" selection-start-line="117" selection-start-column="20" selection-end-line="117" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="68" column="20" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="-3298">
+          <caret line="5" column="36" lean-forward="true" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/views/user_view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/serializers/user_serializer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1322">
+          <caret line="158" column="9" lean-forward="true" selection-start-line="158" selection-start-column="9" selection-end-line="158" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/htmls/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="167" column="66" selection-start-line="167" selection-start-column="66" selection-end-line="167" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#1;n#div#0;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="508">
+          <caret line="136" column="17" selection-start-line="136" selection-start-column="17" selection-end-line="136" selection-end-column="17" />
+          <folding>
+            <element signature="e#3906#4179#0" />
+            <element signature="e#4635#9992#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Pages/views/user_center.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="142" column="56" selection-start-line="142" selection-start-column="56" selection-end-line="142" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="59" column="28" lean-forward="true" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#1763#1770#1#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="240">
+          <caret line="27" column="104" selection-start-line="27" selection-start-column="104" selection-end-line="27" selection-end-column="104" />
         </state>
       </provider>
     </entry>
