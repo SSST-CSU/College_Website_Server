@@ -140,6 +140,10 @@ def user_center_laboratory(request):
     # 未登录
     if user is None:
         return HttpResponseRedirect('/login')
+
+    # 获取所有申请记录
+    from ResourceBorrowingSystem.models import LaboratoryBorrowingApply
+
     return render(request, 'htmls/user_center/user_center_laboratory.html', {
         "user": user,
     })

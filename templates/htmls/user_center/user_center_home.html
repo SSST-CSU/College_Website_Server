@@ -20,6 +20,27 @@
 </head>
 
 <body>
-home
+<table align="center">
+    <tr>
+        <td>姓名：</td>
+        <td>{{ user.name }}</td>
+    </tr>
+    <tr>
+        <td>学号：</td>
+        <td>{{ user.id }}</td>
+    </tr>
+    <tr>
+        <td>密码：</td>
+        <td><input type="password" id="pwd" value="{{ user.pwd }}"></td>
+    </tr>
+
+</table>
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<!-- 本地js文件 -->
+<script src="{% static "js/user_center.js" %}"></script>
 </body>
 </html>
