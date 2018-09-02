@@ -142,8 +142,34 @@ def user_center_laboratory(request):
         return HttpResponseRedirect('/login')
 
     # 获取所有申请记录
-    from ResourceBorrowingSystem.models import LaboratoryBorrowingApply
+    from ResourceBorrowingSystem.models import LaboratoryBorrowingApply, AdminUser
+    apply_record = LaboratoryBorrowingApply.objects.get_all_apply_by_user(user)
+
+    # 查询是否有管理员权限
+    from UserManagement.models.User_Duty import User_Duty
+    duties = User_Duty.objects.filter(user=user).values_list('duty')
+    admin_queryset = AdminUser.objects.none()
+    for duty in duties:
+        admin_queryset = admin_queryset | AdminUser.objects.filter(duty=duty)
+    if admin_queryset.count() == 0:
+        lab = None
+    else:
+        lab = admin_queryset.values_list('laboratory')
+
+    # 查询是否是相应的年级
+    from ResourceBorrowingSystem.models import ApplyUserGrade
+    # todo: grade
+    grade = True
+    student = user.to_student()
+    try:
+        if ApplyUserGrade.objects.filter(grade=student.student_class.grade).count() != 0:
+            grade = True
+    except:
+        pass
 
     return render(request, 'htmls/user_center/user_center_laboratory.html', {
         "user": user,
+        "apply_record": apply_record,
+        "lab": lab,
+        "grade": grade,
     })

@@ -24,27 +24,33 @@
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
+        {% if grade %}
         <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">我的申请</a></li>
+        {% endif %}
+        {% if lab != None %}
         <li role="presentation"><a href="#admin" aria-controls="admin" role="tab" data-toggle="tab">申请审核</a></li>
         <li role="presentation"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">实验室名单</a></li>
         <li role="presentation"><a href="#list" aria-controls="setting" role="tab" data-toggle="tab">设置</a></li>
+        {% endif %}
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
+        {% if grade %}
         <div role="tabpanel" class="tab-pane active" id="home">
 
             <br>
 
             <!-- Button trigger modal -->
             <div class="col-lg-12" style="text-align: right">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newApply" style="width: 20%" onclick="newApply()">
                     新建申请
                 </button>
+
             </div>
 
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal fade" id="newApply" tabindex="-1" role="dialog" aria-labelledby="newApplyLabel">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -53,12 +59,45 @@
                         </div>
 
                         <div class="modal-body">
-                            ...
+                            <form>
+                                <div class="form-group">
+                                    <label for="room" class="control-label">实验室</label>
+                                    <select class="form-control" id="room">
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="reason_type" class="control-label">申请类型</label>
+                                    <select class="form-control" id="reason_type">
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="reason" class="control-label">申请理由</label>
+                                    <textarea class="form-control" id="reason" wrap="soft"></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="start_time" class="control-label">使用开始时间</label>
+                                    <input type="date" class="form-control" id="start_time">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="end_time" class="control-label">使用开始时间</label>
+                                    <input type="date" class="form-control" id="end_time">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="proof_document" class="control-label">附件</label>
+                                    <input type="file" class="form-control" id="proof_document">
+                                </div>
+
+                            </form>
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">提交</button>
-                            <button type="button" class="btn btn-primary">保存</button>
+                            <button type="button" class="btn btn-default" onclick="submitApply()">提交</button>
+                            <button type="button" class="btn btn-primary" onclick="saveApply()">保存</button>
                         </div>
                     </div>
                 </div>
@@ -77,11 +116,21 @@
                             <th>申请类型</th>
                             <th>申请状态</th>
                         </tr>
+                        {% for apply in apply_record %}
+                        <tr id="{{ apply.apply_id }}" onclick="apply_list_item_click('{{ apply.apply_id }}')">
+                            <td>{{ apply.apply_id }}</td>
+                            <td>{{ apply.room }}</td>
+                            <td>{{ apply.apply_time }}</td>
+                            <td>{{ apply.reason_type }}</td>
+                            <td>{{ apply.stat }}</td>
+                        </tr>
+                        {% endfor %}
                     </table>
                 </div>
             </div>
         </div>
-
+        {% endif %}
+        {% if lab != None %}
         <div role="tabpanel" class="tab-pane" id="admin">
 
         </div>
@@ -93,6 +142,7 @@
         <div role="tabpanel" class="tab-pane" id="setting">
 
         </div>
+        {% endif %}
     </div>
 
 </div>
@@ -102,6 +152,9 @@
 <!-- 包括所有已编译的插件 -->
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 <!-- 本地js文件 -->
-<script src="{% static "js/user_center.js" %}"></script>
+<script src="{% static "js/laboratory.js" %}"></script>
 </body>
+<script>
+    var CSRF_TOKEN = "{{ csrf_token }}";
+</script>
 </html>

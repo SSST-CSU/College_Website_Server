@@ -26,13 +26,27 @@ class LaboratoryApplyReason(models.Model):
 
 class LaboratoryBorrowingApplyManager(models.Manager):
     def get_apply_by_user(self, user):
+        """
+        返回最近的一次申请
+        :param user:
+        :return:
+        """
         all_apply = self.filter(user=user).order_by('update_time').reverse()
         if all_apply.count() == 0:
             return None
         return all_apply.first()
 
     def get_all_apply_by_user(self, user):
-        return self.filter(user=user).order_by('update_time').reverse()
+        all_apply = self.filter(user=user).order_by('update_time').reverse()
+        if all_apply.count() == 0:
+            return None
+        id_set = set()
+        for apply in all_apply:
+            if apply.apply_id in id_set:
+                all_apply = all_apply - apply
+            else:
+                id_set.add(apply.apply_id)
+        return all_apply
 
     def get_apply_by_id(self, id):
         return self.filter(id=id).order_by('update_time').reverse()
@@ -64,7 +78,7 @@ class LaboratoryBorrowingApply(models.Model):
     proof_document = models.FileField('附件', upload_to=upload_to, null=True, blank=True)
     seat_number = models.IntegerField('座位号', null=True, blank=True)
     content = models.CharField('备注', max_length=50, null=True, blank=True)
-    object = LaboratoryBorrowingApplyManager()
+    objects = LaboratoryBorrowingApplyManager()
 
     def __str__(self):
         return str(self.room) + str('@') + str(self.user)
@@ -82,7 +96,7 @@ class AdminUser(models.Model):
 
     class Meta:
         verbose_name = '实验室管理员'
-        verbose_name_plural = '实验室借用申请'
+        verbose_name_plural = '实验室管理员'
 
 
 class ApplyUserGrade(models.Model):

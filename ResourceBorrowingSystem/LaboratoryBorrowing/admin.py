@@ -21,3 +21,17 @@ class LaboratoryBorrowingApplyAdmin(admin.ModelAdmin):
 
 
 admin.site.register(LaboratoryBorrowingApply, LaboratoryBorrowingApplyAdmin)
+
+
+class AdminUserAdmin(admin.ModelAdmin):
+    list_display = ['duty', 'laboratory']
+
+
+admin.site.register(AdminUser, AdminUserAdmin)
+
+
+class ApplyUserGradeAdmin(admin.ModelAdmin):
+    list_display = ['grade']
+
+
+admin.site.register(ApplyUserGrade, ApplyUserGradeAdmin)
