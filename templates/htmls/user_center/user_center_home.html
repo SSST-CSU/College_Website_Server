@@ -20,21 +20,28 @@
 </head>
 
 <body>
-<table align="center">
-    <tr>
-        <td>姓名：</td>
-        <td>{{ user.name }}</td>
-    </tr>
-    <tr>
-        <td>学号：</td>
-        <td>{{ user.id }}</td>
-    </tr>
-    <tr>
-        <td>密码：</td>
-        <td><input type="password" id="pwd" value="{{ user.pwd }}"></td>
-    </tr>
+<br>
 
-</table>
+<div class="col-md-6 col-md-offset-3 col-sm-12">
+    <div class="form-group">
+        <label>姓名：{{ user.name }}</label>
+    </div>
+    <div class="form-group">
+        <label>学号：{{ user.id }}</label>
+    </div>
+    <div class="form-group">
+        <form id="change_pwd" action="/user/pwd/" method="post">
+            <label for="pwd">密码：</label>
+            {% csrf_token %}
+            <input type="password" class="input_area" id="pwd" name="pwd">
+        </form>
+    </div>
+    <div>
+        <button class="btn btn-default" style="width: 50%; text-align:center; alignment: center" onclick="change_pwd()">修改密码</button>
+    </div>
+
+</div>
+
 
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
@@ -42,5 +49,30 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 <!-- 本地js文件 -->
 <script src="{% static "js/user_center.js" %}"></script>
+<script>
+function change_pwd() {
+    let pwd = document.getElementById("pwd").value;
+    if(pwd.length < 8) {
+        alert("密码长度少于8位！");
+    } else {
+        $.ajax({
+            url: "/user/pwd/",
+            type: "POST",
+            data: {
+                pwd: pwd,
+                csrfmiddlewaretoken: "{{ csrf_token }}"
+            },
+            success:function(callback) {
+                callback_dict = $.parseJSON(callback);
+                alert(callback_dict.msg);
+                if(callback_dict.stat === 1) {
+                    {#location.reload();#}
+                    parent.location.reload();
+                }
+            }
+        })
+    }
+}
+</script>
 </body>
 </html>

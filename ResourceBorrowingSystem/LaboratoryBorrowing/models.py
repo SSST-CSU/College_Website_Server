@@ -43,13 +43,13 @@ class LaboratoryBorrowingApplyManager(models.Manager):
         id_set = set()
         for apply in all_apply:
             if apply.apply_id in id_set:
-                all_apply = all_apply - apply
+                all_apply = all_apply.exclude(apply_id=apply.apply_id, stat=apply.stat)
             else:
                 id_set.add(apply.apply_id)
         return all_apply
 
     def get_apply_by_id(self, id):
-        return self.filter(id=id).order_by('update_time').reverse()
+        return self.filter(apply_id=id).order_by('update_time').reverse()
 
 
 def upload_to(instance, filename):
@@ -65,7 +65,7 @@ def upload_to(instance, filename):
 
 
 class LaboratoryBorrowingApply(models.Model):
-    apply_id = models.IntegerField("申请编号")
+    apply_id = models.CharField(verbose_name="申请编号", max_length=25)
     user = models.ForeignKey(User, verbose_name="申请人", on_delete=models.DO_NOTHING)
     room = models.CharField(verbose_name='申请实验室', max_length=20)
     apply_time = models.DateTimeField('申请提交时间')
@@ -74,14 +74,23 @@ class LaboratoryBorrowingApply(models.Model):
     reason = models.TextField('申请理由', max_length=500, blank=True, null=True)
     start_time = models.DateTimeField('申请开始时间')
     end_time = models.DateTimeField('申请结束时间')
-    stat = models.CharField('申请状态', max_length=30)
+    stat_choices = (
+        ('已保存', '已保存'),
+        ('已提交', '已提交'),
+        ('审核中', '审核中'),
+        ('排序中', '排序中'),
+        ('申请通过', '申请通过'),
+        ('申请不通过', '申请不通过')
+    )
+    stat = models.CharField('申请状态', max_length=30, choices=stat_choices)
     proof_document = models.FileField('附件', upload_to=upload_to, null=True, blank=True)
     seat_number = models.IntegerField('座位号', null=True, blank=True)
     content = models.CharField('备注', max_length=50, null=True, blank=True)
+    registration_number = models.IntegerField('注册编号', null=True, blank=True)
     objects = LaboratoryBorrowingApplyManager()
 
     def __str__(self):
-        return str(self.room) + str('@') + str(self.user)
+        return str(self.update_time) + str('-') + str(self.room) + str('@') + str(self.user)
 
     class Meta:
         unique_together = ('apply_id', 'stat')

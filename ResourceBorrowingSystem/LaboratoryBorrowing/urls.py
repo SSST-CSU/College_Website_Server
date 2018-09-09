@@ -10,7 +10,8 @@ router.register(prefix='laboratory_apply_reason', viewset=LaboratoryApplyReasonV
 
 
 urlpatterns = [
-
+    path('apply_lab/', apply_lab),
+    path('update_lab/', update_lab)
 ]
 
 urlpatterns += router.urls

@@ -177,11 +177,10 @@
 <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
 
 <script src="{% static "js/index.js" %}"></script>
-
+<script>
+    const USER_ID = "{{ user.id }}";
+    const CSRF_TOKEN = "{{ csrf_token }}";
+    const USER = null;
+</script>
 </body>
 </html>
-<script>
-    var USER_ID = "{{ user.id }}";
-    var CSRF_TOKEN = "{{ csrf_token }}";
-    var USER = null;
-</script>

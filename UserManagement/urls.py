@@ -25,6 +25,7 @@ app_name = 'UserManagement'
 urlpatterns = [
     path('login/', user_view.login, name='login'),
     path('logout/', user_view.logout, name='logout'),
+    path('pwd/', user_view.pwd, name='pwd'),
 ]
 
 urlpatterns += router.urls

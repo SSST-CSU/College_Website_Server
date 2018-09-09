@@ -17,6 +17,17 @@ def user_center(request):
     if user is None:
         return HttpResponseRedirect('/login')
 
+    # if user.sex == None or \
+    #         user.birthday is None or \
+    #         user.political_choices is None or \
+    #         user.political is None or \
+    #         user.native_place is None or \
+    #         user.id_number is None or \
+    #         user.phone_number is None or user.phone_number == "x" or \
+    #         user.qq == "0" or user.email == "x@x.com" or \
+    #         user.country_and_region is None:
+    #     return render(request, 'htmls/login.html')
+
     # 导航栏
     navbarobj = NavbarObject.objects.filter(page__name='index').order_by('serial_number')
     navbar = []
@@ -167,9 +178,45 @@ def user_center_laboratory(request):
     except:
         pass
 
+    lab_pass_list = None
+    user_pass = False
+
+    apply = LaboratoryBorrowingApply.objects.filter(stat="申请通过").order_by('start_time')
+    from django.utils import timezone
+    today = timezone.now()
+    apply = apply.filter(start_time__lte=today)
+    lab_pass_list = apply.filter(end_time__gte=today).order_by('seat_number')
+    print(lab_pass_list)
+    try:
+        a = lab_pass_list.filter(user=user)
+        if a.count() != 0:
+            user_pass = True
+        print(a)
+
+    except:
+        pass
+
+    apply = None
+    if lab is not None:
+        apply = LaboratoryBorrowingApply.objects.all().order_by('update_time').reverse()
+        id_set = set()
+        for a in apply:
+            if a.apply_id in id_set:
+                a = apply.exclude(apply_id=a.apply_id, stat=a.stat)
+            else:
+                id_set.add(a.apply_id)
+        apply = apply.exclude(stat='申请通过')
+
     return render(request, 'htmls/user_center/user_center_laboratory.html', {
         "user": user,
         "apply_record": apply_record,
         "lab": lab,
         "grade": grade,
+        "lab_pass_list": lab_pass_list,
+        "pass": user_pass,
+        "apply": apply
     })
+
+
+def user_center_student_cadres(request):
+    return render(request, 'htmls/user_center/user_center_student_cadres.html')

@@ -15,4 +15,5 @@ def AuthenticateUser(user_id, user_pwd):
             user = None
     except:
         user = None
+    print("AuthenticateUser: " + str(user.id))
     return user

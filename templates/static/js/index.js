@@ -1,3 +1,9 @@
+window.onload = function (ev) {
+    let winwidth = window.innerWidth;
+    if(winwidth < 768) {
+        $('#footer').hide();
+    }
+};
 function back() {
     history.back()
 }
@@ -90,7 +96,7 @@ function getUserData() {
 
         },
         success:function(callback){
-            USER = callback;
+            let USER = callback;
             $('#modal_name').val(USER.name);
             $('#modal_id').val(USER.id);
             $('#modal_pwd').val("");
@@ -99,10 +105,10 @@ function getUserData() {
             $('#modal_phone_number').val(USER.phone_number);
             $('#modal_qq').val(USER.qq);
             $('#modal_email').val(USER.email);
-            logout2();
         }
     });
 }
+
 function update() {
     var name = $('#modal_name').val();
     var id = $('#modal_id').val();
@@ -136,12 +142,12 @@ function update() {
         url: "/user/user/" + id.trim() + '/',
         type: "PUT",
         data: {
+            csrfmiddlewaretoken: CSRF_TOKEN,
             id: id,
             name: name,
             stat: USER.stat,
             name_used_before: name_used_before,
             sex: sex,
-            birthday: USER.birthday,
             qq: qq,
             email: email,
             political: USER.political,

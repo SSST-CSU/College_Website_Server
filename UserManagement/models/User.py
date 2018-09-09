@@ -117,7 +117,7 @@ class User(models.Model):
     stat = models.BooleanField(verbose_name='用户状态', default=True)  # 0 不可用 1 可用
     name_used_before = models.CharField(verbose_name='曾用名', max_length=10, null=True, blank=True)
     sex = models.IntegerField(verbose_name='性别', choices=((0, '男'), (1, '女')))
-    birthday = models.DateField(verbose_name='出生日期')
+    birthday = models.DateField(verbose_name='出生日期', null=True, blank=True)
     political_choices = (
         (1, '中共党员'),
         (2, '中共预备党员'),
@@ -135,7 +135,7 @@ class User(models.Model):
     )
     political = models.IntegerField(verbose_name='政治面貌', choices=political_choices)
     native_place = models.CharField(verbose_name='籍贯', max_length=5)
-    id_number = models.CharField(verbose_name='身份证号', max_length=20)
+    id_number = models.CharField(verbose_name='身份证号', max_length=20, null=True, blank=True)
     phone_number = models.CharField(verbose_name='电话', max_length=20)
     email = models.EmailField(verbose_name='email')
     qq = models.CharField(verbose_name='QQ', max_length=20)

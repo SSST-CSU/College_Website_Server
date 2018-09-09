@@ -51,30 +51,33 @@ $("ul.nav-sidebar > li").click(function (e) {
     var h = $(this)[0].children[0].href;
     $("#right_page").attr("src", h.toString());
 });
+
 window.onload = function (ev) {
     $("#home").click();
     var winheight = window.innerHeight;
-    var navheight = document.getElementById("menu-nav").offsetHeight;
+    // var navheight = document.getElementById("menu-nav").offsetHeight;
     var winwidth = window.innerWidth;
     if(winwidth > 768) {
-        document.getElementById("right_page").height = winheight - navheight - 24;
-        var leftwidth = document.getElementById("left").offsetWidth;
-        document.getElementById("right_page").width = winwidth * 5 / 6 - 20;
+        $("#right_page").height(winheight - 51 - 24);
+        var leftwidth = $("#left").offsetWidth;
+        $("#right_page").width(winwidth * 5 / 6 - 20);
     } else {
-        document.getElementById("right_page").width = winwidth - 40;
-        document.getElementById("right_page").height = document.getElementById("right_page").contentWindow.document.body.scrollHeight;
+        $("#right_page").width(winwidth - 40);
+        // $("#right_page").height($("#right_page")[0].contentDocument.body.scrollHeight);
+        $("#right_page").height(winheight - 80);
     }
 };
 window.onresize = function () {
     var winheight = window.innerHeight;
-    var navheight = document.getElementById("menu-nav").offsetHeight;
+    // var navheight = document.getElementById("menu-nav").offsetHeight;
     var winwidth = window.innerWidth;
     if(winwidth > 768) {
-        document.getElementById("right_page").height = winheight - navheight - 24;
+        document.getElementById("right_page").height = winheight - 51 - 24;
         var leftwidth = document.getElementById("left").offsetWidth;
         document.getElementById("right_page").width = winwidth * 5 / 6 - 20;
     } else {
-        document.getElementById("right_page").width = winwidth - 40;
-        document.getElementById("right_page").height = document.getElementById("right_page").contentWindow.document.body.scrollHeight;
+        $("#right_page").width(winwidth - 40);
+        // document.getElementById("right_page").height = document.getElementById("right_page").contentWindow.document.body.scrollHeight;
+        $("#right_page").height(winheight - 51 - 24);
     }
 };

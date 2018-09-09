@@ -20,7 +20,7 @@
 
 </head>
 <body>
-<div>
+<div id="lab_page">
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
@@ -29,7 +29,11 @@
         {% endif %}
         {% if lab != None %}
         <li role="presentation"><a href="#admin" aria-controls="admin" role="tab" data-toggle="tab">申请审核</a></li>
+        {% endif %}
+        {% if pass or lab != None %}
         <li role="presentation"><a href="#list" aria-controls="list" role="tab" data-toggle="tab">实验室名单</a></li>
+        {% endif %}
+        {% if lab != None %}
         <li role="presentation"><a href="#list" aria-controls="setting" role="tab" data-toggle="tab">设置</a></li>
         {% endif %}
     </ul>
@@ -43,7 +47,7 @@
 
             <!-- Button trigger modal -->
             <div class="col-lg-12" style="text-align: right">
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#newApply" style="width: 20%" onclick="newApply()">
+                <button type="button" class="btn btn-primary" style="width: 20%" id="newApplyBtn" onclick="newApply()">
                     新建申请
                 </button>
 
@@ -59,16 +63,17 @@
                         </div>
 
                         <div class="modal-body">
-                            <form>
+                            <form id="apply_form" enctype="multipart/form-data">
+                                {% csrf_token %}
                                 <div class="form-group">
                                     <label for="room" class="control-label">实验室</label>
-                                    <select class="form-control" id="room">
+                                    <select class="form-control" id="room" required>
                                     </select>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="reason_type" class="control-label">申请类型</label>
-                                    <select class="form-control" id="reason_type">
+                                    <select class="form-control" id="reason_type" required>
                                     </select>
                                 </div>
 
@@ -79,12 +84,12 @@
 
                                 <div class="form-group">
                                     <label for="start_time" class="control-label">使用开始时间</label>
-                                    <input type="date" class="form-control" id="start_time">
+                                    <input type="date" class="form-control" id="start_time" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="end_time" class="control-label">使用开始时间</label>
-                                    <input type="date" class="form-control" id="end_time">
+                                    <label for="end_time" class="control-label">使用结束时间</label>
+                                    <input type="date" class="form-control" id="end_time" required>
                                 </div>
 
                                 <div class="form-group">
@@ -92,12 +97,22 @@
                                     <input type="file" class="form-control" id="proof_document">
                                 </div>
 
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" id="ck">我同意<a herf="http://115.159.217.104/article/id/9/" onclick="toA()">软件学院本科生开放实验室管理方案</a>
+                                    </label>
+                                </div>
+                                <script>
+                                    function toA() {
+                                        window.open("http://115.159.217.104/article/id/9/");
+                                    }
+                                </script>
                             </form>
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" onclick="submitApply()">提交</button>
-                            <button type="button" class="btn btn-primary" onclick="saveApply()">保存</button>
+                            <button type="button" class="btn btn-primary" onclick="submitApply('submit')">提交</button>
+{#                            <button type="button" class="btn btn-primary" onclick="submitApply('save')">保存</button>#}
                         </div>
                     </div>
                 </div>
@@ -108,7 +123,7 @@
 
             <div class="col-lg-12">
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-bordered table-hover" id="apply_table">
                         <tr>
                             <th>申请编号</th>
                             <th>申请实验室</th>
@@ -129,16 +144,147 @@
                 </div>
             </div>
         </div>
+        <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="detailLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="detailLabel">详情</h4>
+                    </div>
+
+                    <div class="modal-body">
+                        <form id="apply_form" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="detail_room" class="control-label">实验室</label>
+                                <input type="text" class="form-control" id="detail_room" required disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="detail_reason_type" class="control-label">申请类型</label>
+                                <input type="text" class="form-control" id="detail_reason_type" required disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="detail_reason" class="control-label">申请理由</label>
+                                <textarea class="form-control" id="detail_reason" wrap="soft" disabled></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="detail_start_time" class="control-label">使用开始时间</label>
+                                <input type="text" class="form-control" id="detail_start_time" required disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="detail_end_time" class="control-label">使用结束时间</label>
+                                <input type="text" class="form-control" id="detail_end_time" required disabled>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="detail_submit_time" class="control-label">申请提交时间</label>
+                                <input type="text" class="form-control" id="detail_submit_time" required disabled>
+                            </div>
+
+                            <div id="detail_list">
+                                <table class="table" id="detail_table">
+                                    <tr>
+                                        <td>申请变更时间</td>
+                                        <td>申请状态</td>
+                                        <td>座位号</td>
+                                        <td>备注</td>
+                                    </tr>
+                                </table>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         {% endif %}
         {% if lab != None %}
         <div role="tabpanel" class="tab-pane" id="admin">
+            <table class="table table-bordered">
+                <tr>
+                    <th width="10%">申请编号</th>
+                    <th width="10%">学号</th>
+                    <th width="10%">姓名</th>
+                    <th width="10%">实验室</th>
+                    <th width="10%">申请类型</th>
+                    <th width="10%">申请理由</th>
+                    <th width="10%">开始时间</th>
+                    <th width="10%">结束时间</th>
+                    <th width="10%">状态</th>
+                    <th width="10%">座位号</th>
+                    <th width="10%">备注</th>
+                    <th width="10%">注册编号</th>
+                    <th width="10%">修改</th>
+                </tr>
+                {% for a in apply %}
+                <tr id="ck_{{ a.apply_id }}">
+                    <td>{{ a.apply_id }}</td>
+                    <td>{{ a.user.id }}</td>
+                    <td>{{ a.user.name }}</td>
+                    <td>{{ a.room }}</td>
+                    <td>{{ a.reason_type }}</td>
+                    <td>{{ a.reason }}</td>
+                    <td><input id="ck_start_time_{{ a.apply_id }}" type="text" value="{{ a.start_time }}"></td>
+                    <td><input id="ck_end_time_{{ a.apply_id }}" type="text" value="{{ a.end_time }}"></td>
+                    <td>
+                        <select id="ck_stat_{{ a.apply_id }}">
+                            <option value="已保存" {% if a.stat == "已保存" %}selected{% endif %}>已保存</option>
+                            <option value="已提交" {% if a.stat == "已提交" %}selected{% endif %}>已提交</option>
+                            <option value="审核中" {% if a.stat == "审核中" %}selected{% endif %}>审核中</option>
+                            <option value="排序中" {% if a.stat == "排序中" %}selected{% endif %}>排序中</option>
+                            <option value="申请通过" {% if a.stat == "申请通过" %}selected{% endif %}>申请通过</option>
+                            <option value="申请不通过" {% if a.stat == "申请不通过" %}selected{% endif %}>申请不通过</option>
+                        </select>
+                    </td>
+                    <td><input id="ck_seat_number_{{ a.apply_id }}" type="text" {% if a.seat_number != None %}value="{{ a.seat_number }}"{% endif %}></td>
+                    <td><input id="ck_content_{{ a.apply_id }}" type="text" {% if a.content != None %}value="{{ a.content }}"{% endif %}></td>
+                    <td><input id="ck_registration_number_{{ a.apply_id }}" type="text" {% if a.registration_number != None %}value="{{ a.registration_number }}"{% endif %}></td>
+                    <td><button class="btn-default" onclick="adminCK('{{ a.apply_id }}')">修改</button></td>
+                </tr>
+                {% endfor %}
 
+            </table>
         </div>
-
+        {% endif %}
+        {% if pass or lab != None %}
         <div role="tabpanel" class="tab-pane" id="list">
-
+            <table class="table">
+                <tr>
+                    <th>学号</th>
+                    <th>姓名</th>
+                    <th>申请类型</th>
+                    <th>结束时间</th>
+                    <th>座位号</th>
+                    <th>注册编号</th>
+                    <th>备注</th>
+                </tr>
+                {% for a in lab_pass_list %}
+                <tr>
+                    <td>{{ a.user.id }}</td>
+                    <td>{{ a.user.name }}</td>
+                    <td>{{ a.reason_type }}</td>
+                    <td>{{ a.end_time }}</td>
+                    <td>{{ a.seat_number }}</td>
+                    <td>{{ a.registration_number }}</td>
+                    {% if a.content != None %}
+                    <td>{{ a.content }}</td>
+                    {% else %}
+                    <td></td>
+                    {% endif %}
+                </tr>
+                {% endfor %}
+            </table>
         </div>
-
+        {% endif %}
+        {% if lab != None %}
         <div role="tabpanel" class="tab-pane" id="setting">
 
         </div>
@@ -146,7 +292,16 @@
     </div>
 
 </div>
+<script>
 
+    const CSRF_TOKEN = "{{ csrf_token }}";
+
+    $('input[required]').before('<span style="color:red">*</span>');
+    $('select[required]').before('<span style="color:red">*</span>');
+
+
+
+</script>
 <!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <!-- 包括所有已编译的插件 -->
@@ -154,7 +309,4 @@
 <!-- 本地js文件 -->
 <script src="{% static "js/laboratory.js" %}"></script>
 </body>
-<script>
-    var CSRF_TOKEN = "{{ csrf_token }}";
-</script>
 </html>

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from rest_framework import permissions, status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view, permission_classes
@@ -21,10 +21,17 @@ class UserViewSet(ModelViewSet):
         """
         try:
             perm_set = request.session['perm_set']
+            user_id = request.session['id']
         except:
-            data = {'detail': '没有权限'}
-            return Response(data, status=status.HTTP_403_FORBIDDEN)
-        queryset = User.objects.none()
+            try:
+                user_id = request.session['user_id']
+                queryset = User.objects.filter(id=user_id)
+                self.queryset = queryset
+                return super(UserViewSet, self).list(request, *args, **kwargs)
+            except:
+                data = {'detail': '没有权限'}
+                return Response(data, status=status.HTTP_403_FORBIDDEN)
+        queryset = User.objects.filter(id=user_id)
         perm = False
 
         if 'UserManagement.view_all_users' in perm_set:
@@ -59,21 +66,25 @@ class UserViewSet(ModelViewSet):
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
 
-        if not perm:
-            data = {'detail': '没有权限'}
-            return Response(data, status=status.HTTP_403_FORBIDDEN)
-        else:
-            self.queryset = queryset
-            return super(UserViewSet, self).list(request, *args, **kwargs)
+        # if not perm:
+        #     data = {'detail': '没有权限'}
+        #     return Response(data, status=status.HTTP_403_FORBIDDEN)
+        # else:
+        self.queryset = queryset
+        return super(UserViewSet, self).list(request, *args, **kwargs)
 
     def create(self, request, *args, **kwargs):
         """
         增加
         """
-        perm_set = request.session['perm_set']
-        if 'UserManagement.create_user' in perm_set:
-            return super(UserViewSet, self).create(request, *args, **kwargs)
-        else:
+        try:
+            perm_set = request.session['perm_set']
+            if 'UserManagement.create_user' in perm_set:
+                return super(UserViewSet, self).create(request, *args, **kwargs)
+            else:
+                data = {'detail': '没有权限'}
+                return Response(data, status=status.HTTP_403_FORBIDDEN)
+        except:
             data = {'detail': '没有权限'}
             return Response(data, status=status.HTTP_403_FORBIDDEN)
 
@@ -81,8 +92,19 @@ class UserViewSet(ModelViewSet):
         """
         修改
         """
-        perm_set = request.session['perm_set']
-        queryset = User.objects.none()
+        try:
+            perm_set = request.session['perm_set']
+            user_id = request.session['user_id']
+        except:
+            try:
+                user_id = request.session['user_id']
+                queryset = User.objects.filter(id=user_id)
+                self.queryset = queryset
+                return super(UserViewSet, self).update(request, *args, **kwargs)
+            except:
+                data = {'detail': '没有权限'}
+                return Response(data, status=status.HTTP_403_FORBIDDEN)
+        queryset = User.objects.filter(id=user_id)
         perm = False
 
         if 'UserManagement.update_all_users' in perm_set:
@@ -117,19 +139,30 @@ class UserViewSet(ModelViewSet):
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
 
-        if not perm:
-            data = {'detail': '没有权限'}
-            return Response(data, status=status.HTTP_403_FORBIDDEN)
-        else:
-            self.queryset = queryset
-            return super(UserViewSet, self).update(request, *args, **kwargs)
+        # if not perm:
+        #     data = {'detail': '没有权限'}
+        #     return Response(data, status=status.HTTP_403_FORBIDDEN)
+        # else:
+        self.queryset = queryset
+        return super(UserViewSet, self).update(request, *args, **kwargs)
 
     def destroy(self, request, *args, **kwargs):
         """
         删除
         """
-        perm_set = request.session['perm_set']
-        queryset = User.objects.none()
+        try:
+            perm_set = request.session['perm_set']
+            user_id = request.session['id']
+        except:
+            try:
+                user_id = request.session['user_id']
+                queryset = User.objects.filter(id=user_id)
+                self.queryset = queryset
+                return super(UserViewSet, self).destroy(request, *args, **kwargs)
+            except:
+                data = {'detail': '没有权限'}
+                return Response(data, status=status.HTTP_403_FORBIDDEN)
+        queryset = User.objects.filter(id=user_id)
         perm = False
 
         if 'UserManagement.delete_all_users' in perm_set:
@@ -164,12 +197,12 @@ class UserViewSet(ModelViewSet):
                 return Response(data, status=status.HTTP_403_FORBIDDEN)
             perm = True
 
-        if not perm:
-            data = {'detail': '没有权限'}
-            return Response(data, status=status.HTTP_403_FORBIDDEN)
-        else:
-            self.queryset = queryset
-            return super(UserViewSet, self).destroy(request, *args, **kwargs)
+        # if not perm:
+        #     data = {'detail': '没有权限'}
+        #     return Response(data, status=status.HTTP_403_FORBIDDEN)
+        # else:
+        self.queryset = queryset
+        return super(UserViewSet, self).destroy(request, *args, **kwargs)
 
 
 def login(request):
@@ -209,19 +242,21 @@ def login(request):
         msg = -1
 
     # 检查用户是否为空，若是，需要修改信息
-    if user.sex == None or \
-            user.birthday is None or \
-            user.political_choices is None or \
-            user.political is None or \
-            user.native_place is None or \
-            user.id_number is None or \
-            user.phone_number is None or \
-            user.country_and_region is None:
-        msg = 10
+    # if user.sex == None or \
+    #         user.birthday is None or \
+    #         user.political_choices is None or \
+    #         user.political is None or \
+    #         user.native_place is None or \
+    #         user.id_number is None or \
+    #         user.phone_number is None or user.phone_number == "x" or \
+    #         user.qq == "0" or user.email == "x@x.com" or \
+    #         user.country_and_region is None:
+    #     msg = 10
 
     ret = {
         "msg": msg
     }
+    print(str(user.id) + " Login!")
     return HttpResponse(json.dumps(ret))
 
 
@@ -241,3 +276,38 @@ def logout(request):
         "msg": msg
     }
     return HttpResponse(json.dumps(ret))
+
+def pwd(request):
+    if request.method == "POST":
+        # 登录
+        try:
+            user_id = request.session['user_id']
+            user_pwd = request.session['user_pwd']
+            from UserManagement.Authentication import AuthenticateUser
+            user = AuthenticateUser(user_id, user_pwd)
+        except:
+            ret = {
+                "msg": "没有权限",
+                "stat": 0
+            }
+            return HttpResponse(json.dumps(ret))
+        if user is None:
+            ret = {
+                "msg": "没有权限",
+                "stat": 0
+            }
+            return HttpResponse(json.dumps(ret))
+
+        new_pwd = request.POST['pwd']
+        User.objects.filter(id=user.id).update(pwd=new_pwd)
+
+        request.session['user_id'] = None
+        request.session['user_pwd'] = None
+        request.session['admin_set'] = None
+        request.session['perm_set'] = None
+
+        ret = {
+            "msg": "修改成功",
+            "stat": 1
+        }
+        return HttpResponse(json.dumps(ret))

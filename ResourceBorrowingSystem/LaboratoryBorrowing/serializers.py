@@ -15,3 +15,7 @@ class LaboratoryApplyReasonSerializer(serializers.ModelSerializer):
         fields = ['reason']
 
 
+class LaboratoryBorrowingApplySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LaboratoryBorrowingApply
+        fields = ['apply_id', 'user', 'room', 'apply_time', 'update_time', 'reason_type', 'reason', 'start_time', 'end_time', 'stat']
