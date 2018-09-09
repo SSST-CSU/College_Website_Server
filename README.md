@@ -7,6 +7,7 @@
 - [**OnlineJudgeSystem**](OnlineJudgeSystem/README.md)
 - [**Pages**](Pages/READEME.md)
 - [**ResourceBorrowinSystem**](ResourceBorrowingSystem/README.md)
+- [**StudentCadres**](StudentCadres/README.md)
 - [**SchoolOfSoftware**](SchoolOfSoftware/README.md)
 - **templates**
     - **htmls**

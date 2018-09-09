@@ -71,7 +71,7 @@ def user_center_articles(request):
     # 未登录
     if user is None:
         return HttpResponseRedirect('/login')
-    return render(request, 'htmls/user_center/user_center_articles.html', {
+    return render(request, 'htmls/user_center/articles/user_center_articles.html', {
         "user": user,
     })
 
@@ -219,4 +219,4 @@ def user_center_laboratory(request):
 
 
 def user_center_student_cadres(request):
-    return render(request, 'htmls/user_center/user_center_student_cadres.html')
+    return render(request, 'htmls/user_center/student_cadres/user_center_student_cadres.html')

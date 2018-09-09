@@ -16,7 +16,7 @@ def user_center_articles_edit(request):
     # 未登录
     if user is None:
         return HttpResponseRedirect('/login')
-    return render(request, 'htmls/user_center/user_center_articles_edit.html', {
+    return render(request, 'htmls/user_center/articles/user_center_articles_edit.html', {
         "user": user,
     })
 
@@ -40,7 +40,7 @@ def user_center_articles_edit_id(request, id):
     except:
         pass
 
-    return render(request, 'htmls/user_center/user_center_articles_edit.html', {
+    return render(request, 'htmls/user_center/articles/user_center_articles_edit.html', {
         "user": user,
         "article": article,
     })

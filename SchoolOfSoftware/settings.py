@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'Pages',
     'ResourceBorrowingSystem',
     'UserManagement',
+    'StudentCadres',
 ]
 
 MIDDLEWARE = [

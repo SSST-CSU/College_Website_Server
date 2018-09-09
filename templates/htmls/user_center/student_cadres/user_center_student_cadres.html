@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中南大学软件学院</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 引入 Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/amazeui/2.7.2/css/amazeui.css" rel="stylesheet">
+    <link href="{% static "css/button.css"%}" rel="stylesheet">
+
+    <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+    <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/r29/html5.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div>
+    <div style="width: 80%;height: auto;margin-right: auto;margin-left: auto">
+        <form id="registerForm" class="am-form" enctype="multipart/form-data" method="post">
+            <fieldset>
+                <legend align="center">考核任务列表</legend>
+                <div class="am-form-group">
+                    {% if end11 == "" %}
+                    <label><span style="color: red">注意：没有提交科协报名表的请先提交报名表再进入本系统</span></label><br>
+                    <label onclick="gotoApply()"><span style="color: green">点击此处进入科协招新报名系统</span></label>
+                    {% elif end21 == "" %}
+                        <label onclick="gotoApply()"><span style="color: red;">科协报名已截止!请继续完成第三次考核任务！</span>
+                        <span style="color: green;">点击此处可查看报名表。</span></label>
+                    {% else %}
+                    <label onclick="gotoApply()"><span style="color: red;">科协招新考核已截止!</span>
+                        <span style="color: green;">点击此处可查看报名表。</span></label>
+                    {% endif %}
+                </div>
+                {% for t in task %}
+                <div>
+                    <button type="button" onclick="task('{{ t.id }}')"
+                             class="am-btn am-btn-default am-btn-sm am-btn-block">
+                        {{ t.name }}（截止时间：{{ t.end_time }}）
+                        {% if end1 != "" %}
+                        <span style="color: red">已截止</span>
+                        {% endif %}
+                    </button>
+                </div>
+                <br>
+                {% endfor %}
+
+                <div>
+                    <button type="button" onclick="interview()"
+                             class="am-btn am-btn-default am-btn-sm am-btn-block">
+                        面试信息
+                    </button>
+                </div>
+                <br>
+                <div>
+                    <button type="button" onclick="getresult()"
+                             class="am-btn am-btn-default am-btn-sm am-btn-block">
+                        查看考核分数与录取结果
+                    </button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<div class="am-modal am-modal-no-btn" tabindex="-1" id="msg">
+    <div class="am-modal-dialog">
+        <div class="am-modal-hd">消息提示
+            <a href="javascript: void(0)" class="am-close am-close-spin" data-am-modal-close>&times;</a>
+        </div>
+        <div class="am-modal-bd">
+            <span id="msgContent">
+            </span>
+        </div>
+        <div class="am-modal-footer">
+            <span class="am-modal-btn">确定</span>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+
+<!-- 包括所有已编译的插件 -->
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script src="https://cdn.bootcss.com/amazeui/2.7.2/js/amazeui.js"></script>
+
+<script type="text/javascript">
+    function notstart() {
+        $("#msgContent").html("<span style='color: red'>任务暂未发布！</span>");
+        $("#msg").modal();
+    }
+    $("#notstart").on("mouseenter",function(){
+        $("#notstart").css("color","#00a8e6")
+    })
+    $("#notstart").on("mouseleave",function(){
+        $("#notstart").css("color","white")
+    })
+
+    function gotoApply() {
+        window.location.href = "/applyForm/" + {{ account }};
+    }
+
+    function task(id) {
+        window.location.href = "/task/" + id + "/" + {{ account }};
+    }
+
+    function interview() {
+        $("#msgContent").html(
+            {% if interview == "你已具有面试资格"%}
+            "<span style='color: green'>{{ interview }}<br>" +
+            "<span style='color: green'>面试时间：<br>" +
+            "面试地点：</span>");
+            {% else %}
+            "<span style='color: red'>{{ interview }}<br>");
+            {% endif %}
+        $("#msg").modal();
+    }
+
+    function getresult() {
+        window.location.href = "/eva/marklist/"
+    }
+
+
+</script>
+
+</body>
+</html>

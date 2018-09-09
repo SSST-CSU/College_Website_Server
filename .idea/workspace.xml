@@ -2,32 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="298f0d6c-6e09-421b-bf2e-f593cdce1f17" name="默认的" comment="">
-      <change afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/migrations/0005_auto_20180902_2131.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/migrations/0006_auto_20180907_0044.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/migrations/0007_laboratoryborrowingapply_registration_number.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/UserManagement/migrations/0004_auto_20180906_0240.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/htmls/user_center/user_center_student_cadres.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentCadres/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentCadres/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/StudentCadres/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres_task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/static/css/button.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pages/views/user_center.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/views/user_center.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pages/views/user_center_articles.py" beforeDir="false" afterPath="$PROJECT_DIR$/Pages/views/user_center_articles.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SchoolOfSoftware/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolOfSoftware/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SchoolOfSoftware/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SchoolOfSoftware/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/Authentication.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/Authentication.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/models/User.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/models/User.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserManagement/views/user_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserManagement/views/user_view.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/htmls/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/user_center/user_center.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/js/laboratory.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/js/laboratory.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/static/js/user_center.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/static/js/user_center.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center_articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/user_center/articles/user_center_articles.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center_articles_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/htmls/user_center/articles/user_center_articles_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/htmls/user_center/user_center_student_cadres.html" beforeDir="false" />
     </list>
     <ignored path="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\website\.idea\shelf/" />
     <ignored path="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\.idea\shelf/" />
@@ -48,56 +38,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="user_center_laboratory.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html">
+      <file leaf-file-name="user_center_student_cadres.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="187" column="50" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_center.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Pages/views/user_center.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="204" column="66" selection-start-line="204" selection-start-column="66" selection-end-line="204" selection-end-column="66" />
+            <state relative-caret-position="270">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
               <folding>
-                <element signature="e#0#58#0" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#label#2;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#label#2;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#label#3;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#label#3;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#button#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#3906#3913#1#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py">
+      <file leaf-file-name="user_center_student_cadres_task.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres_task.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="laboratory.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/static/js/laboratory.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+            <state relative-caret-position="660">
+              <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
             </state>
           </provider>
         </entry>
@@ -108,8 +73,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
-        <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -137,13 +102,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Pages/user_center_views.py" />
-        <option value="$PROJECT_DIR$/Pages/index_views.py" />
-        <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_meetingroom.html" />
-        <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_pages.html" />
-        <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_users.html" />
-        <option value="$PROJECT_DIR$/templates/static/js/iframe.js" />
-        <option value="$PROJECT_DIR$/templates/static/css/iframe.css" />
         <option value="$PROJECT_DIR$/Pages/views/user_center_views.py" />
         <option value="$PROJECT_DIR$/Pages/views/index_views.py" />
         <option value="$PROJECT_DIR$/Pages/views/user_center_articles.py" />
@@ -166,14 +124,10 @@
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/urls.py" />
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/urls.py" />
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/admin.py" />
-        <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_student_cadres.html" />
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/serializers.py" />
         <option value="$PROJECT_DIR$/UserManagement/urls.py" />
         <option value="$PROJECT_DIR$/Pages/views/index.py" />
         <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_home.html" />
-        <option value="$PROJECT_DIR$/SchoolOfSoftware/urls.py" />
-        <option value="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
-        <option value="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
         <option value="$PROJECT_DIR$/UserManagement/models/User.py" />
         <option value="$PROJECT_DIR$/templates/htmls/login.html" />
         <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center.html" />
@@ -185,9 +139,20 @@
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/urls.py" />
         <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html" />
         <option value="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py" />
-        <option value="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py" />
         <option value="$PROJECT_DIR$/templates/static/js/laboratory.js" />
         <option value="$PROJECT_DIR$/Pages/views/user_center.py" />
+        <option value="$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py" />
+        <option value="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
+        <option value="$PROJECT_DIR$/SchoolOfSoftware/settings.py" />
+        <option value="$PROJECT_DIR$/SchoolOfSoftware/urls.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/StudentCadres/README.md" />
+        <option value="$PROJECT_DIR$/StudentCadres/admin.py" />
+        <option value="$PROJECT_DIR$/StudentCadres/urls.py" />
+        <option value="$PROJECT_DIR$/templates/htmls/user_center/user_center_student_cadres.html" />
+        <option value="$PROJECT_DIR$/StudentCadres/models.py" />
+        <option value="$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres_task.html" />
+        <option value="$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres.html" />
       </list>
     </option>
   </component>
@@ -203,10 +168,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="x" value="-297" />
+    <option name="y" value="-10" />
+    <option name="width" value="1439" />
+    <option name="height" value="866" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="添加" />
@@ -269,35 +234,52 @@
             <path>
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
               <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="StudentCadres" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
               <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="Pages" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="ResourceBorrowingSystem" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
-              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
-              <item name="ResourceBorrowingSystem" type="462c0819:PsiDirectoryNode" />
-              <item name="LaboratoryBorrowing" type="462c0819:PsiDirectoryNode" />
+              <item name="StudentCadres" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
               <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="htmls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="htmls" type="462c0819:PsiDirectoryNode" />
+              <item name="user_center" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="htmls" type="462c0819:PsiDirectoryNode" />
+              <item name="user_center" type="462c0819:PsiDirectoryNode" />
+              <item name="student_cadres" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
               <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="College_Website_Server" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchoolOfSoftware" type="b2602c69:ProjectViewProjectNode" />
@@ -320,7 +302,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SSCUST" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -334,19 +316,19 @@
     </option>
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\js\editor" />
-      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\js" />
-      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\Pages\views" />
-      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\htmls\user_center" />
-      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\Pages" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\js" />
+      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\htmls\user_center\student_cadres" />
       <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\ResourceBorrowingSystem\LaboratoryBorrowing" />
       <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\htmls" />
       <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\css" />
-      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static" />
-      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\fonts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\css" />
+      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\htmls\user_center\student_cadres" />
+      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\htmls\user_center\articles" />
+      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\js\editor" />
+      <recent name="F:\STUDYING\PROGRAMMING\PyCharmWorkspace\College_Website_Server\templates\static\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -705,7 +687,14 @@
       <option name="project" value="LOCAL" />
       <updated>1535881060384</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="完成实验室申请部分，实验室申请审核暂存在问题，无法去重，数据库设计还可以更加优化">
+      <created>1536478253561</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1536478253562</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TodoView">
@@ -719,6 +708,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="调试" order="17" weight="0.32936078" />
@@ -729,22 +719,22 @@
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32936078" />
       <window_info anchor="bottom" id="运行" order="13" sideWeight="0.49573562" weight="0.32286024" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.27665246" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992" visible="true" weight="0.19083156" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992" visible="true" weight="0.19296375" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="5" />
+      <window_info anchor="bottom" id="manage.py@SchoolOfSoftware" order="14" weight="0.3261105" />
       <window_info anchor="right" id="SciView" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5008" side_tool="true" weight="0.18869936" />
+      <window_info anchor="bottom" id="找到" order="16" weight="0.32936078" />
       <window_info anchor="bottom" id="Thumbnails" order="15" weight="0.32936078" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="File Transfer" order="18" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="manage.py@SchoolOfSoftware" order="14" weight="0.3261105" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="找到" order="16" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -758,7 +748,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="修改主页，并完成了主页的登录功能" />
     <MESSAGE value="修改主页，更新页面管理，完善权限管理" />
     <MESSAGE value="完善用户管理模块数据库设计" />
     <MESSAGE value="完善用户管理模块数据库设计，实现主页部分个性化展示功能" />
@@ -783,7 +772,8 @@
     <MESSAGE value="用户信息不全时，必须输入完整信息才能登陆，开始制作新建实验室申请的模态框" />
     <MESSAGE value="加入csrf_token" />
     <MESSAGE value="更新实验室申请界面，完成提交申请模态框" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新实验室申请界面，完成提交申请模态框" />
+    <MESSAGE value="完成实验室申请部分，实验室申请审核暂存在问题，无法去重，数据库设计还可以更加优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成实验室申请部分，实验室申请审核暂存在问题，无法去重，数据库设计还可以更加优化" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -805,117 +795,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ArticleManagement/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5340">
-          <caret line="178" column="23" selection-start-line="178" selection-start-column="6" selection-end-line="178" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models/Duty_Department.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/static/css/iframe.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_articles_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
-          <caret line="50" column="26" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Python/Anaconda3/Lib/site-packages/rest_framework/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="163" column="6" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/serializers/user_serializer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="100" selection-start-line="9" selection-start-column="100" selection-end-line="9" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models/Student.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models/User_Duty.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" column="15" lean-forward="true" selection-start-line="17" selection-start-column="15" selection-end-line="17" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/EquipmentBorrowing/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/views/articles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Pages/views/user_center_articles.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-988">
-          <folding>
-            <element signature="e#0#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/ClassroomBorrowing/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UserManagement/views/teacher_view.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-720">
@@ -959,13 +838,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_student_cadres.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/serializers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
@@ -1000,35 +872,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Pages/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-270">
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1050,24 +898,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="87" column="88" selection-start-line="87" selection-start-column="88" selection-end-line="87" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/htmls/login.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
           <caret line="166" column="42" lean-forward="true" selection-start-line="166" selection-start-column="42" selection-end-line="166" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/Authentication.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="17" column="44" selection-start-line="17" selection-start-column="44" selection-end-line="17" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -1123,13 +957,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6270">
-          <caret line="137" column="90" selection-start-line="137" selection-start-column="90" selection-end-line="137" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/Python/Anaconda3/Lib/site-packages/django/utils/timezone.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-540" />
@@ -1149,26 +976,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="548">
-          <caret line="163" column="33" selection-start-line="163" selection-start-column="33" selection-end-line="163" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/static/js/laboratory.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="690">
           <caret line="23" column="31" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_laboratory.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
+        <state relative-caret-position="5610">
           <caret line="187" column="50" selection-start-line="187" selection-start-column="50" selection-end-line="187" selection-end-column="50" />
         </state>
       </provider>
@@ -1177,28 +994,203 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="89" column="33" selection-start-line="89" selection-start-column="33" selection-end-line="89" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Pages/views/user_center.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="204" column="66" selection-start-line="204" selection-start-column="66" selection-end-line="204" selection-end-column="66" />
+        <state relative-caret-position="271">
+          <caret line="207" column="42" selection-start-line="207" selection-start-column="42" selection-end-line="207" selection-end-column="42" />
           <folding>
             <element signature="e#0#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/views/student_view.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="33" lean-forward="true" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/models/Duty_Department.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="20" column="52" lean-forward="true" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="28" selection-start-column="28" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/Authentication.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentCadres/tests.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentCadres/views.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="27" column="86" selection-start-line="27" selection-start-column="86" selection-end-line="27" selection-end-column="86" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SchoolOfSoftware/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="210">
+            <caret line="7" column="31" lean-forward="true" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentCadres/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="30">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserManagement/models/User.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="129" column="18" selection-start-line="129" selection-start-column="18" selection-end-line="129" selection-end-column="18" />
+          <folding>
+            <element signature="e#4679#10036#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentCadres/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center_pages.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ResourceBorrowingSystem/LaboratoryBorrowing/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="63" column="55" selection-start-line="63" selection-start-column="55" selection-end-line="63" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentCadres/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentCadres/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/StudentCadres/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres_task.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/static/css/button.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="35" selection-start-line="6" selection-start-column="35" selection-end-line="6" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/user_center.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="93" column="79" lean-forward="true" selection-start-line="93" selection-start-column="79" selection-end-line="93" selection-end-column="79" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/htmls/user_center/student_cadres/user_center_student_cadres.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#label#0;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#label#1;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#label#2;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#label#2;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#label#3;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#label#3;n#div#0;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#button#0;n#div#1;n#fieldset#0;n#form#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#3906#3913#1#HTML" expanded="true" />
           </folding>
         </state>
       </provider>

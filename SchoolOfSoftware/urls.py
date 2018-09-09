@@ -25,6 +25,7 @@ urlpatterns = [
     path('article_manage/', include('ArticleManagement.urls', namespace='article_manage')),
     path('borrow/', include('ResourceBorrowingSystem.urls', namespace='borrow')),
     path('oj/', include('OnlineJudgeSystem.urls', namespace='oj')),
+    path('student_cadres', include('StudentCadres.urls', namespace='student_cadres')),
 
     path('', include('Pages.urls', namespace='page')),
 ]
